@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
+import schemas from './sanity/schemas';
 
 const config = defineConfig({
     projectId: "eqw6b56r",
@@ -8,6 +9,7 @@ const config = defineConfig({
     apiVersion: "2023-05-14",
     basePath: "/events",
     plugins: [deskTool()],
+    schema: { types: schemas }
 });
 //basePath is where people other than me can edit content
 
