@@ -1,6 +1,7 @@
 import { createClient, groq } from "next-sanity";
+import { Event } from "@/types/Event";
 
-export async function getEvents(){
+export async function getEvents(): Promise<Event[]>{
     const client = createClient({
         projectId: "eqw6b56r",
         dataset: "production",
@@ -8,7 +9,7 @@ export async function getEvents(){
     });
 
     return client.fetch(
-        groq`*[_type = "event"]{
+        groq`*[_type == "event"]{
             _id,
             _createdAt,
             name,
