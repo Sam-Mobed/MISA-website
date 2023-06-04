@@ -9,3 +9,6 @@ export type Event = {
     url: string;
     content: PortableTextBlock[];
 };
+
+//need to add a field for when the event will happen
+//when: Date
