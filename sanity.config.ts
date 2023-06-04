@@ -7,7 +7,7 @@ const config = defineConfig({
     dataset: "production",
     title: "MISA",
     apiVersion: "2023-05-14",
-    basePath: "/events",
+    basePath: "/admin",
     plugins: [deskTool()],
     schema: { types: schemas }
 });
