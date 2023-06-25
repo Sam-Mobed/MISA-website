@@ -1,6 +1,6 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
-import Navbar from '../components/Navbar.tsx';
+//import { Inter } from 'next/font/google';
+import Navbar from '../components/Navbar';
 
 //const inter = Inter({ subsets: ['latin'] })
 //commenting this out cus it might cause problems
@@ -17,10 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navbar />
         {children}
       </body>
     </html>
   )
 }
+
+/*
+body used to have this className, not sure it's useful to us tho
+<body className={inter.className}>
+*/
