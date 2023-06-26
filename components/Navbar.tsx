@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import {AiOutlineMenu, AiOutlineClose, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter} from 'react-icons/ai';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar: React.FC = () => {
     
@@ -11,11 +11,31 @@ const Navbar: React.FC = () => {
     the first elenent is the current State and the second one is a function that updates the current state
     instead of just writing false, we can put a function instead which will not run every time we re-render our component,*/
     const [menuOpen, setMenuOpen] = useState(() => false);
+    const [scrollPosition, setScrollPosition] = useState(() => 0);
     //its not good practice to directly use menuOpen, instead, have an argument inside of your arrow function, and use that
     //but since we are using ts, this makes things more complicated, so leave as is for now
     const handleNav = () => {
         setMenuOpen(!menuOpen);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        console.log(scrollPosition)
+    }, [scrollPosition]);
+
+    /*
+    the transparency of the navbar is determined by scrollY
+    past/before a certain threshhold it doesn't change, but before 
+    it fades in and out
+    */
+
     
     return (
         <nav className="fixed w-full h-24 shadow-xl bg-white">

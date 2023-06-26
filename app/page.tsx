@@ -8,7 +8,7 @@ export default async function Home() {
     <div className="max-w-5xl mx-auto py-20">
       <h1 className="text-7xl font-extrabold">
         <span className="bg-gradient-to-r from-green-400 via-white-500 to-red-600
-        bg-clip-text text-transparent">
+        bg-clip-text text-transparent whitespace-nowrap">
           McGill Iranian Student Association
         </span>
       </h1>
@@ -32,3 +32,10 @@ export default async function Home() {
 
 //this whole events thing needs to be moved to 
 //another route
+
+
+/*
+
+
+
+*/
