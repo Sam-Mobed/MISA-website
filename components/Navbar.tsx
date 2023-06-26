@@ -6,8 +6,13 @@ import { useState } from "react";
 
 const Navbar: React.FC = () => {
     
-    const [menuOpen, setMenuOpen] = useState(false);
-
+    /*the false value we passed to useState is the default value of our state
+    with this, useState generates an array (always has 2 elements) that we deconstruct
+    the first elenent is the current State and the second one is a function that updates the current state
+    instead of just writing false, we can put a function instead which will not run every time we re-render our component,*/
+    const [menuOpen, setMenuOpen] = useState(() => false);
+    //its not good practice to directly use menuOpen, instead, have an argument inside of your arrow function, and use that
+    //but since we are using ts, this makes things more complicated, so leave as is for now
     const handleNav = () => {
         setMenuOpen(!menuOpen);
     };
@@ -15,33 +20,36 @@ const Navbar: React.FC = () => {
     return (
         <nav className="fixed w-full h-24 shadow-xl bg-white">
             <div className="flex justify-between items-center h-full w-full px-5 2xl:px-16">
-                <div>
-                    <Link href="/">
-                        <span>
-                            MISA
+                
+                <Link href="/">
+                    <h3 className="text-7xl font-extrabold">
+                        <span className="bg-gradient-to-r from-green-400 via-white-500 to-red-600
+                            bg-clip-text text-transparent">
+                                MISA
                         </span>
-                    </Link>
-                </div>
+                    </h3>
+                </Link>
+                
                 <div className="hidden md:flex">
                     <ul className="hidden md:flex">
                         <Link href="/about">
-                            <li className="ml-10 hover-border-b text-xl">
+                            <li className="ml-10 hover:border-b text-xl">
                                 About
                             </li>
                         </Link>
                         <Link href="/events">
-                            <li className="ml-10 hover-border-b text-xl">
+                            <li className="ml-10 hover:border-b text-xl">
                                 Events
                             </li>
                         </Link>
-                        <Link href="/apply">
-                            <li className="ml-10 hover-border-b text-xl">
-                                Apply
+                        <Link href="/contact">
+                            <li className="ml-10 hover:border-b text-xl">
+                                Contact Us
                             </li>
                         </Link>
-                        <Link href="/contact">
-                            <li className="ml-10 hover-border-b text-xl">
-                                Contact Us
+                        <Link href="/fa">
+                            <li className="ml-10 hover:border-b text-xl">
+                                فارسی
                             </li>
                         </Link>
                     </ul>
@@ -53,13 +61,14 @@ const Navbar: React.FC = () => {
             <div className={
                 menuOpen ? "fixed left-0 top-0 w-[65%] md:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
                 : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-            }
-            >
-            </div>
-            <div className="flex w-full items-center justify-end">
-                <div onClick={handleNav} className="cursor-pointer">
-                    <AiOutlineClose size={25} />
+            }>
+            
+                <div className="flex w-full items-center justify-end">
+                    <div onClick={handleNav} className="cursor-pointer">
+                        <AiOutlineClose size={25} />
+                    </div>
                 </div>
+
                 <div className="flex-col py-4">
                     <ul>
                         <Link href="/">
@@ -83,19 +92,18 @@ const Navbar: React.FC = () => {
                                 Events
                             </li>
                         </Link>
-                        <Link href="/apply">
-                            <li 
-                                onClick={() => setMenuOpen(false)}
-                                className="py-4 cursor-pointer">
-                                Apply
-                            </li>
-                        </Link>
                         <Link href="/contact">
                             <li 
                                 onClick={() => setMenuOpen(false)}
-                                className="py-4 cursor-pointer"
-                                >
+                                className="py-4 cursor-pointer">
                                 Contact Us
+                            </li>
+                        </Link>
+                        <Link href="/fa">
+                            <li 
+                                onClick={() => setMenuOpen(false)}
+                                className="py-4 cursor-pointer">
+                                فارسی
                             </li>
                         </Link>
                     </ul>
