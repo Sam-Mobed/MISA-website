@@ -26,18 +26,28 @@ const Navbar: React.FC = () => {
         window.addEventListener('scroll', handleScroll);
     }, []);
 
+    let navBarOpacity: number = 0;
     useEffect(() => {
-        console.log(scrollPosition)
+        if (scrollPosition<30){
+            navBarOpacity=0;
+        }else if(scrollPosition>50){
+            navBarOpacity=1;
+        }else{
+            navBarOpacity=navBarOpacity/scrollPosition;
+        }
     }, [scrollPosition]);
 
     /*
-    the transparency of the navbar is determined by scrollY
-    past/before a certain threshhold it doesn't change, but before 
-    it fades in and out
+    
+    surrond the navbar with a div that controls the opacity.
+    but the thing is, elements inside of it have their own color, will this clash with opacity? i don't think so
+    we can surrond the navbar with another div: <div style={{ background: color }}</div>
+
     */
 
     
     return (
+        
         <nav className="fixed w-full h-24 shadow-xl bg-white">
             <div className="flex justify-between items-center h-full w-full px-5 2xl:px-16">
                 

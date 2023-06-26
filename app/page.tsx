@@ -20,12 +20,6 @@ export default async function Home() {
       <h2 className="mt-24 font-bold text-gray-700 text-3xl">
         Our Values
       </h2>
-
-      {events.map((event) => (
-        <div key={event._id}>
-          {event.name}
-        </div>
-      ))}
     </div>
     );
 }
@@ -36,6 +30,11 @@ export default async function Home() {
 
 /*
 
+{events.map((event) => (
+        <div key={event._id}>
+          {event.name}
+        </div>
+      ))}
 
 
 */
