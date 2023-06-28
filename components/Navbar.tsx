@@ -52,9 +52,9 @@ const Navbar: React.FC = () => {
             <div className="flex justify-between items-center h-full w-full px-5 2xl:px-16">
                 
                 <Link href="/">
-                    <h3 className="text-7xl font-extrabold">
-                        <span className="bg-gradient-to-r from-green-400 via-white-500 to-red-600
-                            bg-clip-text text-transparent">
+                    <h3 className="text-5xl font-extrabold">
+                        <span className="inline-block bg-gradient-to-r from-green-500 to-red-600
+                        bg-clip-text text-transparent whitespace-nowrap">
                                 MISA
                         </span>
                     </h3>
