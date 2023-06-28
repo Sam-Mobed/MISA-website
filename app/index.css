@@ -1,4 +1,24 @@
+.main-container{
+    background-color: antiquewhite;
+}
+
 .site-title{
-    font-size: 5.5vw;
+    font-size: 5.8vw;
     text-align: center;
+}
+
+.buffer{
+    padding-top: 100px;
+    height: 30vh;
+    text-align: center;
+    background-color: aqua;
+}
+
+.buffer-space{
+    background-image: url(../components/images/layered-waves-haikei.svg);
+    aspect-ratio: 1500/400;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

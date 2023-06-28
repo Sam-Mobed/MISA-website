@@ -6,24 +6,31 @@ export default async function Home() {
   //const events = await getEvents();
 
   return (
-    <div>
-      <h1>Hi</h1>
-      <h1>Hi</h1>
-      <h1>Hi</h1>
-      <h1>Hi</h1>
-      <h1>Hi</h1>
-      <h1>Hi</h1>
-      <div className="border-2 border-black">
-        Hi
-      </div>
-      <div className="border-2 border-black">
-        <h1 className="site-title font-extrabold">
+    <div className='main-container'>
+
+      <div className='buffer'>Mountain</div>
+      <div className='buffer-space relative'>
+        <h1 className="site-title font-extrabold absolute bottom-8 w-full">
           <span className="inline-block bg-gradient-to-r from-green-500 to-red-600
           bg-clip-text text-transparent whitespace-nowrap">
             McGill Iranian Student Association
           </span>
         </h1>
       </div>
+
+      
+      
+
+      <div className='purpose'>
+        <h2 className='purpose-title pt-5 pl-5'>Our Purpose</h2>
+        <p className='text-justify p-5'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      
     </div>
     );
 }
@@ -33,6 +40,15 @@ export default async function Home() {
 
 
 /*
+
+<h1 className="site-title font-extrabold">
+        <span className="inline-block bg-gradient-to-r from-green-500 to-red-600
+        bg-clip-text text-transparent whitespace-nowrap">
+          McGill Iranian Student Association
+        </span>
+      </h1>
+
+
 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
 
 className="max-w-5xl mx-auto py-20"
