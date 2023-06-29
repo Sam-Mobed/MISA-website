@@ -1,4 +1,5 @@
 //import { getEvents } from "@/sanity/sanity-utils"
+import Head from 'next/head';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
 //this link component wraps the original link component, but it also has the locale perp
@@ -14,6 +15,16 @@ export default function Home() {
 
   return (
     <div className='main-container'>
+      
+      
+    </div>
+    );
+}
+
+/*
+<Head>
+        <title>MISA</title>
+      </Head>
 
       <div>
         <Link href="/" locale="fa">switch</Link> |
@@ -21,6 +32,8 @@ export default function Home() {
       </div>
 
       <div className='buffer'>Mountain</div>
+
+      
       <div className='buffer-space relative'>
         <h1 className="site-title font-extrabold absolute bottom-8 w-full">
           <span className="inline-block bg-gradient-to-r from-green-500 to-red-600
@@ -29,13 +42,16 @@ export default function Home() {
           </span>
         </h1>
       </div>
+      
 
+      
       <div className='purpose'>
         <h2 className='purpose-title pt-5 pl-5'>{t('purpose-title')}</h2>
         <p className='text-justify p-5'>
         {t('purpose')}
         </p>
       </div>
+      
 
       <div className='p-5'>
         <h2>{t('our-values')}</h2>
@@ -96,10 +112,12 @@ export default function Home() {
         <div>who we are:link to about us</div>
         <div>get in touch</div>
       </div>
-      
-    </div>
-    );
-}
+
+
+
+
+
+*/
 
 
 
