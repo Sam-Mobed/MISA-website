@@ -22,3 +22,13 @@
     background-position: center;
     background-size: cover;
 }
+
+.value{
+    text-align: center;
+}
+
+@media (max-width:768px){
+    .values-box{
+        flex-direction: column;
+    }
+}

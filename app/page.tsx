@@ -18,9 +18,6 @@ export default async function Home() {
         </h1>
       </div>
 
-      
-      
-
       <div className='purpose'>
         <h2 className='purpose-title pt-5 pl-5'>Our Purpose</h2>
         <p className='text-justify p-5'>
@@ -29,6 +26,44 @@ export default async function Home() {
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
         sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+      </div>
+
+      <div className='p-5'>
+        <h2>Our Values</h2>
+        <div className='values-box border-2 border-black flex justify-between'>
+          <div className='border-2 border-black'>
+
+            <h3 className='value'>
+              Value1
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+          </div>
+
+          <div className='border-2 border-black'>
+            <h3 className='value'>
+              Value2
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+          </div>
+
+          <div className='border-2 border-black'>
+            <h3 className='value'>
+              Value3
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+          </div>
+
+        </div>
+
       </div>
       
     </div>
