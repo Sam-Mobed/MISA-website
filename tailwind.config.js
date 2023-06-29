@@ -16,3 +16,15 @@ module.exports = {
   },
   plugins: [],
 }
+
+/*
+had this for when I wanted to add a shine effect.
+animation: {
+        shine: "shine 1s",
+      },
+      keyframes: {
+        shine: {
+          "100%": {left: "125%"},
+        },
+      },
+*/

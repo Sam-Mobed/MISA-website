@@ -2,6 +2,8 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
 //this link component wraps the original link component, but it also has the locale perp
+import Card from '../../components/Home/ValueCard';
+import MemberCard from '../../components/About/MemCard';
 import './index.css';
 
 export default function Home() {
@@ -70,6 +72,14 @@ export default function Home() {
 
       </div>
 
+      <Card
+       value="Integrity"
+       description='hi'
+       image='hi'
+       alt='hi' />
+
+      <MemberCard />
+
       <div>
         <p>
           Our values stem from our constitution, which bounds us to core principles under which we operate
@@ -78,9 +88,13 @@ export default function Home() {
 
       <div>
         <h2>
-          What's going on?
+          what we do:already kinda say it in purpose
+          
         </h2>
         <div>we will have circles here to other routes</div>
+        <div>we organize events! to bring the iranian community and those who aappreciate iranian culture closer.</div>
+        <div>who we are:link to about us</div>
+        <div>get in touch</div>
       </div>
       
     </div>
