@@ -1,9 +1,14 @@
 //import { getEvents } from "@/sanity/sanity-utils"
+import { useTranslations } from 'next-intl';
+import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
+//this link component wraps the original link component, but it also has the locale perp
 import './index.css';
 
-export default async function Home() {
+export default function Home() {
 
   //const events = await getEvents();
+  //this is our index file, so we pass index as argument
+  const t = useTranslations('Index');
 
   return (
     <div className='main-container'>
@@ -13,12 +18,14 @@ export default async function Home() {
         <h1 className="site-title font-extrabold absolute bottom-8 w-full">
           <span className="inline-block bg-gradient-to-r from-green-500 to-red-600
           bg-clip-text text-transparent whitespace-nowrap">
-            McGill Iranian Student Association
+            {t('title')}
           </span>
         </h1>
       </div>
 
       <div className='purpose'>
+        <Link href="/" locale="fa">switch</Link>
+        <Link href="/" locale="en">switch back</Link>
         <h2 className='purpose-title pt-5 pl-5'>Our Purpose</h2>
         <p className='text-justify p-5'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -65,13 +72,29 @@ export default async function Home() {
         </div>
 
       </div>
+
+      <div>
+        <p>
+          Our values stem from our constitution, which bounds us to core principles under which we operate
+        </p>
+      </div>
+
+      <div>
+        <h2>
+          What's going on?
+        </h2>
+        <div>we will have circles here to other routes</div>
+      </div>
       
     </div>
     );
 }
 
+
+
 //this whole events thing needs to be moved to 
 //another route
+
 
 
 /*

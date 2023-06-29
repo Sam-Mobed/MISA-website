@@ -15,7 +15,7 @@
 }
 
 .buffer-space{
-    background-image: url(../components/images/layered-waves-haikei.svg);
+    background-image: url(../../components/images/layered-waves-haikei.svg);
     aspect-ratio: 1500/400;
     width: 100%;
     background-repeat: no-repeat;
