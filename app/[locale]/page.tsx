@@ -13,6 +13,11 @@ export default function Home() {
   return (
     <div className='main-container'>
 
+      <div>
+        <Link href="/" locale="fa">switch</Link> |
+        <Link href="/" locale="en">switch back</Link>
+      </div>
+
       <div className='buffer'>Mountain</div>
       <div className='buffer-space relative'>
         <h1 className="site-title font-extrabold absolute bottom-8 w-full">
@@ -24,48 +29,40 @@ export default function Home() {
       </div>
 
       <div className='purpose'>
-        <Link href="/" locale="fa">switch</Link>
-        <Link href="/" locale="en">switch back</Link>
-        <h2 className='purpose-title pt-5 pl-5'>Our Purpose</h2>
+        <h2 className='purpose-title pt-5 pl-5'>{t('purpose-title')}</h2>
         <p className='text-justify p-5'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {t('purpose')}
         </p>
       </div>
 
       <div className='p-5'>
-        <h2>Our Values</h2>
+        <h2>{t('our-values')}</h2>
         <div className='values-box border-2 border-black flex justify-between'>
           <div className='border-2 border-black'>
 
             <h3 className='value'>
-              Value1
+              {t('value1')}
             </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            {t('value1-text')}
             </p>
           </div>
 
           <div className='border-2 border-black'>
             <h3 className='value'>
-              Value2
+              {t('value2')}
             </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            {t('value2-text')}
             </p>
           </div>
 
           <div className='border-2 border-black'>
             <h3 className='value'>
-              Value3
+              {t('value3')}
             </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              {t('value3-text')}
             </p>
           </div>
 
