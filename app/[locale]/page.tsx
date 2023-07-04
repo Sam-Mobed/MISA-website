@@ -1,5 +1,8 @@
+import Hero from '../../components/Home/Hero';
+
+
 //import { getEvents } from "@/sanity/sanity-utils"
-import Head from 'next/head';
+//import Head from 'next/head';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
 //this link component wraps the original link component, but it also has the locale perp
@@ -15,6 +18,23 @@ export default function Home() {
 
   return (
     <div className='main-container'>
+      <Hero />
+      <div className='w-full h-screen bg-red-500'>
+      
+
+      </div>
+      {/*
+      
+      
+      
+      */}
+      <div className='w-full h-screen bg-blue-500'>
+
+      </div>
+
+      <div className='w-full h-screen bg-green-500'>
+
+      </div>
       
       
     </div>
