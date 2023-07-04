@@ -15,7 +15,7 @@ const hafezStyle = {
 
 export default function Hero() {
     return(
-        <div className='w-full h-screen bg-yellow-500 relative overflow-hidden'>
+        <div className='w-full h-screen relative overflow-hidden'>
             <Image 
             src={hafez}
             style={imageStyle}
