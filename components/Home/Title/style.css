@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Gulzar&display=swap');
+
+.title{
+    /*
+    -webkit-background-clip: text;
+    background-clip: text;
+    */
+    font-weight: bold;
+    font-size: 8vw;
+    font-family: Amiri, Courier, monospace;
+    
+    /*
+    'Courier New', Courier, monospace;
+    color: transparent;*/
+    /*display: inline-block;*/
+}
+
+.word{
+    padding-left: 20vw;
+}
+
+/*
+
+.word_3{
+    --tw-gradient-stops: var(--tw-gradient-colors, theme(colors.green.500));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.word_1{
+    --tw-gradient-stops: var(--tw-gradient-colors, theme(colors.green.500));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.word_2{
+    --tw-gradient-stops: var(--tw-gradient-colors, theme(colors.green.500));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));   
+}
+
+.word_3{
+    --tw-gradient-stops: var(--tw-gradient-colors, theme(colors.green.500));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+
+*/
+
