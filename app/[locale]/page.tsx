@@ -1,9 +1,11 @@
 import Hero from '../../components/Home/Hero';
+import Title from '../../components/Home/Title';
+import { useTranslations } from 'next-intl';
 
 
 //import { getEvents } from "@/sanity/sanity-utils"
 //import Head from 'next/head';
-import { useTranslations } from 'next-intl';
+
 import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
 //this link component wraps the original link component, but it also has the locale perp
 import Card from '../../components/Home/ValueCard';
@@ -19,6 +21,9 @@ export default function Home() {
   return (
     <div className='main-container'>
       <Hero />
+      <Title 
+        title={t('title')}
+      />
       <div className='w-full h-screen bg-red-500'>
       
 

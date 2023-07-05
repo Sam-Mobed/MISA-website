@@ -8,11 +8,6 @@ const imageStyle = {
     width: '100%'
 }
 
-const hafezStyle = {
-    height: '100%',
-    width: '100%'
-}
-
 export default function Hero() {
     return(
         <div className='w-full h-screen relative overflow-hidden'>
