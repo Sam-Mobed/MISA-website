@@ -1,3 +1,8 @@
+"use client"
+
+import { motion, useScroll,useTransform } from 'framer-motion';
+import './styles.css';
+
 import Image from 'next/image';
 import hafez from '../../images/hafez.png';
 import hill from '../../images/hill.png';
@@ -9,6 +14,11 @@ const imageStyle = {
 }
 
 export default function Hero() {
+    const {scrollY} = useScroll();
+
+    const y1 = useTransform(scrollY, [0,300],[0,200]);
+    const y2 = useTransform(scrollY, [0,300],[0,-100]);
+    //const y1 = useTransform(scrollY, [0,300],[0,200]);
     return(
         <div className='w-full h-screen relative overflow-hidden'>
             <Image 
@@ -29,6 +39,23 @@ export default function Hero() {
             alt="mountain-parallax"
             className='absolute bottom-0'
             />
+
+            
+
+            <motion.div
+            className='mountain-container absolute bottom-0'
+            style={{y:y1,x:50}}
+            >
+
+            <Image
+            src={mountain}
+            style={imageStyle}
+            alt="mountain-parallax"
+            className='absolute bottom-0'
+            />
+
+            </motion.div>
+            
         </div>
     );
 }
