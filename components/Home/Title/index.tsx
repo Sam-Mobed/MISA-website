@@ -1,21 +1,7 @@
 import Image from 'next/image';
-import Clouds from '../../images/clouds.png';
-import Left_corner_plants from '../../images/l-corner-plants.png';
-import Right_corner_plants from '../../images/r-corner-plants.png';
-import Left_corner_rocks from '../../images/l-corner-rocks.png';
-import Right_corner_rocks from '../../images/r-corner-rocks.png';
 import Waves from '../../images/waves.png';
 import TitleText from './text';
-
-const cloudsStyle = {
-    height: 'auto',
-    width: '40vw',
-}
-
-const plantStyle = {
-    height: 'auto',
-    width: '30vw',
-}
+import DynamicElements from './movingElements';
 
 const wavesContainer = {
     width: '100vw',
@@ -32,6 +18,8 @@ const waves = {
     height: 'auto'
 }
 
+
+
 type Props = {
     title: string;
 };
@@ -42,7 +30,8 @@ https://codepen.io/MyXoToD/pen/VaazQq
 
 export default function Title({title}: Props){
     return (
-        <div className='relative'>
+        <div className=''>
+            
 
             <div className='bg-black flex items-center justify-center' style={wavesContainer}>
                 <div className='overflow-hidden' style={wavesStyle}>
@@ -54,61 +43,23 @@ export default function Title({title}: Props){
                 </div>
             </div>
             
+            <div className='relative'>
+                <DynamicElements />
 
-            <div className='flex flex-row justify-between w-screen'>
+                <div className='w-screen bg-black' style={{height:'20vh'}}>
 
-                <div>
-                    <Image 
-                    src={Left_corner_plants}
-                    style={plantStyle}
-                    alt="left-corner-plants"
+                </div>
+
+                <div className="m-5 p-3 border-4 border-double border-black">
+                    <TitleText
+                        title={title}
                     />
                 </div>
 
-                <div>
-                    <Image 
-                    src={Clouds}
-                    style={cloudsStyle}
-                    alt="clouds"
-                    />
-                </div>
-                
+                <div className='w-screen bg-black' style={{height:'15vh'}}>
 
-                <div>
-                    <Image 
-                    src={Right_corner_plants}
-                    style={plantStyle}
-                    alt="right-corner-plants"
-                    />  
                 </div>
 
-            </div>
-            
-             
-            
-            
-            <div className="m-5 p-3 border-4 border-double border-black">
-                <TitleText
-                    title={title}
-                />
-            </div>
-
-
-            <div className='flex flex-row justify-between'>
-                <div>
-                    <Image 
-                    src={Left_corner_rocks}
-                    style={cloudsStyle}
-                    alt="left-corner-rocks"
-                    />
-                </div>
-                <div>
-                    <Image 
-                    src={Right_corner_rocks}
-                    style={cloudsStyle}
-                    alt="right-corner-rocks"
-                    />
-                </div>
             </div>
         </div>
     );
