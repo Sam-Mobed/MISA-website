@@ -4,7 +4,7 @@ import Left_corner_plants from '../../images/l-corner-plants.png';
 import Right_corner_plants from '../../images/r-corner-plants.png';
 import Left_corner_rocks from '../../images/l-corner-rocks.png';
 import Right_corner_rocks from '../../images/r-corner-rocks.png';
-import Flower_pattern from '../../images/flower_pattern.png';
+import Waves from '../../images/waves.png';
 import TitleText from './text';
 
 const cloudsStyle = {
@@ -15,6 +15,21 @@ const cloudsStyle = {
 const plantStyle = {
     height: 'auto',
     width: '30vw',
+}
+
+const wavesContainer = {
+    width: '100vw',
+    height: '10vh'
+}
+
+const wavesStyle = {
+    width: 'calc(98%)',
+    height: 'calc(75%)'
+}
+
+const waves = {
+    width: 'calc(100%)',
+    height: 'auto'
 }
 
 type Props = {
@@ -29,11 +44,16 @@ export default function Title({title}: Props){
     return (
         <div className='relative'>
 
-            <Image 
-            src={Flower_pattern}
-            style={{width:'100vw', height:'10vh'}}
-            alt="left-corner-plants"
-            />
+            <div className='bg-black flex items-center justify-center' style={wavesContainer}>
+                <div className='overflow-hidden' style={wavesStyle}>
+                    <Image 
+                    src={Waves}
+                    style={waves}
+                    alt="waves"
+                    />
+                </div>
+            </div>
+            
 
             <div className='flex flex-row justify-between w-screen'>
 
@@ -96,6 +116,13 @@ export default function Title({title}: Props){
 
 
 /*
+
+
+            <Image 
+            src={Waves}
+            style={{width:'100vw', height:'10vh'}}
+            alt="left-corner-plants"
+            />
 
 const simurghStyle = {
     height: 'auto',

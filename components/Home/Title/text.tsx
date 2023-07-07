@@ -20,7 +20,8 @@ export default function TitleText({title}: Props){
                 initial = {{ opacity: 0 , translateX: -50}}
                 animate = {{ opacity: 1 , translateX: 0}}
                 transition = {{ duration: 0.7, delay: index * 0.2}}
-                className={`word_${index} title `}
+                style={{}}
+                className="title"
             >
                 <h1 className='word'>
                     {word}
