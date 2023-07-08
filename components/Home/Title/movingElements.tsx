@@ -22,7 +22,7 @@ const cornerStyle = {
 
 const sunStyle = {
     width: 'auto',
-    height: 'calc(45%)',
+    height: 'calc(40%)',
 }
 
 /*
@@ -48,34 +48,45 @@ const cornerHillStyle = {
 export default function DynamicElements(){
     const {scrollY} = useScroll();
 
-    const sun_Y = useTransform(scrollY, [400,1000],[0,120]);
+    const sun_Y = useTransform(scrollY, [400,1000],[-70,50]);
 
-    const left_plant_Y = useTransform(scrollY, [400,1000],[-100,0]);
-    const left_plant_X = useTransform(scrollY, [400,1000],[-300,0]);
+    //before, the input range was [0,1000]
+    const left_plant_Y = useTransform(scrollY, [0,700],[-100,0]);
+    const left_plant_X = useTransform(scrollY, [0,700],[-100,0]);
 
-    const right_plant_Y = useTransform(scrollY, [400,1000],[100,0]);
-    const right_plant_X = useTransform(scrollY, [400,1000],[300,0]);
+    const right_plant_Y = useTransform(scrollY, [0,1000],[-100,0]);
+    const right_plant_X = useTransform(scrollY, [0,1000],[100,0]);
+
+    const simurgh_Y = useTransform(scrollY, [500,1000],[150,-10]);
+    const simurgh_X = useTransform(scrollY, [500,1000],[200,0]);
+
+    const beast_Y = useTransform(scrollY, [450,1000],[70,0]);
+    const beast_X = useTransform(scrollY, [450,1000],[-70,0]);
+
+    const hill_Y = useTransform(scrollY, [450,1000],[70,0]);
+    const hill_X = useTransform(scrollY, [450,1000],[70,0]);
 
     return (
         <div>
-            <div className='absolute top-0 w-screen flex flex-row justify-between'>
+            <div className='absolute top-0 w-screen flex flex-row justify-between overflow-hidden'>
                 <motion.div
                 style={{
                     y:left_plant_Y,
-                    x:left_plant_X
+                    x:left_plant_X,
                 }}
                 >
                     <Image 
                     src={moving_plants_left}
                     style={plantStyle}
                     alt="moving_plants_left"
-                    className='object-contain'
+                    className='justify-center items-center'
                     />
                     
                 </motion.div>
 
                 <motion.div
                 style={{
+                    x:70,
                     y:sun_Y,
                     rotate:0
                 }}
@@ -84,6 +95,7 @@ export default function DynamicElements(){
                     src={Sun}
                     style={sunStyle}
                     alt="sun"
+                    className='inline-block'
                     />
                 </motion.div>
 
@@ -92,6 +104,7 @@ export default function DynamicElements(){
                     y:right_plant_Y,
                     x:right_plant_X
                 }}
+                
                 >
                     <Image 
                     src={moving_plants_right}
@@ -102,25 +115,48 @@ export default function DynamicElements(){
                 </motion.div>
             </div>
             <div className='absolute right-0' style={{top:'30%',right:'10%'}}>
-                <Image 
-                src={Simurgh}
-                style={simurghStyle}
-                alt="simurgh"
-                />
+                <motion.div
+                    style={{
+                        y:simurgh_Y,
+                        x:simurgh_X,
+                    }}
+                >
+                    <Image 
+                    src={Simurgh}
+                    style={simurghStyle}
+                    alt="simurgh"
+                    />
+                </motion.div>
+
             </div>
-            <div className='absolute bottom-0 w-screen flex flex-row justify-between'>
-                <Image 
-                src={Beast}
-                style={cornerStyle}
-                alt="Beast"
-                className='inline-block'
-                />
-                <Image 
-                src={moving_hill_right}
-                style={cornerHillStyle}
-                alt="moving_hill_right"
-                className='inline-block'
-                />
+            <div className='absolute bottom-0 w-screen flex flex-row justify-between overflow-hidden'>
+                <motion.div
+                    style={{
+                        y:beast_Y,
+                        x:beast_X,
+                    }}
+                >
+                    <Image 
+                    src={Beast}
+                    style={cornerStyle}
+                    alt="Beast"
+                    className='inline-block'
+                    />
+                </motion.div>
+                
+                <motion.div
+                    style={{
+                        y:hill_Y,
+                        x:hill_X,
+                    }}
+                >
+                    <Image 
+                    src={moving_hill_right}
+                    style={cornerHillStyle}
+                    alt="moving_hill_right"
+                    className='inline-block'
+                    />
+                </motion.div>
             </div>
         </div>
     );
