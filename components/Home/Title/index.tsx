@@ -46,7 +46,7 @@ export default function Title({title}: Props){
             <div className='relative'>
                 <DynamicElements />
 
-                <div className='w-screen bg-black' style={{height:'20vh'}}>
+                <div className='w-screen bg-black' style={{height:'25vh'}}>
 
                 </div>
 
@@ -56,7 +56,7 @@ export default function Title({title}: Props){
                     />
                 </div>
 
-                <div className='w-screen bg-black' style={{height:'15vh'}}>
+                <div className='w-screen bg-black' style={{height:'5vh'}}>
 
                 </div>
 
