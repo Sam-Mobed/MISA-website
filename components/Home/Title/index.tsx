@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Waves from '../../images/waves.png';
 import TitleText from './text';
 import DynamicElements from './movingElements';
+import StaticElements from './staticElements';
 
 const wavesContainer = {
     width: '100vw',
@@ -30,7 +31,7 @@ https://codepen.io/MyXoToD/pen/VaazQq
 
 export default function Title({title}: Props){
     return (
-        <div className=''>
+        <div>
             
 
             <div className='bg-black flex items-center justify-center' style={wavesContainer}>
@@ -43,12 +44,11 @@ export default function Title({title}: Props){
                 </div>
             </div>
             
-            <div className='relative'>
+            <div className='relative border-2 border-double border-black'>
                 <DynamicElements />
+                <StaticElements />
 
-                <div className='w-screen bg-black' style={{height:'22vw'}}>
-
-                </div>
+                <div className='w-screen' style={{height:'22vw'}} />
 
                 <div className="m-5 p-3 border-4 border-double border-black">
                     <TitleText
@@ -56,11 +56,13 @@ export default function Title({title}: Props){
                     />
                 </div>
 
-                <div className='w-screen bg-black' style={{height:'5vh'}}>
-
-                </div>
+                
 
             </div>
+            {/*
+            <div className='w-screen' style={{height:'5vh'}} />
+            */}
+            
         </div>
     );
 }
