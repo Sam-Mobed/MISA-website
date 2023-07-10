@@ -21,9 +21,12 @@ export default function Home() {
   return (
     <div className='main-container'>
       <Hero />
+         
       <Title 
         title={t('title')}
       />
+    
+      
       <div className='w-full h-screen bg-red-500'>
       
 

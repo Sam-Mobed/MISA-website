@@ -19,6 +19,7 @@ export default function Hero() {
     const hafez_y = useTransform(scrollY, [50,1000],[0,500]);
     const mountain_y = useTransform(scrollY, [0,500],[7,300]);
     const hill_y = useTransform(scrollY, [50,500],[0,100]);
+    
     return(
         <div className='w-full h-screen relative overflow-hidden'>
 
