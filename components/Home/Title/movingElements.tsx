@@ -33,7 +33,7 @@ const sunStyle = {
 */
 
 const simurghStyle = {
-    width: '35vw',
+    width: '40vw',
     height: 'auto',
 }
 
@@ -48,23 +48,23 @@ const cornerHillStyle = {
 export default function DynamicElements(){
     const {scrollY} = useScroll();
 
-    const sun_Y = useTransform(scrollY, [400,1000],[-70,50]);
+    const sun_Y = useTransform(scrollY, [400,900],[-100,20]);
 
     //before, the input range was [0,1000]
-    const left_plant_Y = useTransform(scrollY, [0,700],[-100,0]);
-    const left_plant_X = useTransform(scrollY, [0,700],[-100,0]);
+    const left_plant_Y = useTransform(scrollY, [0,800],[-100,0]);
+    const left_plant_X = useTransform(scrollY, [0,800],[-100,0]);
 
-    const right_plant_Y = useTransform(scrollY, [0,1000],[-100,0]);
-    const right_plant_X = useTransform(scrollY, [0,1000],[100,0]);
+    const right_plant_Y = useTransform(scrollY, [0,800],[-100,0]);
+    const right_plant_X = useTransform(scrollY, [0,800],[100,0]);
 
-    const simurgh_Y = useTransform(scrollY, [500,1000],[150,-10]);
-    const simurgh_X = useTransform(scrollY, [500,1000],[200,0]);
+    const simurgh_Y = useTransform(scrollY, [400,800],[120,0]);
+    const simurgh_X = useTransform(scrollY, [400,800],[150,10]);
 
-    const beast_Y = useTransform(scrollY, [450,1000],[70,0]);
-    const beast_X = useTransform(scrollY, [450,1000],[-70,0]);
+    const beast_Y = useTransform(scrollY, [450,800],[70,0]);
+    const beast_X = useTransform(scrollY, [450,800],[-70,0]);
 
-    const hill_Y = useTransform(scrollY, [450,1000],[70,0]);
-    const hill_X = useTransform(scrollY, [450,1000],[70,0]);
+    const hill_Y = useTransform(scrollY, [450,800],[70,0]);
+    const hill_X = useTransform(scrollY, [450,800],[70,0]);
 
     return (
         <div>
@@ -114,12 +114,13 @@ export default function DynamicElements(){
                     
                 </motion.div>
             </div>
-            <div className='absolute right-0' style={{top:'30%',right:'10%'}}>
+            <div className='absolute right-0 overflow-hidden' style={{top:'33%',width:'40vw',height:'60vw'}}>
                 <motion.div
                     style={{
                         y:simurgh_Y,
                         x:simurgh_X,
                     }}
+                
                 >
                     <Image 
                     src={Simurgh}
