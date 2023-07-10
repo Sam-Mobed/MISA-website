@@ -20,18 +20,6 @@ const cornerStyle = {
     height: 'auto',
 }
 
-const sunStyle = {
-    width: 'auto',
-    height: 'calc(40%)',
-}
-
-/*
-const sunStyle = {
-    width: 'calc(20%)',
-    height: 'calc(20%)',
-}
-*/
-
 const simurghStyle = {
     width: '40vw',
     height: 'auto',
@@ -49,6 +37,7 @@ export default function DynamicElements(){
     const {scrollY} = useScroll();
 
     const sun_Y = useTransform(scrollY, [400,900],[-100,20]);
+    const sun_rotate = useTransform(scrollY, [400,900],[-20,30]);
 
     //before, the input range was [0,1000]
     const left_plant_Y = useTransform(scrollY, [0,800],[-100,0]);
@@ -86,16 +75,16 @@ export default function DynamicElements(){
 
                 <motion.div
                 style={{
-                    x:70,
+                    
                     y:sun_Y,
-                    rotate:0
+                    rotate:sun_rotate,
+                    width: 'calc(20%)',
+                    height: 'calc(20%)',
                 }}
                 >   
                     <Image 
                     src={Sun}
-                    style={sunStyle}
                     alt="sun"
-                    className='inline-block'
                     />
                 </motion.div>
 
