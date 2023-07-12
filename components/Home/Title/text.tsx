@@ -10,17 +10,14 @@ type Props = {
 export default function TitleText({title}: Props){
     
     return (
-    <motion.div
-        initial= {{ opacity: 0 }}
-        animate= {{ opacity: 1 }}
-    >
+    <motion.div>
         {title.split(' ').map((word, index) => (
             <motion.span
                 key={index}
-                initial = {{ opacity: 0 , translateX: -50}}
-                animate = {{ opacity: 1 , translateX: 0}}
-                transition = {{ duration: 0.7, delay: index * 0.2}}
-                style={{}}
+                initial = {{ opacity: 0}}
+                whileInView = {{ opacity: 1}}
+                transition = {{ duration: 1, delay: index * 0.4}}
+                viewport={{ once: true }}
                 className="title"
             >
                 <h1 className='word'>

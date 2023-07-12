@@ -34,3 +34,14 @@
     }
 }
 */
+
+.test-div{
+    background-color: aqua;
+    border: solid;
+    padding: 5px;
+}
+
+.inner-block{
+    border: solid;
+    margin: 5px;
+}

@@ -25,13 +25,9 @@ type Props = {
     title: string;
 };
 
-/*this border is cool, we could replicate it if time allows
-https://codepen.io/MyXoToD/pen/VaazQq
-*/
-
 export default function Title({title}: Props){
     return (
-        <div>
+        <div style={{backgroundColor:'bisque'}}>
             
 
             <div className='bg-black flex items-center justify-center' style={wavesContainer}>

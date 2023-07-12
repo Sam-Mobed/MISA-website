@@ -1,5 +1,6 @@
 import Hero from '../../components/Home/Hero';
 import Title from '../../components/Home/Title';
+import Purpose from '../../components/Home/Purpose';
 import { useTranslations } from 'next-intl';
 
 
@@ -25,7 +26,17 @@ export default function Home() {
       <Title 
         title={t('title')}
       />
+
+      <Purpose 
+        section_title='hi'
+        section_text='hi'
+      />
     
+      <div className='w-full h-screen test-div'>
+        <div className='inner-block w-full h-screen'>
+          
+        </div>
+      </div>
       
       <div className='w-full h-screen bg-red-500'>
       
