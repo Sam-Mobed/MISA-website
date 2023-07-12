@@ -29,7 +29,6 @@ export default function StaticElements(){
                     src={Left_corner_plants}
                     style={plantStyle}
                     alt="static_plants_left"
-                    className='justify-center items-center'
                     />
                 </div>
 
@@ -38,7 +37,6 @@ export default function StaticElements(){
                     src={Clouds}
                     style={cloudsStyle}
                     alt="clouds"
-                    className='justify-center items-center'
                     />
                 </div>
 
@@ -47,7 +45,6 @@ export default function StaticElements(){
                     src={Right_corner_plants}
                     style={plantStyle}
                     alt="static_plants_right"
-                    className='justify-center items-center'
                     />
                 </div>
             </div>

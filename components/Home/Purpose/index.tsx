@@ -9,7 +9,7 @@ type Props = {
 export default function Purpose({section_title,section_text}:Props){
     
     return (
-        <div>
+        <div className='w-screen' style={{height:'80vh', backgroundColor:'bisque'}}>
             <MovingElements />
 
         </div>

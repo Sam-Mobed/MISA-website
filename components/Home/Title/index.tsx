@@ -40,13 +40,13 @@ export default function Title({title}: Props){
                 </div>
             </div>
             
-            <div className='relative border-2 border-double border-black'>
+            <div className='relative overflow-hidden'>
                 <DynamicElements />
                 <StaticElements />
 
                 <div className='w-screen' style={{height:'22vw'}} />
 
-                <div className="m-5 p-3 border-4 border-double border-black">
+                <div className="m-5 p-3">
                     <TitleText
                         title={title}
                     />
