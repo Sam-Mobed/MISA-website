@@ -36,12 +36,52 @@
 */
 
 .test-div{
-    background-color: aqua;
+    background-image: linear-gradient(to bottom right, tan, bisque);
+    margin:5px;
     border: solid;
-    padding: 5px;
+    position: relative;
+}
+
+.test-div::before, .test-div::after{
+    height:5px;
+    width:5px;
+    background-color: black;
+    content: "";
+    border: solid;
+    position: absolute;
+}
+
+.test-div::before{
+    top: 0;
+    right: 0;
+}
+
+.test-div::after{
+    bottom: 0;
+    left: 0;
 }
 
 .inner-block{
     border: solid;
     margin: 5px;
+    position: relative;
+}
+
+.inner-block::before, .inner-block::after{
+    height:5px;
+    width:5px;
+    background-color: black;
+    content: "";
+    border: solid;
+    position: absolute;
+}
+
+.inner-block::before{
+    top: 0;
+    left: 0;
+}
+
+.inner-block::after{
+    bottom: 0;
+    right: 0;
 }

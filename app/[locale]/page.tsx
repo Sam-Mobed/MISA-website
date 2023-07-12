@@ -32,9 +32,16 @@ export default function Home() {
         section_text='hi'
       />
     
-      <div className='w-full h-screen test-div'>
-        <div className='inner-block w-full h-screen'>
-          
+      <div className='w-full h-screen'>
+        <div className='test-div'>
+          <div className='inner-block'>
+          <div>hi</div>
+          <div>hi</div>
+
+          <div>hi</div>
+          <div>hi</div>
+          <div>hi</div>
+          </div>
         </div>
       </div>
       
