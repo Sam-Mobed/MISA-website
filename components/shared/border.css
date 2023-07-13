@@ -1,0 +1,50 @@
+.outer-div{
+    background-color: sienna;
+    border: solid;
+    position: relative;
+}
+
+.outer-div::before, .outer-div::after{
+    height:5px;
+    width:5px;
+    background-color: black;
+    content: "";
+    border: solid;
+    position: absolute;
+}
+
+.outer-div::before{
+    top: 0;
+    right: 0;
+}
+
+.outer-div::after{
+    bottom: 0;
+    left: 0;
+}
+
+.inner-div{
+    background-image: linear-gradient(to bottom right, tan, bisque);
+    border: solid;
+    height: 98.7%;
+    margin: 5px;
+}
+
+.inner-div::before, .inner-div::after{
+    height:5px;
+    width:5px;
+    background-color: black;
+    content: "";
+    border: solid;
+    position: absolute;
+}
+
+.inner-div::before{
+    top: 0;
+    left: 0;
+}
+
+.inner-div::after{
+    bottom: 0;
+    right: 0;
+}

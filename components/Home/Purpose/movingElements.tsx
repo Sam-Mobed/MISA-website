@@ -6,6 +6,7 @@ import { motion, useScroll,useTransform } from 'framer-motion';
 import MenOnDrums from '../../images/men-drums.png';
 import Riders from '../../images/riders.png';
 import Men from '../../images/StandingMen.png';
+import GiftBringers from '../../images/men-gifts.png';
 
 const imgStyle = {
     width:'18vh',
@@ -69,6 +70,13 @@ export default function MovingElements(){
             alt="men-playing-drums"
             />
             
+        </motion.div>
+        <motion.div>
+            <Image 
+            src={GiftBringers}
+            style={imgStyle}
+            alt="men-playing-drums"
+            />
         </motion.div>
     </div>);
 }

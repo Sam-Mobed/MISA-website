@@ -16,7 +16,7 @@ export default function TitleText({title}: Props){
                 key={index}
                 initial = {{ opacity: 0}}
                 whileInView = {{ opacity: 1}}
-                transition = {{ duration: 1, delay: index * 0.4}}
+                transition = {{ duration: 0.8, delay: index * 0.3}}
                 viewport={{ once: true }}
                 className="title"
             >

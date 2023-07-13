@@ -1,4 +1,4 @@
-
+import '../../shared/border.css';
 import MovingElements from './movingElements';
 
 type Props = {
@@ -9,9 +9,10 @@ type Props = {
 export default function Purpose({section_title,section_text}:Props){
     
     return (
-        <div className='w-screen' style={{height:'80vh', backgroundColor:'bisque'}}>
-            <MovingElements />
-
+        <div className='w-screen outer-div' style={{height:'80vh'}}>
+            <div className='inner-div'>
+                <MovingElements />
+            </div>
         </div>
     );
 }
