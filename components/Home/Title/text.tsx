@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion';
-import './style.css';
+import '../../shared/style.css';
 
 type Props = {
     title: string;

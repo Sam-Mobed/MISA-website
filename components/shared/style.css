@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Gulzar&display=swap');
 
-.title{
-    font-weight: bold;
-    font-size: 8vw;
+.title, .section-title{
     font-family: Amiri, Courier, monospace;
+    font-weight: bold;
+}
+
+.title{
+    font-size: 8vw;
+}
+
+.section-title{
+    /*font-size: 4vw;*/
 }
 
 .word{

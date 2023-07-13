@@ -28,8 +28,10 @@ export default function Home() {
       />
 
       <Purpose 
-        section_title='hi'
-        section_text='hi'
+        section_title={t('purpose-title')}
+        section_text1={t('purpose1')}
+        section_text2={t('purpose1')}
+        section_text3={t('purpose1')}
       />
 
       

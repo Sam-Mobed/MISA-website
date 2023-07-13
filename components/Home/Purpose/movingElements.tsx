@@ -7,9 +7,15 @@ import MenOnDrums from '../../images/men-drums.png';
 import Riders from '../../images/riders.png';
 import Men from '../../images/StandingMen.png';
 import GiftBringers from '../../images/men-gifts.png';
+import Family from '../../images/lookup.png';
 
 const imgStyle = {
     width:'18vh',
+    height:'auto'
+}
+
+const famStyle = {
+    width:'30vh',
     height:'auto'
 }
 
@@ -26,6 +32,12 @@ export default function MovingElements(){
     const men_Y = useTransform(scrollY, [750,1050],[100,0]);
     const men_X = useTransform(scrollY, [750,1050],[100,0]);
 
+    const family_Y = useTransform(scrollY, [800,1100],[200,150]);
+    const family_X = useTransform(scrollY, [800,1100],[-100,-25]);
+
+    const gifts_Y = useTransform(scrollY, [800,1100],[100,0]);
+    const gifts_X = useTransform(scrollY, [800,1100],[-100,-50]);
+
     return (
     <div className='flex flex-row relative overflow-hidden' style={{height:'100%'}}>
         
@@ -39,7 +51,7 @@ export default function MovingElements(){
             <Image 
             src={Riders}
             style={imgStyle}
-            alt="men-playing-drums"
+            alt="men-on-horses"
             />
             
         </motion.div>
@@ -67,15 +79,32 @@ export default function MovingElements(){
             <Image 
             src={Men}
             style={imgStyle}
-            alt="men-playing-drums"
+            alt="men"
             />
             
         </motion.div>
-        <motion.div>
+        <motion.div
+        className='absolute bottom-0'
+        style={{
+            y:gifts_Y,
+            x:gifts_X,
+        }}>
             <Image 
             src={GiftBringers}
             style={imgStyle}
-            alt="men-playing-drums"
+            alt="men-bringing gifts"
+            />
+        </motion.div>
+        <motion.div
+        style={{
+            y:family_Y,
+            x:family_X,
+        }}
+        className='absolute bottom-0'>
+            <Image 
+            src={Family}
+            style={famStyle}
+            alt="Family"
             />
         </motion.div>
     </div>);
