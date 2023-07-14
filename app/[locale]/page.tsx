@@ -9,7 +9,6 @@ import { useTranslations } from 'next-intl';
 
 import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
 //this link component wraps the original link component, but it also has the locale perp
-import Card from '../../components/Home/ValueCard';
 import MemberCard from '../../components/About/MemCard';
 import './index.css';
 

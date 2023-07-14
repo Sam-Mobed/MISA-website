@@ -10,13 +10,9 @@ type Props = {
     paragraph3: string;
 }
 
-const firstStyle = {
-    
-}
-
 export default function AnimatedText({paragraph1, paragraph2, paragraph3}: Props){
     return (
-        <div className='inline-flex flex-col blur-bg' style={firstStyle}>
+        <div className='inline-flex flex-col blur-bg rounded'>
             <div>
                 <div className='box1 text-center text-paragraph'>
                     {paragraph1.split(' ').map((word, index)=>
