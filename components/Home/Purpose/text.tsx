@@ -2,6 +2,7 @@
 
 import {motion} from 'framer-motion';
 import '../../shared/style.css';
+import './boxes.css';
 
 type Props = {
     paragraph1: string;
@@ -10,23 +11,69 @@ type Props = {
 }
 
 const firstStyle = {
-    width:'30vw',
-    height:'auto',
-}
-
-const secondStyle = {
-    width:'30vw',
-    height:'auto'
-}
-
-const thirdStyle = {
-    width:'30vw',
-    height:'auto'
+    
 }
 
 export default function AnimatedText({paragraph1, paragraph2, paragraph3}: Props){
     return (
-        <div className="flex flex flex-row" style={{height:'100vw',width:'100vh'}}>
+        <div className='inline-flex flex-col blur-bg' style={firstStyle}>
+            <div>
+                <div className='box1 text-center text-paragraph'>
+                    {paragraph1.split(' ').map((word, index)=>
+                    <motion.span
+                    key={index}
+                    initial = {{ opacity: 0}}
+                    whileInView = {{ opacity: 1}}
+                    transition = {{ duration: 0.8, delay: index * 0.17}}
+                    viewport={{ once: true }}
+                    >
+                        <span>
+                            {word}{' '}
+                        </span>
+                    </motion.span>
+                    )}
+                </div>
+            </div>
+            <div>
+                <div className='box2 text-center text-paragraph'>
+                    {paragraph2.split(' ').map((word, index)=>
+                    <motion.span
+                    key={index}
+                    initial = {{ opacity: 0}}
+                    whileInView = {{ opacity: 1}}
+                    transition = {{ duration: 0.8, delay: index * 0.17}}
+                    viewport={{ once: true }}
+                    >
+                        <span>
+                            {word}{' '}
+                        </span>
+                    </motion.span>
+                    )}
+                </div>
+            </div>
+            <div>
+                <div className='box3 text-center text-paragraph'>
+                    {paragraph3.split(' ').map((word, index)=>
+                    <motion.span
+                    key={index}
+                    initial = {{ opacity: 0}}
+                    whileInView = {{ opacity: 1}}
+                    transition = {{ duration: 0.8, delay: index * 0.17}}
+                    viewport={{ once: true }}
+                    >
+                        <span>
+                            {word}{' '}
+                        </span>
+                    </motion.span>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/*
+<div className="flex flex flex-row" style={{height:'100vw',width:'100vh'}}>
             <div style={firstStyle}>
                 <div>
                     {paragraph1.split(' ').map((word, index)=>
@@ -78,5 +125,4 @@ export default function AnimatedText({paragraph1, paragraph2, paragraph3}: Props
                 )}
             </div>
         </div>
-    );
-}
+*/

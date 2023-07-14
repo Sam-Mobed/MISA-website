@@ -1,0 +1,16 @@
+.box1, .box2, .box3{
+    width: 60vw;
+    height: auto;
+}
+
+.box1{
+    transform: translateY(2vw);
+}
+
+.box2{
+    transform: translateY(6vw);
+}
+
+.box3{
+    transform: translateY(10vw);
+}

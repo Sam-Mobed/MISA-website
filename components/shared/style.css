@@ -12,14 +12,18 @@
     font-size: 8vw;
 }
 
-.section-title{
-    /*font-size: 4vw;*/
-}
-
 .word{
     padding-left: 25vw;
 }
 
+.section-title{
+    backdrop-filter: blur(1px);
+}
+
 .text-paragraph{
-    font-size: 2.5vw;
+    font-size: 2vh;
+}
+
+.blur-bg{
+    backdrop-filter: blur(2px);
 }
