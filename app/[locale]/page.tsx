@@ -1,6 +1,7 @@
 import Hero from '../../components/Home/Hero';
 import Title from '../../components/Home/Title';
 import Purpose from '../../components/Home/Purpose';
+import Values from '../../components/Home/Values';
 import { useTranslations } from 'next-intl';
 
 
@@ -33,16 +34,22 @@ export default function Home() {
         section_text3={t('purpose3')}
       />
 
+      <Values 
+        section_title={t('our-values')}
+        explanation={t('why-values')}
+        val1={t('value1')}
+        val2={t('value2')}
+        val3={t('value3')}
+        val1_description={t('value1-text')}
+        val2_description={t('value2-text')}
+        val3_description={t('value3-text')}
+      />
       
       <div className='w-full h-screen bg-red-500'>
       
 
       </div>
-      {/*
       
-      
-      
-      */}
       <div className='w-full h-screen bg-blue-500'>
 
       </div>
