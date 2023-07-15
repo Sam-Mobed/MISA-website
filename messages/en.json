@@ -13,5 +13,15 @@
         "value1-text": "Integrity is of paramount importance because it establishes trust and credibility in both personal and professional relationships. It involves adhering to a strong moral and ethical code, consistently demonstrating honesty, and maintaining consistency between one's words and actions. Integrity builds a solid foundation for relationships, teamwork, and collaboration, as it ensures reliability, transparency, and accountability.",
         "value2-text": "Empathy is vital because it allows us to understand and connect with others on a deeper level. It involves recognizing and sharing the emotions, perspectives, and experiences of others, fostering compassion and support. By practicing empathy, we cultivate stronger relationships, build trust, and promote a sense of unity. It enables us to respond sensitively to the needs of others, leading to more effective communication, problem-solving, and conflict resolution.",
         "value3-text": "Inclusivity is important because it recognizes and values the diverse experiences, perspectives, and identities of individuals. When a society or community fosters inclusivity, it creates a sense of belonging and respect for all its members, regardless of their background or characteristics. Inclusive environments promote equality, fairness, and equal opportunities, enabling everyone to participate, contribute, and thrive."
+    },
+    "Navbar":{
+        "MISA": "MISA",
+        "Home": "Home",
+        "About": "About Us",
+        "Events": "Events",
+        "Apply": "Apply",
+        "Contact": "Contact Us",
+        "switchLocale": "فارسی",
+        "Newsletter": "Our Newsletter"
     }
 }
