@@ -1,6 +1,7 @@
 import '../../shared/border.css';
 import Text from './text';
 import Accordion from './accordion';
+import MovingElements from './movingElements';
 
 type Props = {
     section_title: string;
@@ -11,6 +12,15 @@ type Props = {
     val1_description: string;
     val2_description: string;
     val3_description: string;
+}
+
+const titleStyle = {
+    top: '5vw',
+    left: '4%',
+}
+
+const textStyle = {
+    top: '20vw',
 }
 
 export default function Values({
@@ -25,15 +35,16 @@ val3_description}:Props){
     return(
         <div className='w-screen outer-div' style={{height:'80vh'}}>
             <div className='inner-div'>
-                <div className='flex flex-col'>
-                    <div>
+                <MovingElements />
+                <div className='flex flex-col items-center'>
+                    <div className='absolute' style={titleStyle}>
                         <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
                             {section_title.split(' ').map((word)=>
                                 <div>{word}</div>
                             )}
                         </h2>
                     </div>
-                    <div>
+                    <div className='absolute' style={textStyle}>
                         <Text 
                             paragraph={explanation}
                         />
