@@ -17,10 +17,11 @@ type Props = {
 const titleStyle = {
     top: '5vw',
     left: '4%',
+    height: '10vw'
 }
 
 const textStyle = {
-    top: '20vw',
+    top: '20%',
 }
 
 export default function Values({
@@ -48,12 +49,47 @@ val3_description}:Props){
                         <Text 
                             paragraph={explanation}
                         />
-                    </div>
-                    <div>
-
+                        <Accordion 
+                            value1={val1}
+                            value2={val2}
+                            value3={val3}
+                            val1_text={val1_description}
+                            val2_text={val2_description}
+                            val3_text={val3_description}
+                        />
                     </div>
                 </div>
             </div>
         </div>
     );
 }
+
+/*
+
+<div className='inner-div'>
+                <MovingElements />
+                <div className='flex flex-col items-center'>
+                    <div className='absolute' style={titleStyle}>
+                        <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
+                            {section_title.split(' ').map((word)=>
+                                <div>{word}</div>
+                            )}
+                        </h2>
+                    </div>
+                    <div className='absolute' style={textStyle}>
+                        <Text 
+                            paragraph={explanation}
+                        />
+                        <Accordion 
+                            value1={val1}
+                            value2={val2}
+                            value3={val3}
+                            val1_text={val1_description}
+                            val2_text={val2_description}
+                            val3_text={val3_description}
+                        />
+                    </div>
+                </div>
+            </div>
+
+*/

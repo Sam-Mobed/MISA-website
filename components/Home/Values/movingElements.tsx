@@ -20,14 +20,14 @@ const dragonStyle = {
 export default function MovingElements(){
     const {scrollY} = useScroll();
 
-    const cloud_Y = useTransform(scrollY, [1050,1300],[-100,0]);
-    const cloud_X = useTransform(scrollY, [1050,1300],[100,0]);
+    const cloud_Y = useTransform(scrollY, [1400,1600],[-100,0]);
+    const cloud_X = useTransform(scrollY, [1400,1600],[100,0]);
 
-    const cherub_Y = useTransform(scrollY, [1050,1300],[-100,20]);
-    const cherub_X = useTransform(scrollY, [1050,1300],[100,20]);
+    const cherub_Y = useTransform(scrollY, [1400,1600],[-100,20]);
+    const cherub_X = useTransform(scrollY, [1400,1600],[100,-10]);
 
-    const dragon_Y = useTransform(scrollY, [1050,1300],[100,0]);
-    const dragon_X = useTransform(scrollY, [1050,1300],[-100,0]);
+    const dragon_Y = useTransform(scrollY, [1500,1700],[100,0]);
+    const dragon_X = useTransform(scrollY, [1500,1700],[-100,0]);
 
     return (
         <div className='flex flex-row relative overflow-hidden' style={{height:'100%'}}>

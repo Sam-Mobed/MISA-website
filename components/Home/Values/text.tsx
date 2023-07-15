@@ -8,7 +8,7 @@ type Props = {
 
 export default function Text({paragraph}:Props){
     return (
-        <div className='box1 text-center text-paragraph'>
+        <div className='box1 text-center text-paragraph mb-20'>
             {paragraph.split(' ').map((word, index)=>
                 <motion.span
                 key={index}
