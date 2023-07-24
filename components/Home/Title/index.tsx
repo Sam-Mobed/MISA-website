@@ -3,15 +3,16 @@ import Waves from '../../images/waves.png';
 import TitleText from './text';
 import DynamicElements from './movingElements';
 import StaticElements from './staticElements';
+import { transform } from 'typescript';
 
 const wavesContainer = {
     width: '100vw',
-    height: '10vh'
+    height: '8vh'
 }
 
 const wavesStyle = {
-    width: 'calc(98%)',
-    height: 'calc(75%)'
+    width: 'calc(96%)',
+    height: 'calc(70%)'
 }
 
 const waves = {
@@ -19,6 +20,11 @@ const waves = {
     height: 'auto'
 }
 
+const waves2 = {
+    width: 'calc(100%)',
+    height: 'auto',
+    transform: 'scaleY(-1)'
+}
 
 
 type Props = {
@@ -55,9 +61,16 @@ export default function Title({title}: Props){
                 
 
             </div>
-            {/*
-            <div className='w-screen' style={{height:'5vh'}} />
-            */}
+
+            <div className='bg-black flex items-center justify-center' style={wavesContainer}>
+                <div className='overflow-hidden' style={wavesStyle}>
+                    <Image 
+                    src={Waves}
+                    style={waves2}
+                    alt="waves"
+                    />
+                </div>
+            </div>
             
         </div>
     );

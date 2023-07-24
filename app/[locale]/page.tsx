@@ -20,7 +20,7 @@ export default function Home() {
   const t = useTranslations('Index');
 
   return (
-    <div className='main-container'>
+    <div className='main-container' style={{backgroundColor:'bisque'}}>
       <Hero />
          
       <Title 

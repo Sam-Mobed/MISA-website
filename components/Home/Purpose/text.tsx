@@ -2,7 +2,6 @@
 
 import {motion} from 'framer-motion';
 import '../../shared/style.css';
-import './boxes.css';
 
 type Props = {
     paragraph1: string;
@@ -10,11 +9,17 @@ type Props = {
     paragraph3: string;
 }
 
+const boxStyle = {
+    width: '80vw',
+    height: 'auto',
+    padding: '10px'
+}
+
 export default function AnimatedText({paragraph1, paragraph2, paragraph3}: Props){
     return (
-        <div className='inline-flex flex-col blur-bg rounded'>
+        <div className='inline-flex flex-col items-center' style={{top:'20vw'}}>
             <div>
-                <div className='box1 text-center text-paragraph'>
+                <div className='text-center text-paragraph' style={boxStyle}>
                     {paragraph1.split(' ').map((word, index)=>
                     <motion.span
                     key={index}
@@ -31,7 +36,7 @@ export default function AnimatedText({paragraph1, paragraph2, paragraph3}: Props
                 </div>
             </div>
             <div>
-                <div className='box2 text-center text-paragraph'>
+                <div className='text-center text-paragraph' style={boxStyle}>
                     {paragraph2.split(' ').map((word, index)=>
                     <motion.span
                     key={index}
@@ -48,7 +53,7 @@ export default function AnimatedText({paragraph1, paragraph2, paragraph3}: Props
                 </div>
             </div>
             <div>
-                <div className='box3 text-center text-paragraph'>
+                <div className='text-center text-paragraph' style={boxStyle}>
                     {paragraph3.split(' ').map((word, index)=>
                     <motion.span
                     key={index}

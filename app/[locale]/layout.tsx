@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body>
+        {/*
         <Navbar 
         misa={t_nav('MISA')}
         home={t_nav('Home')}
@@ -39,6 +40,7 @@ export default function RootLayout({
         switchLocale={t_nav('switchLocale')}
         newsLetter={t_nav('Newsletter')}
         />
+      */}
         {children}
       </body>
     </html>
