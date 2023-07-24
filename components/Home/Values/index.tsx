@@ -1,5 +1,8 @@
 import Text from './text';
 
+import Image from 'next/image';
+import cooperation from '../../images/cooperation.png';
+
 type Props = {
     section_title: string;
     explanation: string;
@@ -9,6 +12,11 @@ type Props = {
     val1_description: string;
     val2_description: string;
     val3_description: string;
+}
+
+const imgStyle = {
+    height: '15vh',
+    width: 'auto',
 }
 
 export default function Values({
@@ -21,16 +29,22 @@ val1_description,
 val2_description,
 val3_description}:Props){
     return(
-        <div className='w-screen inline'>
-            <div className='flex flex-col items-center'>
-                <div className='w-screen mt-5 ml-5'>
+        <div className='w-screen inline flex justify-center items-center'>
+            <div className='flex flex-col' style={{width:'80vw'}}>
+                <div className='flex flex-row ml-5 mt-5 justify-between'>
                     <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
                         {section_title.split(' ').map((word)=>
                             <div>{word}</div>
                         )}
                     </h2>
+                    <Image 
+                    src={cooperation}
+                    style={imgStyle}
+                    alt="cooperation"
+                    className='mr-8'
+                    />
                 </div>
-                <div>
+                <div className='flex justify-center items-center'>
                     <Text 
                         paragraph={explanation}
                     />
