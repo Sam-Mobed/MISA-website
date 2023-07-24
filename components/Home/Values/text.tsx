@@ -1,14 +1,22 @@
 "use client"
 
+import '../../shared/style.css';
+
 import {motion} from 'framer-motion';
 
 type Props = {
     paragraph: string;
 }
 
+const boxStyle = {
+    width: '80vw',
+    height: 'auto',
+    padding: '10px'
+}
+
 export default function Text({paragraph}:Props){
     return (
-        <div className='box1 text-center text-paragraph mb-20'>
+        <div className='text-center text-paragraph' style={boxStyle}>
             {paragraph.split(' ').map((word, index)=>
                 <motion.span
                 key={index}
