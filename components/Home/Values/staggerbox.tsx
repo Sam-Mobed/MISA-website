@@ -27,64 +27,85 @@ val3txt
     return (
         <div className="flex-container">
             <div className="flex-item">
-                <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
-                    {val1}
-                </h3>
-                <div className='text-center text-paragraph item1'>
-                    {val1txt.split(' ').map((word, index)=>
-                    <motion.span
-                    key={index}
-                    initial = {{ opacity: 0}}
-                    whileInView = {{ opacity: 1}}
-                    transition = {{ duration: 0.8, delay: index * 0.17}}
-                    viewport={{ once: true }}
-                    >
-                        <span>
-                            {word}{' '}
-                        </span>
-                    </motion.span>
-                    )}
-                </div>
+                <motion.div
+                initial={{opacity:0, translateX:-50}}
+                whileInView = {{ opacity: 1,translateX:0}}
+                transition={{duraction:1, delay:0.3}}
+                viewport={{ once: true }}
+                >
+                    <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
+                        {val1}
+                    </h3>
+                    <div className='text-center text-paragraph item1'>
+                        {val1txt.split(' ').map((word, index)=>
+                        <motion.span
+                        key={index}
+                        initial = {{ opacity: 0}}
+                        whileInView = {{ opacity: 1}}
+                        transition = {{ duration: 0.8, delay: index * 0.17}}
+                        viewport={{ once: true }}
+                        >
+                            <span>
+                                {word}{' '}
+                            </span>
+                        </motion.span>
+                        )}
+                    </div>
+                </motion.div>
             </div>
             <div className="flex-item">
-                <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
-                    {val2}
-                </h3>
-                <div className='text-center text-paragraph item2'>
-                    {val2txt.split(' ').map((word, index)=>
-                    <motion.span
-                    key={index}
-                    initial = {{ opacity: 0}}
-                    whileInView = {{ opacity: 1}}
-                    transition = {{ duration: 0.8, delay: index * 0.17}}
-                    viewport={{ once: true }}
-                    >
-                        <span>
-                            {word}{' '}
-                        </span>
-                    </motion.span>
-                    )}
-                </div>
+                <motion.div
+                initial={{opacity:0, translateX:-50}}
+                whileInView = {{ opacity: 1,translateX:0}}
+                transition={{duraction:1, delay:0.6}}
+                viewport={{ once: true }}
+                >
+                    <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
+                        {val2}
+                    </h3>
+                    <div className='text-center text-paragraph item2'>
+                        {val2txt.split(' ').map((word, index)=>
+                        <motion.span
+                        key={index}
+                        initial = {{ opacity: 0}}
+                        whileInView = {{ opacity: 1}}
+                        transition = {{ duration: 0.8, delay: index * 0.17}}
+                        viewport={{ once: true }}
+                        >
+                            <span>
+                                {word}{' '}
+                            </span>
+                        </motion.span>
+                        )}
+                    </div>
+                </motion.div>
             </div>
             <div className="flex-item">
-                <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
-                    {val3}
-                </h3>
-                <div className='text-center text-paragraph item3'>
-                    {val3txt.split(' ').map((word, index)=>
-                    <motion.span
-                    key={index}
-                    initial = {{ opacity: 0}}
-                    whileInView = {{ opacity: 1}}
-                    transition = {{ duration: 0.8, delay: index * 0.17}}
-                    viewport={{ once: true }}
-                    >
-                        <span>
-                            {word}{' '}
-                        </span>
-                    </motion.span>
-                    )}
-                </div>
+                <motion.div
+                initial={{opacity:0, translateX:-50}}
+                whileInView = {{ opacity: 1,translateX:0}}
+                transition={{duraction:1, delay:0.7}}
+                viewport={{ once: true }}
+                >
+                    <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
+                        {val3}
+                    </h3>
+                    <div className='text-center text-paragraph item3' >
+                        {val3txt.split(' ').map((word, index)=>
+                        <motion.span
+                        key={index}
+                        initial = {{ opacity: 0}}
+                        whileInView = {{ opacity: 1}}
+                        transition = {{ duration: 0.8, delay: index * 0.17}}
+                        viewport={{ once: true }}
+                        >
+                            <span>
+                                {word}{' '}
+                            </span>
+                        </motion.span>
+                        )}
+                    </div>
+                </motion.div>
             </div>
         </div>
     );
