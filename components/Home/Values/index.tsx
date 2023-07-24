@@ -2,6 +2,7 @@ import Text from './text';
 
 import Image from 'next/image';
 import cooperation from '../../images/cooperation.png';
+import StaggerBox from './staggerbox';
 
 type Props = {
     section_title: string;
@@ -49,6 +50,14 @@ val3_description}:Props){
                         paragraph={explanation}
                     />
                 </div>
+                <StaggerBox 
+                val1={val1}
+                val2={val2}
+                val3={val3}
+                val1txt={val1_description}
+                val2txt={val2_description}
+                val3txt={val3_description}
+                />
             </div>
         </div>
     );
