@@ -1,0 +1,35 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.flex-item {
+    flex: 1 0 calc(100% / 3); /* Change '3' to the number of items you want per row */
+    box-sizing: border-box;
+    text-align: center; /* Center the child content horizontally */
+    width: 100%; /* Ensure the item takes up the full width */
+    display: inline-block; /* Convert the item to inline-block to take up full width and wrap properly */
+    margin: 40px; /* Add some margin between the items */
+}
+
+.item1{
+    background-image: url("../../images/union.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item2{
+    background-image: url("../../images/discussing.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item3{
+    background-image: url("../../images/drinking.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
