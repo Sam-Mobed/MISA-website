@@ -2,6 +2,7 @@ import Hero from '../../components/Home/Hero';
 import Title from '../../components/Home/Title';
 import Purpose from '../../components/Home/Purpose';
 import Values from '../../components/Home/Values';
+import Discover from '@/components/Home/Discover';
 import { useTranslations } from 'next-intl';
 
 
@@ -43,6 +44,15 @@ export default function Home() {
         val1_description={t('value1-text')}
         val2_description={t('value2-text')}
         val3_description={t('value3-text')}
+      />
+
+      <Discover
+        title={t('discover')}
+        text={t('discover-text')}
+        about={t('abt-us')}
+        events={t('abt-events')}
+        involve={t('getting-involved')}
+        contact={t('getting-contact')}
       />
       
       <div className='w-full h-screen bg-red-500'>
