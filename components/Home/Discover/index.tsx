@@ -40,7 +40,7 @@ export default function Discover(
     }:Props
 ){
     return (
-        <div className='w-screen inline flex justify-center items-center'>
+        <div className='w-screen inline flex justify-center items-center mb-10'>
             <div className="flex flex-col" style={{width:'80vw'}}>
                 <div className='flex flex-row justify-between'>
                     <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
@@ -62,11 +62,15 @@ export default function Discover(
 
                 <div className='flex flex-row justify-between items-center'>
                     <div className='flex flex-col space-y-20 items-center'>
-                        <Link href="/about">
-                            {about}
+                        <Link href="/about" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-b-2 border-r-2 border-black transition-transform transform-gpu hover:scale-110'>
+                            <p className='m-3'>
+                                {about}
+                            </p>
                         </Link>
-                        <Link href="/about#contact" >
-                            {contact}
+                        <Link href="/about#contact" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-t-2 border-r-2 border-black transition-transform transform-gpu hover:scale-110'>
+                            <p className='m-3'>
+                                {contact}
+                            </p>
                         </Link>
                     </div>
 
@@ -84,11 +88,15 @@ export default function Discover(
                     </div>
                     
                     <div className='flex flex-col space-y-20 items-center'>
-                        <Link href="/events">
-                            {events}
+                        <Link href="/events" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-b-2 border-l-2 border-black transition-transform transform-gpu hover:scale-110'>
+                            <p className='m-3'>
+                                {events}
+                            </p>
                         </Link>
-                        <Link href="/about#apply">
-                            {involve}
+                        <Link href="/about#apply" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-t-2 border-l-2 border-black transition-transform transform-gpu hover:scale-110'>
+                            <p className='m-3'>
+                                {involve}
+                            </p>
                         </Link>
                     </div>
                 </div>
