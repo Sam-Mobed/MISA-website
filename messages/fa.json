@@ -20,6 +20,25 @@
         "getting-involved":"درگیر شدن",
         "getting-contact":"تماس گرفتن"
     },
+    "Footer":{
+        "MISA": "میسا",
+        "switchLocale": "English",
+        "Home": "صفحه اصلی",
+        "Goal": "هدف ما",
+        "values": "اصول ما",
+        "About": "درباره ما",
+        "Story": "داستان ما",
+        "Members": "اعضا",
+        "Events": "مناسبت ها",
+        "Upcoming": "مناسبت های آینده",
+        "suggest": "یک مناسبت را پیشنهاد بدین",
+        "Involve": "می خواهید عضو شوید؟",
+        "signUp": "ثبت نام کنید",
+        "Social-Media": "رسانه های اجتماعی",
+        "Newsletter": "خبرنامه ما",
+        "Vercel": "میزبانی  توسط ورسل",
+        "Made": "ساخته شده با عشق، توسط سام"
+    },
     "Navbar":{
         "MISA": "میسا",
         "Home": "صفحه اصلی",
