@@ -9,6 +9,11 @@ import Text from './animated';
 
 import Astrolab from '../../images/astrolab.png';
 import Woman from '../../images/Woman.png';
+import LeftSoldiers from '../../images/LeftSoldiers.png';
+import GoldenSoldiers from '../../images/GoldenSoldiers.png';
+import King from '../../images/king.png';
+import FlagBearer from '../../images/FlagBearer.png';
+import RightSoldiers from '../../images/RightSoldiers.png';
 
 type Props = {
     title:string;
@@ -40,7 +45,7 @@ export default function Discover(
     }:Props
 ){
     return (
-        <div className='w-screen inline flex justify-center items-center mb-10'>
+        <div className='w-screen inline flex justify-center items-center'>
             <div className="flex flex-col" style={{width:'80vw'}}>
                 <div className='flex flex-row justify-between'>
                     <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
@@ -99,6 +104,59 @@ export default function Discover(
                             </p>
                         </Link>
                     </div>
+                </div>
+
+                <div className='flex flex-row overflow-hidden'>
+                    <motion.div
+                    animate={{ y:['275%','10%','235%'] }}
+                    transition={{ duration:22, repeat: Infinity }}
+                    >
+                        <Image
+                        src={LeftSoldiers}
+                        style={{width:'20vw',height:'auto'}}
+                        alt="Goat"
+                        />
+                    </motion.div>
+                    <motion.div
+                    animate={{ y:['255%','10%','225%'] }}
+                    transition={{ duration:21.5, repeat: Infinity }}
+                    >
+                        <Image
+                        src={GoldenSoldiers}
+                        style={astroStyle}
+                        alt="Goat"
+                        />
+                    </motion.div>
+                    <motion.div
+                    animate={{ y:['235%','10%','215%'] }}
+                    transition={{ duration:21, repeat: Infinity }}
+                    >
+                        <Image
+                        src={King}
+                        style={astroStyle}
+                        alt="Goat"
+                        />
+                    </motion.div>
+                    <motion.div
+                    animate={{ y:['215%','10%','205%'] }}
+                    transition={{ duration:20.5, repeat: Infinity }}
+                    >
+                        <Image
+                        src={FlagBearer}
+                        style={astroStyle}
+                        alt="Goat"
+                        />
+                    </motion.div>
+                    <motion.div
+                    animate={{ y:['195%','10%','195%'] }}
+                    transition={{ duration:20, repeat: Infinity }}
+                    >
+                        <Image
+                        src={RightSoldiers}
+                        style={{width:'20vw',height:'auto'}}
+                        alt="Goat"
+                        />
+                    </motion.div>
                 </div>
             </div>
         </div>
