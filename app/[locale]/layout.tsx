@@ -46,7 +46,6 @@ export default function RootLayout({
         {children}
         <Footer
         misa={t_footer("MISA")}
-        locale={t_footer("switchLocale")}
         home={t_footer("Home")}
         goal={t_footer("Goal")}
         values={t_footer("values")}
