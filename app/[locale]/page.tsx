@@ -54,8 +54,12 @@ export default function Home() {
         involve={t('getting-involved')}
         contact={t('getting-contact')}
       />
-      
-      <div className='w-full h-screen bg-red-500'>
+    </div>
+    );
+}
+
+/*
+<div className='w-full h-screen bg-red-500'>
       
 
       </div>
@@ -67,13 +71,8 @@ export default function Home() {
       <div className='w-full h-screen bg-green-500'>
 
       </div>
-      
-      
-    </div>
-    );
-}
 
-/*
+
 <Head>
         <title>MISA</title>
       </Head>

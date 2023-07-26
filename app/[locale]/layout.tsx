@@ -3,6 +3,7 @@ import {useLocale, useTranslations} from 'next-intl';
 import {notFound} from 'next/navigation';
 
 import Navbar from '../../components/NavBar/';
+import Footer from '@/components/shared/Footer';
 
 export const metadata = {
   title: 'Create Next App',
@@ -40,8 +41,28 @@ export default function RootLayout({
         switchLocale={t_nav('switchLocale')}
         newsLetter={t_nav('Newsletter')}
         />
+        
       */}
         {children}
+        <Footer
+        misa={t_footer("MISA")}
+        locale={t_footer("switchLocale")}
+        home={t_footer("Home")}
+        goal={t_footer("Goal")}
+        values={t_footer("values")}
+        about={t_footer("About")}
+        story={t_footer("Story")}
+        members={t_footer("Members")}
+        events={t_footer("Events")}
+        upcoming={t_footer("Upcoming")} 
+        suggest={t_footer("suggest")}
+        involve={t_footer("Involve")}
+        signup={t_footer("signUp")}
+        socialmedia={t_footer("Social-Media")}
+        newsletter={t_footer("Newsletter")}
+        vercel={t_footer("Vercel")}
+        made={t_footer("Made")}
+        />
       </body>
     </html>
   )
