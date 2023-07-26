@@ -17,8 +17,7 @@ type Props = {
     events: string;
     upcoming: string;
     suggest:string;
-    involve:string;
-    signup:string;
+    join:string;
     socialmedia:string;
     newsletter:string;
     vercel:string;
@@ -37,8 +36,7 @@ export default function Footer(
         events,
         upcoming, 
         suggest,
-        involve,
-        signup,
+        join,
         socialmedia,
         newsletter,
         vercel,
@@ -47,106 +45,102 @@ export default function Footer(
 ){
     
     return(
-        <div className="w-screen flex flex-col">
-            <div className="mainFooter flex flex-row">
-                <div className="flex-2 flex flex-col">
-                    <div>
+        <div className="w-screen flex flex-col footer items-center">
+            <div className="mainFooter flex lg:flex-row md:flex-row flex-col p-5 mb-20">
+                <div className="flex-2 flex flex-col space-y-[0.5vw] lg:justify-start md:justify-start justify-center items-center">
+                    <div className="gradient-text">
                         {misa}
                     </div>
                     <div>
                         514 000-0000
                     </div>
                     <div>
-                        misa@ssmu.ca
+                        <a className='underline' href="mailto:misa@ssmu.ca">misa@ssmu.ca</a>
                     </div>
                     <div>
-                        <IntlLink href='/' locale='fa'>
+                        <IntlLink href='/' locale='fa' className="mr-2">
                             فارسی
                         </IntlLink>
                         |
-                        <IntlLink href='/' locale='en'>
+                        <IntlLink href='/' locale='en' className="ml-2">
                             English
                         </IntlLink>
                     </div>
                 </div>
                 <div className="flex-1 flex flex-col">
-                    <div className="flex flex-row justify-end">
-                        <div className="flex flex-col">
-                            <Link href='/'>
-                                {home}
-                            </Link>
+                    <div className="flex flex-row lg:justify-end md:justify-end justify-center">
+                        <div>
+                            <div className="flex flex-col m-5">
+                                <Link href='/' className="mb-5 subtitle">
+                                    {home}
+                                </Link>
 
-                            <Link href='/#goal'>
-                                {goal}
-                            </Link>
+                                <Link href='/#goal' className="mb-1">
+                                    {goal}
+                                </Link>
 
-                            <Link href='/#values'>
-                                {values}
-                            </Link>
-                        </div>
-                        <div className="flex flex-col">
-                            <Link href='/about'>
-                                {about}
-                            </Link>
-
-                            <Link href='/about#story'>
-                                {story}
-                            </Link>
-
-                            <Link href='/about#members'>
-                                {members}
-                            </Link>
-                        </div>
-                        <div className="flex flex-col">
-                            <Link href='/events'>
-                                {events}
-                            </Link>
-
-                            <Link href='/events#upcoming'>
-                                {upcoming}
-                            </Link>
-
-                            <Link href='/about#suggest'>
-                                {suggest}
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="flex flex-row justify-end">
-                        <div className="flex flex-row">
-                            <div>
-                                {involve}
+                                <Link href='/#values'>
+                                    {values}
+                                </Link>
                             </div>
-                            <Link href='/'>
-                                {signup}
-                            </Link>
+                            <div className="flex flex-col m-5">
+                                <Link href='/about' className="mb-5 subtitle">
+                                    {about}
+                                </Link>
+
+                                <Link href='/about#story' className="mb-1">
+                                    {story}
+                                </Link>
+
+                                <Link href='/about#members' className="mb-1">
+                                    {members}
+                                </Link>
+                                <a href='/' className="underline">
+                                    {join}
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="flex flex-row justify-end">
-                        <div className="flex flex-col">
-                            <div>
-                                {socialmedia}
+
+                        <div>
+                            <div className="flex flex-col m-5">
+                                <Link href='/events' className="mb-5 subtitle">
+                                    {events}
+                                </Link>
+
+                                <Link href='/events#upcoming' className="mb-1">
+                                    {upcoming}
+                                </Link>
+
+                                <Link href='/about#suggest'>
+                                    {suggest}
+                                </Link>
                             </div>
-                            <div className="flex flex-row">
-                                <FaInstagram className="text-xl cursor-pointer hover:text-purple-600" />
-                                <FaFacebook className="text-xl cursor-pointer hover:text-blue-600" />
-                                <FaTelegram className="text-xl cursor-pointer hover:text-green-600" />
-                            </div>
-                            <div>
-                                {newsletter}
+                            <div className="flex flex-col m-5">
+                                <div className="mb-5 subtitle flex flex-col">
+                                    {socialmedia}
+                                </div>
+                                <div className="flex flex-row justify-between mb-2">
+                                    <FaInstagram className="text-3xl cursor-pointer hover:text-purple-600" />
+                                    <FaFacebook className="text-3xl cursor-pointer hover:text-blue-600" />
+                                    <FaTelegram className="text-3xl cursor-pointer hover:text-green-600" />
+                                </div>
+                                <Link href='/' className="underline flex justify-center">
+                                    {newsletter}
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="minFooter flex flex-row items-center justify-center">
-                <div className="m-3">
+            <div className="minFooter w-screen flex flex-row items-center justify-center">
+                <div className="m-3 items-center justify-center">
                     {vercel}
                 </div>
-                <BsTriangleFill className="text-xl m-3"/>
-                <div className="m-3">
+                <BsTriangleFill className="text-xl m-3 rtl-text"/>
+                <a href='/' className="m-3 items-center justify-center underline">
                     {made}
-                </div>
+                </a>
             </div>
         </div>
     );

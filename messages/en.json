@@ -31,12 +31,11 @@
         "Events": "Events",
         "Upcoming": "Upcoming Events",
         "suggest": "Suggest an event",
-        "Involve": "Want to get involved?",
-        "signUp": "Sign up Here",
+        "join": "Join Us",
         "Social-Media": "Social Media",
         "Newsletter": "Our Newsletter",
         "Vercel": "Hosted by Vercel",
-        "Made": "Made with love by Sam"
+        "Made": "Made by Sam"
     },
     "Navbar":{
         "MISA": "MISA",

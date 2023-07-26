@@ -1,10 +1,31 @@
-
-
+.footer{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    background-color: sandybrown;
+}
 
 .mainFooter{
-    background-color: sandybrown;
+    
+    width: 80%;
+    height: 100%;
 }
 
 .minFooter{
     background-color: chocolate;
+    color:aliceblue;
+}
+
+.subtitle{
+    font-size: calc(20px + 1vw);
+}
+
+.gradient-text{
+    font-size: calc(40px + 3vw); /* Set your desired font size */
+    
+    background-image: linear-gradient(90deg, green, red);
+    -webkit-background-clip: text; /* For Safari/WebKit browsers */
+    color: transparent; /* Hide the original text content */
+}
+
+a:hover{
+    text-shadow: 0 0 0.5px black;
 }

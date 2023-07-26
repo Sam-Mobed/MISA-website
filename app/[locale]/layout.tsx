@@ -55,8 +55,7 @@ export default function RootLayout({
         events={t_footer("Events")}
         upcoming={t_footer("Upcoming")} 
         suggest={t_footer("suggest")}
-        involve={t_footer("Involve")}
-        signup={t_footer("signUp")}
+        join={t_footer("join")}
         socialmedia={t_footer("Social-Media")}
         newsletter={t_footer("Newsletter")}
         vercel={t_footer("Vercel")}
