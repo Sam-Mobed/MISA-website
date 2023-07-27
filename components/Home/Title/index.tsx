@@ -3,7 +3,6 @@ import Waves from '../../images/waves.png';
 import TitleText from './text';
 import DynamicElements from './movingElements';
 import StaticElements from './staticElements';
-import { transform } from 'typescript';
 
 const wavesContainer = {
     width: '100vw',

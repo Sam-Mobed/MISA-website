@@ -47,7 +47,7 @@ export default function Footer(
     return(
         <div className="w-screen flex flex-col footer items-center">
             <div className="mainFooter flex lg:flex-row md:flex-row flex-col p-5 mb-20">
-                <div className="flex-2 flex flex-col space-y-[0.5vw] lg:justify-start md:justify-start justify-center items-center">
+                <div className="flex-2 flex flex-col space-y-[0.5vw] items-center">
                     <div className="gradient-text">
                         {misa}
                     </div>

@@ -19,7 +19,7 @@ const famStyle = {
     height:'auto'
 }
 
-export default function MovingElements(){
+export default function Herasasdo(){
 
     const {scrollY} = useScroll();
 
@@ -39,10 +39,12 @@ export default function MovingElements(){
     const gifts_X = useTransform(scrollY, [800,1100],[-100,-50]);
 
     return (
-    <div className='flex flex-row relative overflow-hidden' style={{height:'100%'}}>
+    <div className='flex flex-row overflow-hidden w-screen' style={{height:'100%'}}>
         
         <motion.div
         className='absolute right-0'
+        animate={{}}
+        transition={{ duration:21.5, repeat: Infinity }}
         style={{
             y:riders_Y,
             x:riders_X,
