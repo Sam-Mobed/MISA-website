@@ -4,15 +4,29 @@ const event = {
     type: 'document',
     fields: [
         {
-            name: 'name',
-            title: 'Name',
+            name: 'name_en',
+            title: 'Name (en)',
             type: 'string'
         },
         {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
-            options: { source: 'name'}
+            name: 'name-fa',
+            title: 'Name (fa)',
+            type: 'string'
+        },
+        {
+            name: 'datetime',
+            title: 'Date and Time',
+            type: 'string'
+        },
+        {
+            name: 'location',
+            title: 'Location',
+            type: 'string'
+        },
+        {
+            name: 'cost',
+            title: 'Cost',
+            type: 'string'
         },
         {
             name: 'image',
@@ -28,16 +42,23 @@ const event = {
             ]
         },
         {
-            name: 'url',
-            title: 'URL',
-            type: 'url'
-        },
-        {
-            name: 'content',
-            title: 'Content',
+            name: 'content_en',
+            title: 'Content (en)',
             type: 'array',
             of: [{ type: "block" }],
         },
+        {
+            name: 'content_fa',
+            title: 'Content (fa)',
+            type: 'array',
+            of: [{ type: "block" }],
+        },
+        {
+            name: 'links',
+            title: 'Links',
+            type: 'array',
+            of: [{type: 'string'}]
+        }
     ],
 };
 

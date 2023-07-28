@@ -1,5 +1,6 @@
 import { createClient, groq } from "next-sanity";
 import { Event } from "@/types/Event";
+import { Photo } from "@/types/Photo";
 
 export async function getEvents(): Promise<Event[]>{
     const client = createClient({
@@ -12,11 +13,15 @@ export async function getEvents(): Promise<Event[]>{
         groq`*[_type == "event"]{
             _id,
             _createdAt,
-            name,
-            "slug": slug.current,
-            "image": image.asset->url,
-            url,
-            content
+            name_en,
+            name_fa,
+            datetime,
+            location,
+            cost,
+            "image":image.asset->url,
+            content_en,
+            content_fa,
+            links,
         }`
     )
 }

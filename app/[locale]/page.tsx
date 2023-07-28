@@ -4,14 +4,6 @@ import Purpose from '../../components/Home/Purpose';
 import Values from '../../components/Home/Values';
 import Discover from '@/components/Home/Discover';
 import { useTranslations } from 'next-intl';
-
-
-//import { getEvents } from "@/sanity/sanity-utils"
-//import Head from 'next/head';
-
-import Link from 'next-intl/link'; //this is just to test if i18n works, to be removed
-//this link component wraps the original link component, but it also has the locale perp
-import MemberCard from '../../components/About/MemCard';
 import './index.css';
 
 export default function Home() {

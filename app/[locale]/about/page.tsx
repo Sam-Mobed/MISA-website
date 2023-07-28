@@ -1,4 +1,5 @@
 import Hero from '@/components/About/Hero';
+import Members from '@/components/About/Members';
 import { useTranslations } from 'next-intl';
 
 import './index.css';
@@ -8,7 +9,7 @@ export default function About(){
     return(
         <div>
             <Hero />
-
+            <Members />
         </div>
     );
 }

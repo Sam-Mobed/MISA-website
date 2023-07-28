@@ -3,12 +3,13 @@ import { PortableTextBlock } from "sanity";
 export type Event = {
     _id: string;
     _createdAt: Date;
-    name: string;
-    slug: string;
+    name_en: string;
+    name_fa: string;
+    datetime: string;
+    location:string;
+    cost:string;
     image: string;
-    url: string;
-    content: PortableTextBlock[];
+    content_en: PortableTextBlock[];
+    content_fa: PortableTextBlock[];
+    links: [string];
 };
-
-//need to add a field for when the event will happen
-//when: Date
