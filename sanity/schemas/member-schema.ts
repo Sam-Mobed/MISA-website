@@ -9,22 +9,22 @@ const member = {
             type: 'string'
         },
         {
-            name: 'name-fa',
+            name: 'name_fa',
             title: 'Name (fa)',
             type: 'string'
         },
         {
-            name: 'degree&major_en',
+            name: 'degree_major_en',
             title: 'Degree and Major (en)',
             type: 'string'
         },
         {
-            name: 'degree&major_fa',
+            name: 'degree_major_fa',
             title: 'Degree and Major (fa)',
             type: 'string'
         },
         {
-            name: 'start&finishDates',
+            name: 'start_finishDates',
             title: 'Start and Finish Dates',
             type: 'string'
         },

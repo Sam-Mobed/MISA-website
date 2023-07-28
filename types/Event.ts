@@ -11,5 +11,5 @@ export type Event = {
     image: string;
     content_en: PortableTextBlock[];
     content_fa: PortableTextBlock[];
-    links: [string];
+    links: string[];
 };

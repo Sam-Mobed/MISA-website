@@ -9,7 +9,7 @@ const photo = {
             type: 'string'
         },
         {
-            name: 'name-fa',
+            name: 'name_fa',
             title: 'Name (fa)',
             type: 'string'
         },
