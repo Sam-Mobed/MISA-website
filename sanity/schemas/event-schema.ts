@@ -44,21 +44,40 @@ const event = {
         {
             name: 'content_en',
             title: 'Content (en)',
-            type: 'array',
-            of: [{ type: "block" }],
+            type: 'string'
         },
         {
             name: 'content_fa',
             title: 'Content (fa)',
-            type: 'array',
-            of: [{ type: "block" }],
+            type: 'string',
         },
         {
             name: 'links',
             title: 'Links',
             type: 'array',
             of: [{type: 'string'}]
-        }
+        },
+        {
+            name: 'links_slug',
+            title: 'Links Slug',
+            type: 'array',
+            of: [{type: 'string'}]
+        },
+        {
+            name: 'is_there_space_left',
+            title: 'Is there space left for reservation?',
+            type: 'boolean',
+        },
+        {
+            name: 'is_there_waitlist',
+            title: 'Is there a waitlist?',
+            type: 'boolean',
+        },
+        {
+            name: 'waitlist_link',
+            title: 'Waitlist Link',
+            type: 'string',
+        },
     ],
 };
 
