@@ -8,5 +8,6 @@ export type Member = {
     startfinish: string;
     role_en: string;
     role_fa: string;
-    image: string;
+    card_image: string;
+    person_image: string;
 };

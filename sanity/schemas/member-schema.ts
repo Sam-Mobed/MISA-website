@@ -39,8 +39,20 @@ const member = {
             type: 'string'
         },
         {
-            name: 'image',
-            title: 'Image',
+            name: 'card_image',
+            title: 'Card Image',
+            type: 'image',
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string'
+                }
+            ]
+        },
+        {
+            name: 'person_image',
+            title: 'Person Image',
             type: 'image',
             fields: [
                 {
