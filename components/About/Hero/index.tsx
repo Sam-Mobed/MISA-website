@@ -11,10 +11,9 @@ import Musician from '@/components/images/musician.png';
 import palace from '@/components/images/palace.png';
 import tower from '@/components/images/tower.png';
 import whitebuilding from '@/components/images/whitebuilding.png';
-
 import Waves from '../../images/waves.png';
-import build from 'next/dist/build';
 
+import './index.css';
 
 const drumsStyle = {
     width:'20vmin',
@@ -91,28 +90,28 @@ export default function Hero({title}:Props){
             src={Riders}
             style={ridersStyle}
             alt="riders"
-            className='absolute right-[32vmin] top-[2vmin]'
+            className='absolute top-[2vmin] riders'
             />
 
             <Image 
             src={Women}
             style={WomenStyle}
             alt="woman"
-            className='absolute right-[10vmin] top-[5vmin]'
+            className='absolute top-[5vmin] woman'
             />
             
             <Image 
             src={MenOnDrums}
             style={drumsStyle}
             alt="men-playing-drums"
-            className='absolute right-[8vmin] top-[10vmin]'
+            className='absolute top-[10vmin] drums'
             />
     
             <Image 
             src={Men}
             style={menStyle}
             alt="men"
-            className='absolute right-0 bottom-0'
+            className='absolute bottom-0 men'
             />
 
             <Image 
@@ -140,21 +139,21 @@ export default function Hero({title}:Props){
             src={Musician}
             style={angelStyle}
             alt="musician"
-            className='absolute left-[-10px] bottom-[50vmin]'
+            className='absolute bottom-[40vmin] musician'
             />
 
             <Image 
             src={GiftBringers}
             style={giftsStyle}
             alt="men-bringing-gifts"
-            className='absolute left-0 bottom-[35vmin]'
+            className='absolute bottom-[25vmin] gift'
             />
 
             <Image 
             src={Family}
             style={famStyle}
             alt="Family"
-            className='absolute left-0 bottom-[8vmin]'
+            className='absolute bottom-[4vmin] family'
             />
                     
                 

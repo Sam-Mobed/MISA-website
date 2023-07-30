@@ -1,0 +1,90 @@
+.men{
+    animation: MenslideIn 0.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes MenslideIn {
+    0% {
+        right: -100px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        right: 0; /* Ending position: back to its original position */
+    }
+}
+
+.drums{
+    animation: drumsslideIn 1s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes drumsslideIn {
+    0% {
+        right: -150px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        right: 6vmin; /* Ending position: back to its original position */
+    }
+}
+
+.woman{
+    animation: WomanslideIn 1.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes WomanslideIn {
+    0% {
+        right: -200px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        right: 10vmin; /* Ending position: back to its original position */
+    }
+}
+
+.riders{
+    animation: ridersslideIn 2s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes ridersslideIn {
+    0% {
+        right: -250px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        right: 32vmin; /* Ending position: back to its original position */
+    }
+}
+
+.family{
+    animation: familyslideIn 0.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes familyslideIn {
+    0% {
+        left: -100px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        left: 0; /* Ending position: back to its original position */
+    }
+}
+
+.gift{
+    animation: giftslideIn 1s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes giftslideIn {
+    0% {
+        left: -150px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        left: 0; /* Ending position: back to its original position */
+    }
+}
+
+.musician{
+    animation: musicianslideIn 1.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes musicianslideIn {
+    0% {
+        left: -150px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        left: -10px; /* Ending position: back to its original position */
+    }
+}

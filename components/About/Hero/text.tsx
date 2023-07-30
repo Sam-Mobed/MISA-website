@@ -10,7 +10,7 @@ type Props = {
 export default function TitleText({title}: Props){
     
     return (
-    <motion.div className='pt-[27.5vmin] pl-[3vmax]'>
+    <motion.div className='pt-[26.5vmin] pl-[3vmax]'>
         {title.split(' ').map((word, index) => (
             <motion.span
                 key={index}
@@ -28,3 +28,5 @@ export default function TitleText({title}: Props){
     </motion.div>
     );
 }
+
+//pt-[27.5vmin] pl-[3vmax]
