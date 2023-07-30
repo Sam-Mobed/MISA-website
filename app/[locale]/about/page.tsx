@@ -11,7 +11,7 @@ export default function About(){
         <div>
             <Hero title={t('about')} />
             <Story title={t('story-title')} text={t('story')} />
-            <Members />
+            <Members  title={t('our-members')} text={t('click')} />
         </div>
     );
 }
