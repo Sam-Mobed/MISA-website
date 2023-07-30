@@ -21,7 +21,9 @@
         "getting-contact":"Getting in Touch"
     },
     "About":{
-        "about":"About Us"
+        "about":"About Us",
+        "story-title":"Our story",
+        "story": "The McGill Iranian Student Association (MISA) is a non-profit, non-partisan, and non-religious organization, established in 2007. MISA aims to represent the interests of Iranian students at McGill University and foster their active participation in the university's vibrant and diverse society. Through a wide range of engaging events, cultural celebrations, and community outreach initiatives, MISA provides a welcoming platform for students to connect, share their experiences, and celebrate their heritage. Committed to promoting inclusivity, and academic excellence, MISA strives to create a supportive environment that enriches the overall university experience for Iranian students and the wider McGill community."
     },
     "Footer":{
         "MISA": "MISA",
