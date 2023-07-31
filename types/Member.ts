@@ -3,9 +3,9 @@ export type Member = {
     _createdAt: Date;
     name_en: string;
     name_fa: string;
-    degreemajor_en: string;
-    degreemajor_fa: string;
-    startfinish: string;
+    degree_major_en: string;
+    degree_major_fa: string;
+    start_finishDates: string;
     role_en: string;
     role_fa: string;
     card_image: string;

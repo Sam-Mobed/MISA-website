@@ -2,13 +2,18 @@
 import { useState } from "react";
 import {motion} from 'framer-motion';
 import './card.css';
+import '../../../shared/style.css';
 
 import Image from "next/image";
-import members from '../../../images/members.png';
 
 const imgStyle = {
-    height: '15vh',
     width: 'auto',
+    height: '20vmax'
+}
+
+const personStyle = {
+    width: '100%',
+    height: 'auto'
 }
 
 type Props = {
@@ -33,26 +38,49 @@ export default function Card(
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <div className="flip-card">
+        <div className="flip-card flex center-items">
             <motion.div
-                className="flip-card-inner"
+                className="flip-card-inner flex center-items"
                 onClick={() => setIsActive(!isActive)}
                 animate={{
                 rotateY: isActive ? 180 : 0
                 }}
                 transition={{ duration: 0.6 }}
             >
-                <div className="front">
-                    <Image 
-                    src={card_image}
-                    width={100}
-                    height={100}
-                    
-                    alt="historians"
-                    className='mr-8'
-                    />
+                <Image 
+                src={card_image}
+                width='100'
+                height='100'
+                style={imgStyle}
+                alt="member-front"
+                className="rounded-lg3"
+                />
+                <div className="back rounded-lg3 flex flex-col overflow-hidden">
+                    <div className="flex-1" style={{width:'100%', height:'100%'}}>
+                        <Image 
+                        src={person_image}
+                        width='50'
+                        height='50'
+                        style={personStyle}
+                        alt="member-back"
+                        className="border-b-2 border-black"
+                        />
+                    </div>
+                    <div className="flex-1 flex flex-col text-paragraph justify-center items-center whitespace-normal break-words text-center">
+                        <div className="name leading-[1]">
+                            {name}
+                        </div>
+                        <div className="info">
+                            {degreemajor}
+                        </div>
+                        <div className="info">
+                            {startfinish}
+                        </div>
+                        <div className="info">
+                            {role}
+                        </div>
+                    </div>
                 </div>
-                <div className="back">B</div>
             </motion.div>
         </div>
     );

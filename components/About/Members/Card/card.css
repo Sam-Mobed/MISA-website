@@ -1,20 +1,7 @@
-.block {
-    background: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    height: 200px;
-    width: 200px;
-    color: #333;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
 .flip-card {
     background-color: transparent;
-    width: 200px;
-    height: 200px;
+    width: 13.83vmax;
+    height: 20vmax;
     perspective: 1000px;
 }
   
@@ -37,13 +24,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-.front {
-    background: lightgreen;
-}
 .back {
-    background: lightblue;
+    background: white;
+    width: 13.83vmax;
     transform: rotateY(180deg);
+}
+
+.rounded-lg3{
+    border-radius: 7%;
+}
+
+.name{
+    font-weight:800;
+    font-size: 1.9vmax;
+}
+
+.info{
+    font-size: 1.2vmax;
 }

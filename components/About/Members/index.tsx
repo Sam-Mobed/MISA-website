@@ -23,7 +23,7 @@ export default async function Members({title, text}:Props){
     const locale = useLocale();
 
     return (
-        <div className='w-screen inline flex justify-center items-center' style={{backgroundColor:'bisque'}}>
+        <div className='w-screen inline flex justify-center items-center overflow-hidden' style={{backgroundColor:'bisque'}}>
             <div className='flex flex-col' style={{width:'80vw'}}>
                 <div className='flex flex-row ml-5 mt-5 justify-between'>
                     <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
@@ -47,11 +47,11 @@ export default async function Members({title, text}:Props){
                     {MISA_members.reverse().map((member)=>(
                         <div className='flex-1 mb-5 mt-5 flex justify-center' style={{ flexBasis: '25%' }}>
                             {locale === 'en' ? 
-                            <Card name={member.name_en} degreemajor={member.degreemajor_en}  
-                            startfinish={member.startfinish} role={member.role_en}
+                            <Card name={member.name_en} degreemajor={member.degree_major_en}  
+                            startfinish={member.start_finishDates} role={member.role_en}
                             card_image={member.card_image} person_image={member.person_image} /> : 
-                            <Card name={member.name_fa} degreemajor={member.degreemajor_fa}  
-                            startfinish={member.startfinish} role={member.role_fa}
+                            <Card name={member.name_fa} degreemajor={member.degree_major_fa}  
+                            startfinish={member.start_finishDates} role={member.role_fa}
                             card_image={member.card_image} person_image={member.person_image} />}
                         </div>
                     ))}
