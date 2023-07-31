@@ -75,7 +75,7 @@ export default function Discover(
                         </Link>
                     </div>
 
-                    <div className='justify-center center-items flex items-center'>
+                    <div className='justify-center center-items flex items-center p-5'>
                         <Image
                         src={Astrolab}
                         style={astroStyle}
