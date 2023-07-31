@@ -51,9 +51,7 @@ export default function Footer(
                     <div className="gradient-text">
                         {misa}
                     </div>
-                    <div>
-                        514 000-0000
-                    </div>
+                    
                     <div>
                         <a className='underline' href="mailto:misa@ssmu.ca">misa@ssmu.ca</a>
                     </div>

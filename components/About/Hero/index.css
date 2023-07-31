@@ -88,3 +88,55 @@
         left: -10px; /* Ending position: back to its original position */
     }
 }
+
+.couple{
+    animation: coupleslideIn 1.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes coupleslideIn {
+    0% {
+        bottom: -50px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        bottom: 30px; /* Ending position: back to its original position */
+    }
+}
+
+.palace{
+    animation: palaceslideIn 1.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes palaceslideIn {
+    0% {
+        top: -150px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        top: 1vmin; /* Ending position: back to its original position */
+    }
+}
+
+.tower{
+    animation: towerslideIn 1.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes towerslideIn {
+    0% {
+        top: -150px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        top: 6vmin; /* Ending position: back to its original position */
+    }
+}
+
+.building{
+    animation: cityslideIn 1.5s forwards; /* Animation with a duration of 1 second */
+}
+
+@keyframes cityslideIn {
+    0% {
+        top: -150px; /* Starting position: off the screen to the left */
+    }
+    100% {
+        top: 9vmin; /* Ending position: back to its original position */
+    }
+}

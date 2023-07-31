@@ -11,6 +11,7 @@ import Musician from '@/components/images/musician.png';
 import palace from '@/components/images/palace.png';
 import tower from '@/components/images/tower.png';
 import whitebuilding from '@/components/images/whitebuilding.png';
+import couple from '@/components/images/couple.png';
 import Waves from '../../images/waves.png';
 
 import './index.css';
@@ -55,6 +56,11 @@ const buildingStyle = {
     height:'auto'
 }
 
+const coupleStyle = {
+    width:'25vw',
+    height:'auto'
+}
+
 const wavesContainer = {
     width: '100vw',
     height: '8vh'
@@ -82,7 +88,7 @@ type Props = {
 
 export default function Hero({title}:Props){
     return(
-        <div style={mainContainer} className='relative w-screen'>
+        <div style={mainContainer} className='relative w-screen overflow-hidden'>
 
             <TitleText title={title} />
             
@@ -118,21 +124,21 @@ export default function Hero({title}:Props){
             src={palace}
             style={buildingStyle}
             alt="palace"
-            className='absolute left-[18vmin] top-[1vmin]'
+            className='absolute left-[18vmin] top-[1vmin] palace'
             />
 
             <Image 
             src={tower}
             style={buildingStyle}
             alt="tower"
-            className='absolute left-[25vmin] top-[6vmin]'
+            className='absolute left-[25vmin] top-[6vmin] tower'
             />
 
             <Image 
             src={whitebuilding}
             style={buildingStyle}
             alt="building"
-            className='absolute left-[14vmin] top-[9vmin]'
+            className='absolute left-[14vmin] top-[9vmin] building'
             />
             
             <Image 
@@ -147,6 +153,13 @@ export default function Hero({title}:Props){
             style={giftsStyle}
             alt="men-bringing-gifts"
             className='absolute bottom-[25vmin] gift'
+            />
+
+            <Image 
+            src={couple}
+            style={coupleStyle}
+            alt="couple"
+            className='absolute bottom-10 right-[20vmax] couple'
             />
 
             <Image 
