@@ -55,8 +55,8 @@ export async function getMembers(): Promise<Member[]>{
             startfinish,
             role_en,
             role_fa,
-            "card_image":image.asset->url,
-            "person_image":image.asset->url,
+            "card_image": card_image.asset->url,
+            "person_image": person_image.asset->url,
         }`
     );
 }

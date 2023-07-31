@@ -11,7 +11,25 @@ const imgStyle = {
     width: 'auto',
 }
 
-export default function Card(){
+type Props = {
+    name: string;
+    degreemajor: string;
+    startfinish: string;
+    role: string;
+    card_image: string;
+    person_image: string;
+}
+
+export default function Card(
+    {
+        name,
+        degreemajor,
+        startfinish,
+        role,
+        card_image,
+        person_image,
+    }:Props
+){
     const [isActive, setIsActive] = useState(false);
 
     return (
@@ -26,12 +44,13 @@ export default function Card(){
             >
                 <div className="front">
                     <Image 
-                    src={members}
-                    style={imgStyle}
+                    src={card_image}
+                    width={100}
+                    height={100}
+                    
                     alt="historians"
                     className='mr-8'
                     />
-
                 </div>
                 <div className="back">B</div>
             </motion.div>

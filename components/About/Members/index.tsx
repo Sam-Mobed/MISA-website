@@ -4,6 +4,8 @@ import '../../shared/style.css';
 
 import Image from 'next/image';
 import members from '../../images/members.png';
+import {getMembers} from '@/sanity/sanity-utils';
+import { useLocale } from 'next-intl';
 
 type Props = {
     title:string;
@@ -15,7 +17,11 @@ const imgStyle = {
     width: 'auto',
 }
 
-export default function Members({title, text}:Props){
+export default async function Members({title, text}:Props){
+
+    const MISA_members = await getMembers();
+    const locale = useLocale();
+
     return (
         <div className='w-screen inline flex justify-center items-center' style={{backgroundColor:'bisque'}}>
             <div className='flex flex-col' style={{width:'80vw'}}>
@@ -33,11 +39,23 @@ export default function Members({title, text}:Props){
                     />
                 </div>
 
-                <div className='text-paragraph flex justify-center'>
+                <div className='text-paragraph flex justify-center mt-5'>
                     {text}
                 </div>
-
-                <Card />
+                
+                <div className='flex flex-row flex-wrap justify-between center-items'>
+                    {MISA_members.reverse().map((member)=>(
+                        <div className='flex-1 mb-5 mt-5 flex justify-center' style={{ flexBasis: '25%' }}>
+                            {locale === 'en' ? 
+                            <Card name={member.name_en} degreemajor={member.degreemajor_en}  
+                            startfinish={member.startfinish} role={member.role_en}
+                            card_image={member.card_image} person_image={member.person_image} /> : 
+                            <Card name={member.name_fa} degreemajor={member.degreemajor_fa}  
+                            startfinish={member.startfinish} role={member.role_fa}
+                            card_image={member.card_image} person_image={member.person_image} />}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
