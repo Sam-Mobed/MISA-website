@@ -1,5 +1,5 @@
 import {FaInstagram, FaFacebook, FaTelegram} from "react-icons/fa";
-import {BsShopWindow, BsTriangleFill} from 'react-icons/bs';
+import {BsTriangleFill} from 'react-icons/bs';
 import IntlLink from "next-intl/link";
 import Link from "next/link";
 
