@@ -1,9 +1,11 @@
 "use client"
+import '../../shared/style.css';
 
 import { Event } from "@/types/Event";
 import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
 import Image from "next/image";
 import { useState } from "react";
+
 
 /*
 type Props = {
@@ -34,8 +36,8 @@ const mainContainer = {
 }
 
 const imgStyle = {
-    width:'w-screen',
-    height:'w-screen'
+    height:'80%',
+    width:'auto'
 }
 
 export default function Carousel(
@@ -53,17 +55,67 @@ export default function Carousel(
     const next = () => 
         setSlide((currSlide) => (currSlide===events.length-1 ? 0 : currSlide+1));
 
+    const currentDate = new Date();
+    function checkDate(date:string){
+        const targetDate = new Date(date);
+        return targetDate < currentDate;
+    }
+
     return (
         <div className="overflow-hidden">
-            <div className="flex pb-5 transition-transform ease-out duration-500" style={{transform: `translateX(-${currSlide*100}%)`}}>
+            <div className="flex pb-5 transition-transform ease-out duration-1000" style={{transform: `translateX(-${currSlide*100}%)`}}>
                 {events.map((event)=>(
                     <div className="flex-shrink-0 w-[80vw] h-[40vmax]" style={{backgroundColor:'white'}}>
                         <div className="flex h-[100%] w-[100%] lg:flex-row md:flex-row flex-col">
-                            <div className="flex-1" style={{backgroundColor:'black'}}>
-                                hi
+                            <div className="flex-1 border-2 border-black flex justify-center items-center">
+                                <Image
+                                src={event.image}
+                                alt='img'
+                                height='100'
+                                width='100'
+                                style={imgStyle}
+                                />
                             </div>
-                            <div className="flex-2">
-                                byeasasfafas
+                            <div className="flex-2 border-r-2 border-t-2 border-b-2 border-black">
+                                <div className='flex lg:flex-col md:flex-col flex-row'>
+                                    <div>
+                                        <div>
+                                            {locale==='en'?
+                                            event.name_en
+                                            :event.name_fa}
+                                        </div>
+                                        <div>
+                                            {event.datetime}
+                                        </div>
+                                        <div>
+                                            {checkDate(event.datetime)?
+                                                <div>sorry event has past</div>
+                                            :
+                                                (!event.is_there_space_left?
+                                                    (!event.is_there_waitlist?
+                                                    <p>there is no place, and unfortunately we cannot offer waitlise</p>
+                                                    :
+                                                    <p>there is no place, but please sign up to the waitlist</p>
+                                                    )
+                                                :
+                                                    <p>{event.cost} | {event.location} </p>
+                                                )
+                                            }
+                                        </div>
+                                    </div>
+                                    <div>
+                                        {locale==='en'?
+                                        event.content_en
+                                        :event.content_fa}
+                                    </div>
+                                    <div>
+                                        {event.links.length!==0?
+                                            <p>links</p>
+                                        :
+                                        <></>
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
