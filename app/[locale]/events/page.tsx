@@ -7,6 +7,9 @@ export default function Events(){
     return (
         <div>
             <Hero title={t('events')} />
+            <div className='bg-red-400 w-screen h-screen'>
+
+            </div>
         </div>
     );
 }

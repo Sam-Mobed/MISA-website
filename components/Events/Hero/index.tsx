@@ -2,50 +2,117 @@ import './index.css';
 
 import Image from 'next/image';
 import TitleText from './text';
+import Block from './block';
 
-import Waves from '../../images/waves.png';
+
 import dragon from '../../images/dragon.png';
-import black_deev from '../../images/black_deev.png';
-import pink_deev from '../../images/pink_deev.png';
+import tree from '../../images/tree.png';
+import deer from '../../images/goldenDeer.png';
 
-import soldiers2 from '../../images/2_soldiers.png';
+import soldiers2 from '../../images/soldiers1.png';
 import soldiers from '../../images/soldiers.png';
 import warrior from '../../images/warrior.png';
-import king from '../../images/king.png';
 
 type Props = {
     title:string
 }
 
-const wavesContainer = {
-    width: '100vw',
-    height: '8vh'
-}
-
-const wavesStyle = {
-    width: 'calc(96%)',
-    height: 'calc(70%)'
-}
-
-const waves2 = {
-    width: 'calc(100%)',
-    height: 'auto',
-    transform: 'scaleY(-1)'
-}
-
 const dragonStyle = {
-    width:'30vmin',
+    width:'38vmin',
+    height:'auto'
+}
+
+const treeStyle = {
+    width:'45vmin',
     height:'auto'
 }
 
 const mainContainer = {
     backgroundColor: 'bisque',
-    height: '50vmax'
+    height: '46vmax',
+    width: '100vw'
+}
+
+const sndRow = {
+    width:'17vmax',
+    height:'auto'
+}
+
+const deerStyle = {
+    width:'10vmax',
+    height:'auto'
 }
 
 export default function Hero({title}:Props){
     return (
-    <div style={mainContainer} className='relative w-screen overflow-hidden'>
+    <div>
+        <div style={mainContainer} className='overflow-hidden relative'>
+            <div className='absolute top-0 flex flex-col w-screen h-[100%] justify-center items-center'>
+                <TitleText title={title} />
+            </div>
+            <div className='relative w-screen h-[100%]'>
+
+                <Image 
+                src={deer}
+                style={deerStyle}
+                alt="deer"
+                className='absolute top-0 deer'
+                />
+
+                <Image 
+                src={soldiers2}
+                style={sndRow}
+                alt="soldiers"
+                className='absolute bottom-[50vmin] soldiers2'
+                />
+
+                <Image 
+                src={soldiers}
+                style={sndRow}
+                alt="soldiers"
+                className='absolute bottom-[35vmin] right-0 soldiers1'
+                />
+
+                <Image 
+                src={tree}
+                style={treeStyle }
+                alt="tree"
+                className='absolute bottom-[30vmin] tree'
+                />
+
+                <Image 
+                src={dragon}
+                style={dragonStyle}
+                alt="dragon"
+                className='absolute bottom-0 dragon'
+                />
+                <Image 
+                src={warrior}
+                style={dragonStyle}
+                alt="warrior"
+                className='absolute bottom-0 warrior'
+                />
+            </div>
+        </div>
+        <Block />
+    </div>
+    );
+}
+
+/*
+
+<div className='flex justify-center items-center w-[100%] h-[100%]'>
+            <TitleText title={title} />
+        </div>
+        
+        <Image 
+        src={dragon}
+        style={dragonStyle}
+        alt="dragon"
+        className='absolute bottom-[12vmin] left-0'
+        />
+
+<div className='relative overflow-hidden w-screen'>
         <div className='w-[100%] h-[100%] flex justify-center items-center'>
             <TitleText title={title} />
         </div>
@@ -54,7 +121,7 @@ export default function Hero({title}:Props){
         src={king}
         style={dragonStyle}
         alt="king"
-        className='absolute top-0 right-0'
+        className='absolute top-0 right-[50%]'
         />
 
         <Image 
@@ -82,14 +149,14 @@ export default function Hero({title}:Props){
         src={soldiers}
         style={dragonStyle}
         alt="soldiers"
-        className='absolute bottom-60 right-0'
+        className='absolute bottom-[15vmax] right-[8vmax]'
         />
 
         <Image 
         src={dragon}
         style={dragonStyle}
         alt="dragon"
-        className='absolute bottom-16 left-0'
+        className='absolute bottom-[10vmin] left-0'
         />
 
         <Image 
@@ -98,16 +165,6 @@ export default function Hero({title}:Props){
         alt="warrior"
         className='absolute bottom-16 right-0'
         />
-        
-        <div className='bg-black flex items-center justify-center absolute bottom-0' style={wavesContainer}>
-            <div className='overflow-hidden' style={wavesStyle}>
-                <Image 
-                src={Waves}
-                style={waves2}
-                alt="waves"
-                />
-            </div>
         </div>
-    </div>
-    );
-}
+
+*/
