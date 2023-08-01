@@ -2,7 +2,7 @@ import './globals.css';
 import {useLocale, useTranslations} from 'next-intl';
 import {notFound} from 'next/navigation';
 
-import Navbar from '../../components/NavBar/';
+import Navbar from '../../components/shared/NavBar';
 import Footer from '@/components/shared/Footer';
 
 export const metadata = {

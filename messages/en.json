@@ -35,6 +35,16 @@
         "newsletter":"You can also take a look at our newsletter by clicking on the following icon.",
         "signup": "Furthermore, if you would like to get involved as a volunteer, or a member of the club, please sign up by clicking on the following icon."
     },
+    "Events":{
+        "events": "Our Events",
+        "Upcoming": "Upcoming Events",
+        "past": "Past Events",
+        "suggestions": "Suggestions",
+        "suggest-box": "If you have any suggestions for potential events we could organize, please write them in the following box.",
+        "Submit": "Submit",
+        "success": "Submission successful!",
+        "error": "Something went wrong."
+    },
     "Footer":{
         "MISA": "MISA",
         "Home": "Home",
