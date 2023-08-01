@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Gulzar&display=swap');
 
-h3, .title, .section-title, .text-paragraph, .index-link, .title-abt{
+h3, .title, .section-title, .text-paragraph, .index-link, .title-abt, .title-events{
     font-family: Amiri, Courier, monospace;
 }
 
-h3, .title, .section-title, .index-link, .title-abt{
+h3, .title, .section-title, .index-link, .title-abt, .title-events{
     font-weight: bold;
 }
 
@@ -12,7 +12,7 @@ h3, .title, .section-title, .index-link, .title-abt{
     font-size: 8vw;
 }
 
-.title-abt{
+.title-abt, .title-events{
     font-size: 7vmax;
 }
 
