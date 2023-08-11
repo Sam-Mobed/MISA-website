@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import Hero from '@/components/Events/Hero';
 import Upcoming from '@/components/Events/Upcoming';
 import Gallery from '@/components/Events/Gallery';
+import Suggest from '@/components/Events/Suggest';
 
 export default function Events(){
     const t = useTranslations('Events');
@@ -19,6 +20,11 @@ export default function Events(){
             <Gallery
             title={t('gallery')}
             text={t('gallery-desciption')}
+            />
+            <Suggest
+            title={t('suggest-title')}
+            text={t('suggest-text')}
+            placeholder={t('placeholder')}
             />
         </div>
     );

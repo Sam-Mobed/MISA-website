@@ -49,7 +49,10 @@
         "event-done": "This event has concluded.",
         "no-waitlist": "All spots have been filled, and we are unable to provide a waitlist at this time.",
         "yes-waitlist": "All spots are filled. Please join the",
-        "links": "Links"
+        "links": "Links",
+        "suggest-title":"Suggest Events",
+        "suggest-text":"If you have any propositions regarding events that we should organize, please write them in the box below and we will be sure to consider them.",
+        "placeholder":"Write your thoughts here"
     },
     "Footer":{
         "MISA": "MISA",
