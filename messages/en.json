@@ -43,7 +43,13 @@
         "suggest-box": "If you have any suggestions for potential events we could organize, please write them in the following box.",
         "Submit": "Submit",
         "success": "Submission successful!",
-        "error": "Something went wrong."
+        "error": "Something went wrong.",
+        "gallery":"Gallery",
+        "gallery-desciption":"Here are some photos from our past events, enjoy them.",
+        "event-done": "This event has concluded.",
+        "no-waitlist": "All spots have been filled, and we are unable to provide a waitlist at this time.",
+        "yes-waitlist": "All spots are filled. Please join the",
+        "links": "Links"
     },
     "Footer":{
         "MISA": "MISA",

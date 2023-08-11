@@ -35,8 +35,10 @@ export async function getPhotos(): Promise<Photo[]>{
             _createdAt,
             name_en,
             name_fa,
-            date,
-            location,
+            date_en,
+            date_fa,
+            location_en,
+            location_fa,
             "image":image.asset->url,
         }`
     );

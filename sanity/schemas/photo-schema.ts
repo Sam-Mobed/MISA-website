@@ -14,13 +14,23 @@ const photo = {
             type: 'string'
         },
         {
-            name: 'date',
-            title: 'Date',
+            name: 'date_en',
+            title: 'Date (en)',
             type: 'string'
         },
         {
-            name: 'location',
-            title: 'Location',
+            name: 'date_fa',
+            title: 'Date (fa)',
+            type: 'string'
+        },
+        {
+            name: 'location_en',
+            title: 'Location (En)',
+            type: 'string'
+        },
+        {
+            name: 'location_fa',
+            title: 'Location (Fa)',
             type: 'string'
         },
         {

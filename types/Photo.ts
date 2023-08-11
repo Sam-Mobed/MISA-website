@@ -3,7 +3,9 @@ export type Photo = {
     _createdAt: Date;
     name_en: string;
     name_fa: string;
-    date: string;
-    location:string;
+    date_en: string;
+    date_fa: string;
+    location_en:string;
+    location_fa:string;
     image: string;
 };

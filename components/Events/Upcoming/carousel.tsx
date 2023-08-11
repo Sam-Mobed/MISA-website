@@ -26,6 +26,10 @@ type Props = {
 type Props = {
     events: Event[];
     locale: string;
+    event_done:string;
+    no_waitlist:string;
+    yes_waitlist:string;
+    links:string;
 }
 
 const imgStyle = {
@@ -37,6 +41,10 @@ export default function Carousel(
     {
         events,
         locale,
+        event_done,
+        no_waitlist,
+        yes_waitlist,
+        links
     }:Props
 ){
     const [currSlide, setSlide] = useState(0);
@@ -83,14 +91,14 @@ export default function Carousel(
                                         </div>
                                         <div className='pl-1 pr-1'>
                                             {checkDate(event.datetime)?
-                                                <div className='text-orange-500 pb-1'>This event has concluded.</div>
+                                                <div className='text-orange-500 pb-1 text-center'>{event_done}</div>
                                             :
                                                 (!event.is_there_space_left?
                                                     (!event.is_there_waitlist?
-                                                    <p className='pb-1 text-red-500'>All spots have been filled, and we are unable to provide a waitlist at this time.</p>
+                                                    <p className='pb-1 text-red-500'>{no_waitlist}</p>
                                                     :
-                                                    <div className='pb-1 text-orange-500'>
-                                                        All spots are filled. Please join the {' '}  
+                                                    <div className='pb-1 text-orange-500 text-center'>
+                                                        <p>{yes_waitlist} {' '} </p> 
                                                         <a href={event.waitlist_link} className='underline'>
                                                             Waitlist
                                                         </a>
@@ -113,7 +121,7 @@ export default function Carousel(
                                     <div>
                                         {event.links.length!==0?
                                             <div>
-                                                <p className='font-bold'>Links</p>
+                                                <p className='font-bold'>{links}</p>
                                                 {event.links.map((l,i)=>(
                                                     <li key={l}>
                                                         <a href={l} className='underline'>

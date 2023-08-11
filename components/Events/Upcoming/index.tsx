@@ -14,9 +14,13 @@ const imgStyle = {
 
 type Prop = {
     title:string;
+    event_done:string;
+    no_wl:string;
+    yes_wl:string;
+    lnks:string;
 }
 
-export default async function Upcoming({title}:Prop){
+export default async function Upcoming({title,event_done,no_wl,yes_wl,lnks}:Prop){
 
     const events = await getEvents();
     const locale = useLocale();
@@ -44,7 +48,11 @@ export default async function Upcoming({title}:Prop){
                 <div style={{width:'80vw'}}>
                     <Carousel 
                     events={events} 
-                    locale={locale} 
+                    locale={locale}
+                    event_done={event_done}
+                    no_waitlist={no_wl}
+                    yes_waitlist={yes_wl}
+                    links={lnks}
                     />
                 </div>
             </div>
