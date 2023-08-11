@@ -28,25 +28,17 @@ type Props = {
     locale: string;
 }
 
-
-const mainContainer = {
-    width:'80vw',
-    height:'40vmax',
-    backgroundColor:'white'
-}
-
 const imgStyle = {
-    height:'80%',
-    width:'auto'
+    height:'auto',
+    width:'80%'
 }
 
 export default function Carousel(
     {
         events,
-        locale
+        locale,
     }:Props
 ){
-    
     const [currSlide, setSlide] = useState(0);
 
     const prev = () => 
@@ -62,12 +54,12 @@ export default function Carousel(
     }
 
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden carousel lg:text-[1.3vmax] md:text-[1.5vmax] pb-5">
             <div className="flex pb-5 transition-transform ease-out duration-1000" style={{transform: `translateX(-${currSlide*100}%)`}}>
                 {events.map((event)=>(
-                    <div className="flex-shrink-0 w-[80vw] h-[40vmax]" style={{backgroundColor:'white'}}>
+                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[65vmax]" style={{backgroundColor:'white'}} key={event.name_en}>
                         <div className="flex h-[100%] w-[100%] lg:flex-row md:flex-row flex-col">
-                            <div className="flex-1 border-2 border-black flex justify-center items-center">
+                            <div className="flex-2 lg:w-[57vw] md:w-[50vw] bg-black flex justify-center items-center">
                                 <Image
                                 src={event.image}
                                 alt='img'
@@ -76,29 +68,39 @@ export default function Carousel(
                                 style={imgStyle}
                                 />
                             </div>
-                            <div className="flex-2 border-r-2 border-t-2 border-b-2 border-black">
-                                <div className='flex lg:flex-col md:flex-col flex-row'>
-                                    <div>
+                            <div className="flex-1">
+                                <div className='flex flex-col p-2 h-[100%] justify-between'>
+                                    <div className='border-b-2 border-black'>
                                         <div>
-                                            {locale==='en'?
-                                            event.name_en
-                                            :event.name_fa}
+                                            <h2 className='text-center font-bold'>
+                                                {locale==='en'?
+                                                event.name_en
+                                                :event.name_fa}
+                                            </h2>
                                         </div>
-                                        <div>
+                                        <div className='pl-1 pr-1'>
                                             {event.datetime}
                                         </div>
-                                        <div>
+                                        <div className='pl-1 pr-1'>
                                             {checkDate(event.datetime)?
-                                                <div>sorry event has past</div>
+                                                <div className='text-orange-500 pb-1'>This event has concluded.</div>
                                             :
                                                 (!event.is_there_space_left?
                                                     (!event.is_there_waitlist?
-                                                    <p>there is no place, and unfortunately we cannot offer waitlise</p>
+                                                    <p className='pb-1 text-red-500'>All spots have been filled, and we are unable to provide a waitlist at this time.</p>
                                                     :
-                                                    <p>there is no place, but please sign up to the waitlist</p>
+                                                    <div className='pb-1 text-orange-500'>
+                                                        All spots are filled. Please join the {' '}  
+                                                        <a href={event.waitlist_link} className='underline'>
+                                                            Waitlist
+                                                        </a>
+                                                    </div>
                                                     )
                                                 :
-                                                    <p>{event.cost} | {event.location} </p>
+                                                    <div className='pb-1'>
+                                                        <p>{event.location}</p>
+                                                        <p>{event.cost}</p>
+                                                    </div>
                                                 )
                                             }
                                         </div>
@@ -110,7 +112,16 @@ export default function Carousel(
                                     </div>
                                     <div>
                                         {event.links.length!==0?
-                                            <p>links</p>
+                                            <div>
+                                                <p className='font-bold'>Links</p>
+                                                {event.links.map((l,i)=>(
+                                                    <li key={l}>
+                                                        <a href={l} className='underline'>
+                                                            {event.links_slug[i]}
+                                                        </a>
+                                                    </li>
+                                                ))}
+                                            </div>
                                         :
                                         <></>
                                         }

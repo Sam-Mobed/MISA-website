@@ -16,12 +16,6 @@ type Prop = {
     title:string;
 }
 
-const mainContainer = {
-    width:'80vw',
-    height:'40vmax',
-    backgroundColor:'white'
-}
-
 export default async function Upcoming({title}:Prop){
 
     const events = await getEvents();
@@ -48,7 +42,10 @@ export default async function Upcoming({title}:Prop){
             </div>
             <div className='flex justify-center items-center pt-5' style={{backgroundColor:'bisque'}}>
                 <div style={{width:'80vw'}}>
-                    <Carousel events={events} locale={locale} />
+                    <Carousel 
+                    events={events} 
+                    locale={locale} 
+                    />
                 </div>
             </div>
         </div>
