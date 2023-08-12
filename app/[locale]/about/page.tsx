@@ -14,6 +14,7 @@ export default function About(){
             <section id='story'></section>
             <Story title={t('story-title')} text={t('story')} />
             <section id='members'></section>
+            {/* @ts-except-error Async Server Component */}
             <Members  title={t('our-members')} text={t('click')} />
             <Contact contact={t('contact')} contact_text={t('contact-text')}
             ig={t('IG')} fb={t('FB')} tg={t('TG')}
