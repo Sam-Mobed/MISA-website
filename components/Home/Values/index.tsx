@@ -34,8 +34,8 @@ val3_description}:Props){
             <div className='flex flex-col' style={{width:'80vw'}}>
                 <div className='flex flex-row ml-5 mt-5 justify-between'>
                     <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
-                        {section_title.split(' ').map((word)=>
-                            <div>{word}</div>
+                        {section_title.split(' ').map((word,index)=>
+                            <div key={`${index}-${word}`}>{word}</div>
                         )}
                     </h2>
                     <Image 

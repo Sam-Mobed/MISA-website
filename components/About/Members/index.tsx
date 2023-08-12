@@ -27,8 +27,8 @@ export default async function Members({title, text}:Props){
             <div className='flex flex-col' style={{width:'80vw'}}>
                 <div className='flex flex-row ml-5 mt-5 justify-between'>
                     <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>
-                        {title.split(' ').map((word)=>
-                            <div>{word}</div>
+                        {title.split(' ').map((word, index)=>
+                            <div key={`${index}-${word}`}>{word}</div>
                         )}
                     </h2>
                     <Image 
@@ -44,8 +44,8 @@ export default async function Members({title, text}:Props){
                 </div>
                 
                 <div className='flex flex-row flex-wrap justify-between center-items'>
-                    {MISA_members.reverse().map((member)=>(
-                        <div className='flex-1 mb-5 mt-5 flex justify-center' style={{ flexBasis: '25%' }}>
+                    {MISA_members.reverse().map((member,index)=>(
+                        <div className='flex-1 mb-5 mt-5 flex justify-center' style={{ flexBasis: '25%' }} key={`${index}-${member.name_en}`}>
                             {locale === 'en' ? 
                             <Card name={member.name_en} degreemajor={member.degree_major_en}  
                             startfinish={member.start_finishDates} role={member.role_en}
