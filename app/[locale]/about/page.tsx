@@ -9,7 +9,7 @@ import './index.css';
 export default function About(){
     const t = useTranslations('About');
     return(
-        <div style={{backgroundColor:'bisque'}}>
+        <div style={{backgroundColor:'bisque'}} className='overflow-hidden'>
             <Hero title={t('about')} />
             <section id='story'></section>
             <Story title={t('story-title')} text={t('story')} />

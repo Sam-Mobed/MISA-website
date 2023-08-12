@@ -57,7 +57,7 @@ val3txt
                 <motion.div
                 initial={{opacity:0, translateX:-50}}
                 whileInView = {{ opacity: 1,translateX:0}}
-                transition={{duraction:1, delay:0.6}}
+                transition={{duraction:1, delay:0.5}}
                 viewport={{ once: true }}
                 >
                     <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>
@@ -84,7 +84,7 @@ val3txt
                 <motion.div
                 initial={{opacity:0, translateX:-50}}
                 whileInView = {{ opacity: 1,translateX:0}}
-                transition={{duraction:1, delay:0.7}}
+                transition={{duraction:1, delay:0.5}}
                 viewport={{ once: true }}
                 >
                     <h3 className='text-3xl md:text-3xl lg:text-4xl mb-3'>

@@ -13,7 +13,7 @@ export default function Home() {
   const t = useTranslations('Index');
 
   return (
-    <div className='main-container' style={{backgroundColor:'bisque'}}>
+    <div className='main-container overflow-hidden' style={{backgroundColor:'bisque'}}>
       <Hero />
          
       <Title 

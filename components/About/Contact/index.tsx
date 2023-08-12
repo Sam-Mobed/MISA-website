@@ -35,8 +35,8 @@ export default function Contact(
     }:Props
 ){
     return (
-        <div className='mt-5'>
-            <div className='w-screen inline flex justify-center items-center'>
+        <div className='mt-5 w-screen'>
+            <div className='w-[100%] inline flex justify-center items-center'>
                 <div className='flex flex-col text-paragraph' style={{width:'80vw'}}>
                     <div className='flex flex-row ml-5 mt-5 justify-between'>
                         <h2 className='section-title text-3xl md:text-4xl lg:text-6xl'>

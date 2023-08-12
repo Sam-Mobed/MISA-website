@@ -8,7 +8,7 @@ import Suggest from '@/components/Events/Suggest';
 export default function Events(){
     const t = useTranslations('Events');
     return (
-        <div>
+        <div className='overflow-hidden'>
             <Hero title={t('events')} />
             <section id='upcoming'></section>
             {/* @ts-except-error Async Server Component */}
