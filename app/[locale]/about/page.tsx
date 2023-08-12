@@ -11,7 +11,9 @@ export default function About(){
     return(
         <div style={{backgroundColor:'bisque'}}>
             <Hero title={t('about')} />
+            <section id='story'></section>
             <Story title={t('story-title')} text={t('story')} />
+            <section id='members'></section>
             <Members  title={t('our-members')} text={t('click')} />
             <Contact contact={t('contact')} contact_text={t('contact-text')}
             ig={t('IG')} fb={t('FB')} tg={t('TG')}

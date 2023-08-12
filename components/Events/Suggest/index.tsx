@@ -35,15 +35,12 @@ export default function Suggest({title,text,placeholder}:Props){
                     <div className="text-center text-paragraph pb-3">
                         {text}
                     </div>
-                    <textarea
-                    id="message"
-                    style={{resize:'none'}}
-                    className="block p-2.5 w-full h-32 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 overflow-y-auto"
+                    <Box
                     placeholder={placeholder}
-                    ></textarea>
-
+                    />
                 </div>
             </div>
         </div>
     )
 }
+//focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500

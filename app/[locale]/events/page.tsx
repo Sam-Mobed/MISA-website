@@ -10,6 +10,7 @@ export default function Events(){
     return (
         <div>
             <Hero title={t('events')} />
+            <section id='upcoming'></section>
             <Upcoming 
             title={t('Upcoming')} 
             event_done={t('event-done')} 
@@ -21,6 +22,7 @@ export default function Events(){
             title={t('gallery')}
             text={t('gallery-desciption')}
             />
+            <section id='suggest'></section>
             <Suggest
             title={t('suggest-title')}
             text={t('suggest-text')}

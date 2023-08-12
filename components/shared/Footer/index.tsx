@@ -73,27 +73,27 @@ export default function Footer(
                                     {home}
                                 </Link>
 
-                                <Link href='/#goal' className="mb-1">
+                                <a href='/#goal' className="mb-1">
                                     {goal}
-                                </Link>
+                                </a>
 
-                                <Link href='/#values'>
+                                <a href='/#values'>
                                     {values}
-                                </Link>
+                                </a>
                             </div>
                             <div className="flex flex-col m-5">
                                 <Link href='/about' className="mb-5 subtitle">
                                     {about}
                                 </Link>
 
-                                <Link href='/about#story' className="mb-1">
+                                <a href='/about#story' className="mb-1">
                                     {story}
-                                </Link>
+                                </a>
 
-                                <Link href='/about#members' className="mb-1">
+                                <a href='/about#members' className="mb-1">
                                     {members}
-                                </Link>
-                                <a href='/' className="underline">
+                                </a>
+                                <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer" className="underline">
                                     {join}
                                 </a>
                             </div>
@@ -105,24 +105,32 @@ export default function Footer(
                                     {events}
                                 </Link>
 
-                                <Link href='/events#upcoming' className="mb-1">
+                                <a href='/events#upcoming' className="mb-1">
                                     {upcoming}
-                                </Link>
+                                </a>
 
-                                <Link href='/about#suggest'>
+                                <a href='/events#suggest'>
                                     {suggest}
-                                </Link>
+                                </a>
                             </div>
                             <div className="flex flex-col m-5">
                                 <div className="mb-5 subtitle flex flex-col">
                                     {socialmedia}
                                 </div>
                                 <div className="flex flex-row justify-between mb-2">
-                                    <FaInstagram className="text-3xl cursor-pointer hover:text-purple-600" />
-                                    <FaFacebook className="text-3xl cursor-pointer hover:text-blue-600" />
-                                    <FaTelegram className="text-3xl cursor-pointer hover:text-green-600" />
+                                    <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer">
+                                        <FaInstagram className="text-3xl cursor-pointer hover:text-purple-600" />
+                                    </a>
+                                    
+                                    <a href="https://www.facebook.com/mcgillmisa/" target="_blank" rel="noopener noreferrer">
+                                        <FaFacebook className="text-3xl cursor-pointer hover:text-blue-600" />
+                                    </a>
+
+                                    <a href='https://t.me/McGillMISA' target="_blank" rel="noopener noreferrer">
+                                        <FaTelegram className="text-3xl cursor-pointer hover:text-green-600" />
+                                    </a>
                                 </div>
-                                <Link href='/' className="underline flex justify-center">
+                                <Link href='https://drive.google.com/file/d/1Rwn8vYPAzRDoX7yD4zf-E6G963Uzty09/view?pli=1' target="_blank" rel="noopener noreferrer" className="underline flex justify-center">
                                     {newsletter}
                                 </Link>
                             </div>
@@ -136,9 +144,9 @@ export default function Footer(
                     {vercel}
                 </div>
                 <BsTriangleFill className="text-xl m-3 rtl-text"/>
-                <a href='/' className="m-3 items-center justify-center underline">
+                <Link href='https://github.com/Sam-Mobed' target="_blank" rel="noopener noreferrer" className="m-3 items-center justify-center underline">
                     {made}
-                </a>
+                </Link>
             </div>
         </div>
     );
