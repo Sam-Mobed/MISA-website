@@ -4,10 +4,11 @@ import Story from '@/components/About/Story';
 import Contact from '@/components/About/Contact';
 import { useTranslations } from 'next-intl';
 
-import './index.css';
+import Footer from '@/components/shared/Footer';
 
 export default function About(){
     const t = useTranslations('About');
+    const t_footer = useTranslations('Footer');
     return(
         <div style={{backgroundColor:'bisque'}} className='overflow-hidden'>
             <Hero title={t('about')} />
@@ -19,6 +20,24 @@ export default function About(){
             <Contact contact={t('contact')} contact_text={t('contact-text')}
             ig={t('IG')} fb={t('FB')} tg={t('TG')}
             email={t('email')} newsletter={t('newsletter')} signup={t('signup')} />
+
+            <Footer
+                misa={t_footer("MISA")}
+                home={t_footer("Home")}
+                goal={t_footer("Goal")}
+                values={t_footer("values")}
+                about={t_footer("About")}
+                story={t_footer("Story")}
+                members={t_footer("Members")}
+                events={t_footer("Events")}
+                upcoming={t_footer("Upcoming")} 
+                suggest={t_footer("suggest")}
+                join={t_footer("join")}
+                socialmedia={t_footer("Social-Media")}
+                newsletter={t_footer("Newsletter")}
+                vercel={t_footer("Vercel")}
+                made={t_footer("Made")}
+            />
         </div>
     );
 }

@@ -42,8 +42,9 @@ export default function RootLayout({
         newsLetter={t_nav('Newsletter')}
         />
         
-      */}
+        */}
         {children}
+        {/*
         <Footer
         misa={t_footer("MISA")}
         home={t_footer("Home")}
@@ -61,6 +62,7 @@ export default function RootLayout({
         vercel={t_footer("Vercel")}
         made={t_footer("Made")}
         />
+        */}
       </body>
     </html>
   )

@@ -6,11 +6,14 @@ import Discover from '@/components/Home/Discover';
 import { useTranslations } from 'next-intl';
 import './index.css';
 
+import Footer from '@/components/shared/Footer';
+
 export default function Home() {
 
   //const events = await getEvents();
   //this is our index file, so we pass index as argument
   const t = useTranslations('Index');
+  const t_footer = useTranslations('Footer');
 
   return (
     <div className='main-container overflow-hidden' style={{backgroundColor:'bisque'}}>
@@ -45,6 +48,23 @@ export default function Home() {
         events={t('abt-events')}
         involve={t('getting-involved')}
         contact={t('getting-contact')}
+      />
+      <Footer
+        misa={t_footer("MISA")}
+        home={t_footer("Home")}
+        goal={t_footer("Goal")}
+        values={t_footer("values")}
+        about={t_footer("About")}
+        story={t_footer("Story")}
+        members={t_footer("Members")}
+        events={t_footer("Events")}
+        upcoming={t_footer("Upcoming")} 
+        suggest={t_footer("suggest")}
+        join={t_footer("join")}
+        socialmedia={t_footer("Social-Media")}
+        newsletter={t_footer("Newsletter")}
+        vercel={t_footer("Vercel")}
+        made={t_footer("Made")}
       />
     </div>
     );
