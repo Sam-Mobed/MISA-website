@@ -74,6 +74,7 @@ export default function Carousel(
                                 height='100'
                                 width='100'
                                 style={imgStyle}
+                                unoptimized={true}
                                 />
                             </div>
                             <div className="flex-1">
