@@ -21,6 +21,7 @@ export default async function Members({title, text}:Props){
 
     const MISA_members = await getMembers();
     const locale = useLocale();
+    //console.log(MISA_members[0])
 
     return (
         <div className='w-screen inline flex justify-center items-center overflow-hidden' style={{backgroundColor:'bisque'}}>

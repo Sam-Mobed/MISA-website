@@ -53,6 +53,7 @@ export default function Card(
                 height='100'
                 style={imgStyle}
                 alt="member-front"
+                unoptimized={true}
                 className="rounded-lg3"
                 />
                 <div className="back rounded-lg3 flex flex-col overflow-hidden">
@@ -63,6 +64,7 @@ export default function Card(
                         height='50'
                         style={personStyle}
                         alt="member-back"
+                        unoptimized={true}
                         className="border-b-2 border-black"
                         />
                     </div>
