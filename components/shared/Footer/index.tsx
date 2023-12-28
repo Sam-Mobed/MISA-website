@@ -1,5 +1,5 @@
 import {FaInstagram, FaFacebook, FaTelegram} from "react-icons/fa";
-import {BsTriangleFill} from 'react-icons/bs';
+import {TbPlaystationTriangle} from "react-icons/tb";
 import IntlLink from "next-intl/link";
 import Link from "next/link";
 
@@ -46,7 +46,7 @@ export default function Footer(
     
     return(
         <div className="w-screen flex flex-col footer items-center">
-            <div className="mainFooter flex lg:flex-row md:flex-row flex-col p-5 mb-15">
+            <div className="mainFooter flex lg:flex-row md:flex-row flex-col lg:p-5 md:p-5 p-2 mb-15">
                 <div className="flex-2 flex flex-col space-y-[0.5vmax] items-center">
                     <div className="gradient-text">
                         {misa}
@@ -162,11 +162,11 @@ export default function Footer(
             </div>
 
             <div className="minFooter w-screen flex flex-row items-center justify-center">
-                <div className="m-3 items-center justify-center">
+                <div className="m-3 items-center justify-center text-sm">
                     {vercel}
                 </div>
-                <BsTriangleFill className="text-xl m-3 rtl-text"/>
-                <Link href='https://github.com/Sam-Mobed' target="_blank" rel="noopener noreferrer" className="m-3 items-center justify-center underline footer_invert">
+                <TbPlaystationTriangle className="text-xl m-3 rtl-text"/>
+                <Link href='https://github.com/Sam-Mobed' target="_blank" rel="noopener noreferrer" className="text-sm m-3 items-center justify-center underline footer_invert">
                     {made}
                 </Link>
             </div>
