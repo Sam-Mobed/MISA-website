@@ -36,24 +36,24 @@ const cornerHillStyle = {
 export default function DynamicElements(){
     const {scrollY} = useScroll();
 
-    const sun_Y = useTransform(scrollY, [400,900],[-100,20]);
-    const sun_rotate = useTransform(scrollY, [400,900],[-20,30]);
+    const sun_Y = useTransform(scrollY, [300,800],[-50,20]);
+    const sun_rotate = useTransform(scrollY, [300,800],[-20,30]);
 
     //before, the input range was [0,1000]
-    const left_plant_Y = useTransform(scrollY, [0,800],[-100,0]);
-    const left_plant_X = useTransform(scrollY, [0,800],[-100,0]);
+    const left_plant_Y = useTransform(scrollY, [0,700],[-100,0]);
+    const left_plant_X = useTransform(scrollY, [0,700],[-100,0]);
 
-    const right_plant_Y = useTransform(scrollY, [0,800],[-100,0]);
-    const right_plant_X = useTransform(scrollY, [0,800],[100,0]);
+    const right_plant_Y = useTransform(scrollY, [0,700],[-100,0]);
+    const right_plant_X = useTransform(scrollY, [0,700],[100,0]);
 
-    const simurgh_Y = useTransform(scrollY, [400,800],[120,0]);
-    const simurgh_X = useTransform(scrollY, [400,800],[150,10]);
+    const simurgh_Y = useTransform(scrollY, [300,700],[120,0]);
+    const simurgh_X = useTransform(scrollY, [300,700],[150,10]);
 
-    const beast_Y = useTransform(scrollY, [450,800],[70,0]);
-    const beast_X = useTransform(scrollY, [450,800],[-70,0]);
+    const beast_Y = useTransform(scrollY, [350,700],[70,0]);
+    const beast_X = useTransform(scrollY, [350,700],[-70,0]);
 
-    const hill_Y = useTransform(scrollY, [450,800],[70,0]);
-    const hill_X = useTransform(scrollY, [450,800],[70,0]);
+    const hill_Y = useTransform(scrollY, [350,700],[70,0]);
+    const hill_X = useTransform(scrollY, [350,700],[70,0]);
 
     return (
         <div>

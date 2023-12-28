@@ -4,12 +4,15 @@ h3, .title, .section-title, .text-paragraph, .index-link, .title-abt, .title-eve
     font-family: Amiri, Courier, monospace;
 }
 
+/*
 h3, .title, .section-title, .index-link, .title-abt, .title-events{
     font-weight: bold;
 }
+*/
 
 .title{
     font-size: 8vw;
+    font-weight:550;
 }
 
 .title-abt, .title-events{
