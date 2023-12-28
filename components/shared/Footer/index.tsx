@@ -46,21 +46,21 @@ export default function Footer(
     
     return(
         <div className="w-screen flex flex-col footer items-center">
-            <div className="mainFooter flex lg:flex-row md:flex-row flex-col p-5 mb-20">
-                <div className="flex-2 flex flex-col space-y-[0.5vw] items-center">
+            <div className="mainFooter flex lg:flex-row md:flex-row flex-col p-5 mb-15">
+                <div className="flex-2 flex flex-col space-y-[0.5vmax] items-center">
                     <div className="gradient-text">
                         {misa}
                     </div>
                     
                     <div>
-                        <a className='underline' href="mailto:misa@ssmu.ca">misa@ssmu.ca</a>
+                        <a className='underline footer_invert' href="mailto:misa@ssmu.ca">misa@ssmu.ca</a>
                     </div>
                     <div>
-                        <IntlLink href='/' locale='fa' className="mr-2">
+                        <IntlLink href='/' locale='fa' className="mr-2 footer_invert">
                             فارسی
                         </IntlLink>
                         |
-                        <IntlLink href='/' locale='en' className="ml-2">
+                        <IntlLink href='/' locale='en' className="ml-2 footer_invert">
                             English
                         </IntlLink>
                     </div>
@@ -69,69 +69,91 @@ export default function Footer(
                     <div className="flex flex-row lg:justify-end md:justify-end justify-center">
                         <div>
                             <div className="flex flex-col m-5">
-                                <Link href='/' className="mb-5 subtitle">
-                                    {home}
+                                <Link href='/' className="mb-3 subtitle">
+                                    <p className="footer_invert inline-block subtitle-underline">
+                                        {home}
+                                    </p>
                                 </Link>
 
                                 <a href='/#goal' className="mb-1">
-                                    {goal}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {goal}
+                                    </p>
                                 </a>
 
                                 <a href='/#values'>
-                                    {values}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {values}
+                                    </p>
                                 </a>
                             </div>
                             <div className="flex flex-col m-5">
-                                <Link href='/about' className="mb-5 subtitle">
-                                    {about}
+                                <Link href='/about' className="mb-3 subtitle">
+                                    <p className="footer_invert inline-block subtitle-underline leading-tight">
+                                        {about}
+                                    </p>
                                 </Link>
 
                                 <a href='/about#story' className="mb-1">
-                                    {story}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {story}
+                                    </p>
                                 </a>
 
                                 <a href='/about#members' className="mb-1">
-                                    {members}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {members}
+                                    </p>
                                 </a>
                                 <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer" className="underline">
-                                    {join}
+                                    <p className="footer_invert inline-block underline">
+                                        {join}
+                                    </p>
                                 </a>
                             </div>
                         </div>
 
                         <div>
                             <div className="flex flex-col m-5">
-                                <Link href='/events' className="mb-5 subtitle">
-                                    {events}
+                                <Link href='/events' className="mb-3 subtitle">
+                                    <p className="footer_invert inline-block subtitle-underline">
+                                        {events}
+                                    </p>
                                 </Link>
 
                                 <a href='/events#upcoming' className="mb-1">
-                                    {upcoming}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {upcoming}
+                                    </p>
                                 </a>
 
                                 <a href='/events#suggest'>
-                                    {suggest}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {suggest}
+                                    </p>
                                 </a>
                             </div>
                             <div className="flex flex-col m-5">
-                                <div className="mb-5 subtitle flex flex-col">
+                                <div className="mb-3 subtitle flex flex-col leading-tight">
                                     {socialmedia}
                                 </div>
                                 <div className="flex flex-row justify-between mb-2">
                                     <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer">
-                                        <FaInstagram className="text-3xl cursor-pointer hover:text-purple-600" />
+                                        <FaInstagram className="lg:text-3xl md:text-3xl text-2xl cursor-pointer hover:text-purple-600" />
                                     </a>
                                     
                                     <a href="https://www.facebook.com/mcgillmisa/" target="_blank" rel="noopener noreferrer">
-                                        <FaFacebook className="text-3xl cursor-pointer hover:text-blue-600" />
+                                        <FaFacebook className="lg:text-3xl md:text-3xl text-2xl cursor-pointer hover:text-blue-600" />
                                     </a>
 
                                     <a href='https://t.me/McGillMISA' target="_blank" rel="noopener noreferrer">
-                                        <FaTelegram className="text-3xl cursor-pointer hover:text-green-600" />
+                                        <FaTelegram className="lg:text-3xl md:text-3xl text-2xl cursor-pointer hover:text-green-600" />
                                     </a>
                                 </div>
                                 <Link href='https://drive.google.com/file/d/1Rwn8vYPAzRDoX7yD4zf-E6G963Uzty09/view?pli=1' target="_blank" rel="noopener noreferrer" className="underline flex justify-center">
-                                    {newsletter}
+                                    <p className="footer_invert inline-block leading-tight">
+                                        {newsletter}
+                                    </p>
                                 </Link>
                             </div>
                         </div>
@@ -144,7 +166,7 @@ export default function Footer(
                     {vercel}
                 </div>
                 <BsTriangleFill className="text-xl m-3 rtl-text"/>
-                <Link href='https://github.com/Sam-Mobed' target="_blank" rel="noopener noreferrer" className="m-3 items-center justify-center underline">
+                <Link href='https://github.com/Sam-Mobed' target="_blank" rel="noopener noreferrer" className="m-3 items-center justify-center underline footer_invert">
                     {made}
                 </Link>
             </div>
