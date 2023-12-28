@@ -27,7 +27,7 @@ type Props = {
 
 const imgStyle = {
     height:'auto',
-    width:'60%'
+    width:'65%'
 }
 
 export default function Carousel(
@@ -49,7 +49,7 @@ export default function Carousel(
         <div className="overflow-hidden carousel lg:text-[1.3vmax] md:text-[1.5vmax] pb-5">
             <div className="flex pb-5 transition-transform ease-out duration-1000" style={{transform: `translateX(-${currSlide*100}%)`}}>
                 {photos.map((photo)=>(
-                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[65vmax]" style={{backgroundColor:'white'}} key={photo.name_en}>
+                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[80vmax]" style={{backgroundColor:'white'}} key={photo.name_en}>
                         <div className="flex h-[100%] w-[100%] flex-col">
                             <div className="flex-2 h-[90%] bg-black flex justify-center items-center">
                                 <Image

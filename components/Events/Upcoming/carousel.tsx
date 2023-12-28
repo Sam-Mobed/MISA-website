@@ -65,7 +65,7 @@ export default function Carousel(
         <div className="overflow-hidden carousel lg:text-[1.3vmax] md:text-[1.5vmax] pb-5">
             <div className="flex pb-5 transition-transform ease-out duration-1000" style={{transform: `translateX(-${currSlide*100}%)`}}>
                 {events.map((event)=>(
-                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[65vmax]" style={{backgroundColor:'white'}} key={event.name_en}>
+                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[80vmax]" style={{backgroundColor:'white'}} key={event.name_en}>
                         <div className="flex h-[100%] w-[100%] lg:flex-row md:flex-row flex-col">
                             <div className="flex-2 lg:w-[57vw] md:w-[50vw] bg-black flex justify-center items-center">
                                 <Image
