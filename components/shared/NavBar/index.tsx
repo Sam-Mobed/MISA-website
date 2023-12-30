@@ -34,21 +34,21 @@ export default function Navbar(
 ){
     return (
         <nav>
-            <div className='flex flex-row fixed top-0 z-10 m-2 justify-between w-screen items-center'>
+            <div className='flex flex-row fixed top-0 z-10 justify-between w-screen items-center navbar'>
                 {/*
                     also add the english | Farsi toggle (only in burger mode)
                 <li className='active'>
                     <span className='nav-gradient-text'>{misa}</span>
                 </li>                
                 */}
-                <div>
+                <div className='logo h-full p-2'>
                     <Image 
                         src={MISA_logo}
                         alt='MISA logo'
                         style={logo_style}
                     />
                 </div>
-                <ul className='flex flex-row  w-[50vw] justify-evenly navigation-bar'>
+                <ul className='flex flex-row  w-[50vw] justify-evenly navigation-bar p-2'>
                     <li className='active p-2'>
                         <a href='/'>
                             <span>Home</span>
