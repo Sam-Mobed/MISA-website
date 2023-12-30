@@ -1,6 +1,9 @@
+"use client"
+
 import './style.css';
 
 import Image from 'next/image';
+import { useState } from 'react';
 
 import MISA_logo from '@/components/images/MISA_logo.png';
 
@@ -16,7 +19,7 @@ type Props = {
 }
 
 const logo_style = {
-    height: '5vmax',
+    height: '5.5vmax',
     width: 'auto'
 }
 
@@ -32,9 +35,15 @@ export default function Navbar(
        newsLetter
     }:Props
 ){
+    const [isNavVisible, setIsNavVisible] = useState(false);
+
+    const toggleNavVisibility = () => {
+        setIsNavVisible(!isNavVisible);
+    };
+
     return (
         <nav>
-            <div className='flex flex-row fixed top-0 z-10 justify-between w-screen items-center navbar'>
+            <div className='flex flex-row fixed top-0 z-10 justify-between w-screen items-center navbar overflow-hidden'>
                 {/*
                     also add the english | Farsi toggle (only in burger mode)
                 <li className='active'>
@@ -48,7 +57,17 @@ export default function Navbar(
                         style={logo_style}
                     />
                 </div>
-                <ul className='flex flex-row  w-[50vw] justify-evenly navigation-bar p-2'>
+
+                <button 
+                className='mobile-nav-toggle' 
+                aria-controls="navigation-bar" 
+                
+                onClick={toggleNavVisibility}
+                >
+                    <span className='sr-only'>Menu</span>
+                </button>
+                
+                <ul id="navigation-bar" aria-expanded={isNavVisible} className='flex flex-row  w-[50vw] justify-evenly navigation-bar p-2'>
                     <li className='active p-2'>
                         <a href='/'>
                             <span>Home</span>
