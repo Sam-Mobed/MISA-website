@@ -19,7 +19,7 @@ type Props = {
 }
 
 const logo_style = {
-    height: '5.5vmax',
+    height: '4.5vmax',
     width: 'auto'
 }
 
@@ -43,14 +43,17 @@ export default function Navbar(
 
     return (
         <nav>
-            <div className='flex flex-row fixed top-0 z-10 justify-between w-screen items-center navbar overflow-hidden'>
+            <div className='flex flex-row fixed top-0 z-10 w-screen justify-between items-center navbar overflow-hidden'>
                 {/*
                     also add the english | Farsi toggle (only in burger mode)
                 <li className='active'>
                     <span className='nav-gradient-text'>{misa}</span>
-                </li>                
+                </li>    
                 */}
-                <div className='logo h-full p-2'>
+                
+                <div className='w-full navbar-backg-smallsc top-0 h-[7vh]' aria-expanded={isNavVisible}/>
+                
+                <div className='logo h-full p-2 ml-[7vw]' aria-expanded={isNavVisible}>
                     <Image 
                         src={MISA_logo}
                         alt='MISA logo'
@@ -59,15 +62,14 @@ export default function Navbar(
                 </div>
 
                 <button 
-                className='mobile-nav-toggle' 
+                className='mobile-nav-toggle mr-[7vw] mt-[-0.5vw]' 
                 aria-controls="navigation-bar" 
-                
                 onClick={toggleNavVisibility}
                 >
                     <span className='sr-only'>Menu</span>
                 </button>
                 
-                <ul id="navigation-bar" aria-expanded={isNavVisible} className='flex flex-row  w-[50vw] justify-evenly navigation-bar p-2'>
+                <ul id="navigation-bar" aria-expanded={isNavVisible} className='flex flex-row w-[50vw] justify-evenly navigation-bar p-2'>
                     <li className='active p-2'>
                         <a href='/'>
                             <span>Home</span>

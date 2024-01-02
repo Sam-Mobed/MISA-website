@@ -55,16 +55,20 @@
 
 @media (min-width: 30em) {
     .navbar{
-        background: hsl(0 0% 0% / 0.5);
+        background-color: hsla(0, 0%, 100%, 0.8);
     }
     @supports (backdrop-filter: blur(0.5rem)){
         .navbar{
-            background: hsl(0 0% 100% / 0.1);
-            backdrop-filter: blur(0.5rem);
+            background-color: hsla(0, 0%, 100%, 0.8);
+            backdrop-filter: blur(0.06rem);        
         }
     }
 
     .mobile-nav-toggle{
+        display: none;
+    }
+
+    .navbar-backg-smallsc{
         display: none;
     }
 }
@@ -83,15 +87,15 @@
         align-items: center;
         background-color: steelblue;
         inset: 0 0 0 50%;
-        background: hsl(0 0% 0% / 0.5);
+        background-color: hsla(0, 0%, 100%, 0.8);
 
         transform: translateX(100%);
         transition: transform 600ms ease-out;
     }
     @supports (backdrop-filter: blur(0.5rem)){
         .navigation-bar{
-            background: hsl(0 0% 100% / 0.1);
-            backdrop-filter: blur(0.5rem);
+            background-color: hsla(0, 0%, 100%, 0.8);
+            backdrop-filter: blur(0.06rem);  
         }
     }
 
@@ -108,5 +112,25 @@
         top: 0.8rem;
         right: 1rem;
         z-index: 100;
+    }
+
+    .navbar-backg-smallsc{
+        background-color: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(0.06rem);
+        display:block;
+        position: fixed;
+        transform: translateY(0%);
+        transition: transform 700ms ease-out;
+    }
+    .navbar-backg-smallsc[aria-expanded="true"]{
+        transform: translateY(-150%);
+    }
+
+    .logo{
+        transform: translateX(0%);
+        transition: transform 700ms ease-out;
+    }
+    .logo[aria-expanded="true"]{
+        transform: translateX(-200%);
     }
 }
