@@ -64,10 +64,8 @@
         }
     }
 
-    .mobile-nav-toggle{
-        display: none;
-    }
-
+    .mobile-nav-toggle, 
+    .ham-bar, 
     .navbar-backg-smallsc{
         display: none;
     }
@@ -106,12 +104,47 @@
     .mobile-nav-toggle{
         display: block;
         position: absolute;
-        background: red;
-        width: 1.3rem;
+        width: 2rem;
+        height: 2rem;
         aspect-ratio: 1;
         top: 0.8rem;
         right: 1rem;
         z-index: 100;
+    }
+
+    .ham-bar{
+        display: block;
+        width: 70%;
+        height: 2px;
+        background-color: black;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: transform .6s, opacity .8s, top .6s;
+    }
+
+    .bar-top{
+        top:25%;
+    }
+
+    .bar-bottom{
+        top: 75%;
+    }
+
+    .bar-top[aria-expanded="true"]{
+        transform: translate(-50%,-50%) rotate(-315deg);
+        top:50%;
+    }
+
+    .bar-middle[aria-expanded="true"]{
+        opacity: 0;
+    }
+
+    .bar-bottom[aria-expanded="true"]{
+        transform: translate(-50%,-50%) rotate(-225deg);
+        top:50%;
     }
 
     .navbar-backg-smallsc{

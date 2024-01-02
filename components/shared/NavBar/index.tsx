@@ -66,7 +66,9 @@ export default function Navbar(
                 aria-controls="navigation-bar" 
                 onClick={toggleNavVisibility}
                 >
-                    <span className='sr-only'>Menu</span>
+                    <div aria-expanded={isNavVisible} className='ham-bar bar-top'></div>
+                    <div aria-expanded={isNavVisible} className='ham-bar bar-middle'></div>
+                    <div aria-expanded={isNavVisible} className='ham-bar bar-bottom'></div>
                 </button>
                 
                 <ul id="navigation-bar" aria-expanded={isNavVisible} className='flex flex-row w-[50vw] justify-evenly navigation-bar p-2'>
