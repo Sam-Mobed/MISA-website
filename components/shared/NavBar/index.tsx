@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useState,useEffect } from 'react';
 import IntlLink from "next-intl/link";
 
-import MISA_logo from '@/components/images/MISA_logo.png';
+import MISA_logo from '@/components/images/MISA_Logo.png';
 
 type Props = {
     misa: string;
