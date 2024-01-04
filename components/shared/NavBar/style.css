@@ -1,56 +1,34 @@
-.navBtn, .navContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 60px;
-    border-radius: 10px;
-}
-
-.navContainer{
-    padding: none;
-    margin-top: 10px;
-    margin-left: 15px;
-}
-
-.navBtn{
-    position: relative;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    border: 3px solid black;
-}
-
-.navBtn__burger{
-    width: 40px;
-    height: 4px;
-    background: black;
-    transition: all .5s ease-in-out;
-}
-
-.navBtn__burger::before,
-.navBtn__burger::after{
-    content:'';
-    position: absolute;
-    width: 40px;
-    height: 4px;
-    background: black;
-    transition: all .5s ease-in-out;
-}
-
-.navBtn__burger::before{
-    transform: translateY(-14px);
-}
-
-.navBtn__burger::after{
-    transform: translateY(14px);
-}
-
 .nav-gradient-text{
-    font-size: calc(10px + 3vmax); /* Set your desired font size */
+    font-size: calc(12px + 5vmax); /* Set your desired font size */
     background-image: linear-gradient(90deg, green, red);
     -webkit-background-clip: text; /* For Safari/WebKit browsers */
     background-clip: text;
     color: transparent; /* Hide the original text content */
+}
+
+.home-nav,
+.about-nav,
+.events-nav{
+    position: relative;
+}
+
+.home-nav::after,
+.about-nav::after,
+.events-nav::after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the height of the underline as needed */
+    background-color: black; /* Color of the underline */
+    transition: width 0.3s ease; /* Adjust the transition duration and easing */
+}
+  
+.home-nav:hover::after,
+.about-nav:hover::after,
+.events-nav:hover::after {
+    width: 100%;
 }
 
 @media (min-width: 30em) {
@@ -66,8 +44,16 @@
 
     .mobile-nav-toggle, 
     .ham-bar, 
-    .navbar-backg-smallsc{
+    .navbar-backg-smallsc,
+    .misa-name,
+    .switch-locale{
         display: none;
+    }
+
+    .home-nav,
+    .about-nav,
+    .events-nav{
+        font-size: 1.5vmax;
     }
 }
 
@@ -75,6 +61,12 @@
     .logo{
         flex-direction: column;
         align-items: start;
+    }
+
+    .home-nav,
+    .about-nav,
+    .events-nav{
+        font-size: 2.5vmax;
     }
 
     .navigation-bar {
@@ -107,7 +99,6 @@
         width: 2rem;
         height: 2rem;
         aspect-ratio: 1;
-        top: 0.8rem;
         right: 1rem;
         z-index: 100;
     }
@@ -165,5 +156,14 @@
     }
     .logo[aria-expanded="true"]{
         transform: translateX(-200%);
+    }
+
+    .switch-locale,
+    .misa-name{
+        display: block;
+    }
+
+    .switch-locale{
+        font-size: smaller;
     }
 }

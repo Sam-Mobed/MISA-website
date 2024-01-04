@@ -36,10 +36,6 @@ export default function RootLayout({
           home={t_nav('Home')}
           about={t_nav('About')}
           events={t_nav('Events')}
-          apply={t_nav('Apply')}
-          contact={t_nav('Contact')}
-          switchLocale={t_nav('switchLocale')}
-          newsLetter={t_nav('Newsletter')}
         />
 
         {children}

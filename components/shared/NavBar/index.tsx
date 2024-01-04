@@ -4,6 +4,7 @@ import './style.css';
 
 import Image from 'next/image';
 import { useState } from 'react';
+import IntlLink from "next-intl/link";
 
 import MISA_logo from '@/components/images/MISA_logo.png';
 
@@ -12,10 +13,6 @@ type Props = {
     home: string;
     about: string;
     events: string;
-    apply: string;
-    contact: string;
-    switchLocale: string;
-    newsLetter: string;
 }
 
 const logo_style = {
@@ -29,10 +26,6 @@ export default function Navbar(
        home,
        about,
        events,
-       apply,
-       contact,
-       switchLocale,
-       newsLetter
     }:Props
 ){
     const [isNavVisible, setIsNavVisible] = useState(false);
@@ -53,7 +46,7 @@ export default function Navbar(
                 
                 <div className='w-full navbar-backg-smallsc top-0 h-[7vh]' aria-expanded={isNavVisible}/>
                 
-                <div className='logo h-full p-2 ml-[7vw]' aria-expanded={isNavVisible}>
+                <div className='logo h-full p-2 ml-[7vw] ' aria-expanded={isNavVisible}>
                     <Image 
                         src={MISA_logo}
                         alt='MISA logo'
@@ -62,7 +55,7 @@ export default function Navbar(
                 </div>
 
                 <button 
-                className='mobile-nav-toggle mr-[7vw] mt-[-0.5vw]' 
+                className='mobile-nav-toggle mr-[7vw]' 
                 aria-controls="navigation-bar" 
                 onClick={toggleNavVisibility}
                 >
@@ -72,19 +65,31 @@ export default function Navbar(
                 </button>
                 
                 <ul id="navigation-bar" aria-expanded={isNavVisible} className='flex flex-row w-[50vw] justify-evenly navigation-bar p-2'>
-                    <li className='active p-2'>
+                    <li className='p-2 misa-name nav-gradient-text m-0 p-0'>
+                        <span>{misa}</span>
+                    </li>
+                    <li className='switch-locale mb-10'>
+                        <IntlLink href='/' locale='fa' className="mr-2">
+                            فارسی
+                        </IntlLink>
+                        |
+                        <IntlLink href='/' locale='en' className="ml-2">
+                            English
+                        </IntlLink>
+                    </li>
+                    <li className='p-2 home-nav'>
                         <a href='/'>
-                            <span>Home</span>
+                            <span>{home}</span>
                         </a>
                     </li>
-                    <li className='active p-2'>
+                    <li className='p-2 about-nav'>
                         <a href='/about'>
-                            <span>About</span>
+                            <span>{about}</span>
                         </a>
                     </li>
-                    <li className='active p-2'>
+                    <li className='p-2 events-nav'>
                         <a href='/events'>
-                            <span>Events</span>
+                            <span>{events}</span>
                         </a>
                     </li>
                 </ul>
