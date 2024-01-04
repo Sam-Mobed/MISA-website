@@ -13,6 +13,7 @@ export default function Events(){
     return (
         <div className='overflow-hidden'>
             <Hero title={t('events')} />
+            <section id='show-nav'></section>
             <section id='upcoming'></section>
             {/* @ts-except-error Async Server Component */}
             <Upcoming 

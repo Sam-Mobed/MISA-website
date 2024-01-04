@@ -22,6 +22,7 @@ export default function Home() {
       <Title 
         title={t('title')}
       />
+      <section id='show-nav'></section>
       <section id='goal'></section>
       <Purpose 
         section_title={t('purpose-title')}

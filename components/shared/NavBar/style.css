@@ -167,3 +167,20 @@
         font-size: smaller;
     }
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.navbar-fadein { animation: fadeIn 1.5s; }
+
+/*
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; } 
+    100% { opacity: 0; }
+}
+
+.navbar-fadeout { animation: fadeOut 1.5s; }
+*/

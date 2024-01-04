@@ -3,7 +3,7 @@
 import './style.css';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import IntlLink from "next-intl/link";
 
 import MISA_logo from '@/components/images/MISA_logo.png';
@@ -34,16 +34,48 @@ export default function Navbar(
         setIsNavVisible(!isNavVisible);
     };
 
+    const [showNavbar, setShowNavbar] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        const sectionId = 'show-nav';
+        
+        const section = document.getElementById(sectionId);
+
+        if (section) {
+            const sectionRect = section.getBoundingClientRect();
+            setShowNavbar(sectionRect.bottom <= 0);
+        }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    /* the else if never gets executed because the div that has that id is conditionally rendered.
+    useEffect(() => {
+        const nav = document.getElementById('navbar');
+        if (showNavbar && nav) {
+            nav.classList.remove('navbar-fadeout');
+            nav.classList.add('navbar-fadein');
+        } else if(nav) {
+            nav.classList.remove('navbar-fadein');
+            nav.classList.add('navbar-fadeout');
+        }
+    }, [showNavbar]);
+
+    i have an idea on how to fix this, we make the the navbar fadeout BEFORE we reach the section.
+    so when we scroll down, the navbar appears once we pass the section. but when we scroll up, the navbar disappears a little sooner,
+    before we hit the section. that way it still exists and we can add the fadeout class to it. 
+    */
     return (
         <nav>
-            <div className='flex flex-row fixed top-0 z-10 w-screen justify-between items-center navbar overflow-hidden'>
-                {/*
-                    also add the english | Farsi toggle (only in burger mode)
-                <li className='active'>
-                    <span className='nav-gradient-text'>{misa}</span>
-                </li>    
-                */}
-                
+            {showNavbar && (
+            <div className='flex flex-row fixed top-0 z-10 w-screen justify-between items-center navbar navbar-fadein overflow-hidden'
+            id='navbar'>
                 <div className='w-full navbar-backg-smallsc top-0 h-[7vh]' aria-expanded={isNavVisible}/>
                 
                 <div className='logo h-full p-2 ml-[7vw] ' aria-expanded={isNavVisible}>
@@ -93,11 +125,8 @@ export default function Navbar(
                         </a>
                     </li>
                 </ul>
-                {/*
-                    should I add the social media here too?
-                    only in burger mode
-                */}
             </div>
+            )}
         </nav>
     );
 }

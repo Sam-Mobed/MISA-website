@@ -12,6 +12,7 @@ export default function About(){
     return(
         <div style={{backgroundColor:'bisque'}} className='overflow-hidden'>
             <Hero title={t('about')} />
+            <section id='show-nav'></section>
             <section id='story'></section>
             <Story title={t('story-title')} text={t('story')} />
             <section id='members'></section>
