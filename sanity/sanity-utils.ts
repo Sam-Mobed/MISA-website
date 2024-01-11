@@ -62,3 +62,54 @@ export async function getMembers(): Promise<Member[]>{
         }`
     );
 }
+
+/*
+export async function handler(
+    req:NextApiRequest,
+    res:NextApiResponse
+){
+    if (req.method === 'POST'){
+        const { submittedText } = req.body;
+        
+        try{
+            const response = await createClient(clientConfig).create({
+                _type: 'suggestion',
+                suggestion_text: submittedText
+            });
+
+            res.status(200).json({success:true,data:response});
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({success:false, error: 'Internal Server Error'});
+        } 
+    } else {
+        res.status(405).json({ success: false, error: 'Method Not Allowed'});
+    }
+}
+import clientConfig from "@/sanity/config/client-config";
+import { createClient} from "next-sanity";
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export async function handler(
+    req:NextApiRequest,
+    res:NextApiResponse
+){
+    if (req.method === 'POST'){
+        const { submittedText } = req.body;
+        
+        try{
+            const response = await createClient(clientConfig).create({
+                _type: 'suggestion',
+                suggestion_text: submittedText
+            });
+
+            res.status(200).json({success:true,data:response});
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({success:false, error: 'Internal Server Error'});
+        } 
+    } else {
+        res.status(405).json({ success: false, error: 'Method Not Allowed'});
+    }
+}
+*/
