@@ -33,6 +33,12 @@ export default function Events(){
             title={t('suggest-title')}
             text={t('suggest-text')}
             placeholder={t('placeholder')}
+            submit={t('Submit')}
+            success={t('success')}
+            error={t('error')}
+            alrdone={t('already-suggested')}
+            emailpholder={t('email-placeholder')}
+            note={t('note')}
             />
             <Footer
             misa={t_footer("MISA")}

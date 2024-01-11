@@ -38,12 +38,10 @@
     "Events":{
         "events": "Our Events",
         "Upcoming": "Upcoming Events",
-        "past": "Past Events",
-        "suggestions": "Suggestions",
-        "suggest-box": "If you have any suggestions for potential events we could organize, please write them in the following box.",
         "Submit": "Submit",
-        "success": "Submission successful!",
-        "error": "Something went wrong.",
+        "success": "Suggestion submitted successfully!",
+        "error": "An unexpected error occurred. Please try again later.",
+        "already-suggested": "You have already placed a suggestion in the past 12 hours.",
         "gallery":"Gallery",
         "gallery-desciption":"Here are some photos from our past events, enjoy them.",
         "event-done": "This event has concluded.",
@@ -51,8 +49,10 @@
         "yes-waitlist": "All spots are filled. Please join the",
         "links": "Links",
         "suggest-title":"Suggest Events",
-        "suggest-text":"If you have any propositions regarding events that we should organize, please write them in the box below and we will be sure to consider them.",
-        "placeholder":"Write your thoughts here"
+        "suggest-text":"If you have any propositions regarding events that we should organize, please write them in the box below and we will be sure to consider them. Please also include your email in case we need to reach you.",
+        "note": "Keep in mind that you can only make one suggestion every 12 hours.",
+        "placeholder":"Write your thoughts here",
+        "email-placeholder": "Your email address"
     },
     "Footer":{
         "MISA": "MISA",

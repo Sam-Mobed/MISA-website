@@ -7,10 +7,16 @@ import clientConfig from "@/sanity/config/client-config";
 
 type Props = {
   placeholder:string;
+  submit:string;
+  success:string;
+  error:string;
+  alrdone:string;
+  emailpholder:string;
 }
 
-export default function Box({placeholder}:Props){
+export default function Box({placeholder,submit,success,error,alrdone,emailpholder}:Props){
   const [submittedText, setSubmittedText] = useState('');
+  const [submittedEmail, setSubmittedEmail] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -22,19 +28,20 @@ export default function Box({placeholder}:Props){
       //console.log(client.config)
       const doc = {
         _type: 'suggestion',
-        suggestion_text: submittedText
+        suggestion_text: submittedText,
+        user_email: submittedEmail
       };
   
       await client.create(doc);
       //saveText(submittedText);
 
-      setSuccessMessage('Suggestion submitted successfully!');
+      setSuccessMessage(success);
       setErrorMessage('');
       setSubmittedText('');
-    } catch (error) {
-      console.error(error);
-      console.log(error);
-      setErrorMessage('An unexpected error occurred. Please try again later.');
+    } catch (err) {
+      console.error(err);
+      console.log(err);
+      setErrorMessage(error);
       setSuccessMessage('');
     }
   };
@@ -53,11 +60,13 @@ export default function Box({placeholder}:Props){
           <textarea
           id="email"
           style={{resize:'none'}}
-          className="text-suggestion block p-2.5 w-[50%] h-12 text-md text-black bg-white rounded-lg border border-2 border-gray-500 focus:ring focus:ring-blue-700 overflow-y-auto"
-          placeholder={placeholder}
+          className="text-suggestion block p-2.5 mb-5 w-[50%] h-12 text-md text-black bg-white rounded-lg border border-2 border-gray-500 focus:ring focus:ring-blue-700 overflow-y-auto"
+          placeholder={emailpholder}
+          onChange={(e) => setSubmittedEmail(e.target.value)}
           />
         </label>
-        {!successMessage && !errorMessage && <button type="submit">Submit</button>}
+        {!successMessage && !errorMessage && <button type="submit" 
+        className="suggestion-btn bg-blue-500 border-2 border-black text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">{submit}</button>}
         {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </form>

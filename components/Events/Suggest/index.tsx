@@ -7,6 +7,12 @@ type Props = {
     title:string;
     text:string;
     placeholder:string;
+    submit:string;
+    success:string;
+    error:string;
+    alrdone:string;
+    emailpholder:string;
+    note:string;
 }
 
 const imgStyle = {
@@ -14,7 +20,16 @@ const imgStyle = {
     width: 'auto',
 }
 
-export default function Suggest({title,text,placeholder}:Props){
+export default function Suggest(
+    {title,
+    text,
+    placeholder,
+    submit,
+    success,
+    error,
+    alrdone,
+    emailpholder,
+    note}:Props){
     return (
         <div>
             <div className='w-screen inline flex justify-center items-center pb-10' style={{backgroundColor:'bisque'}}>
@@ -35,8 +50,16 @@ export default function Suggest({title,text,placeholder}:Props){
                     <div className="text-center text-paragraph pb-3">
                         {text}
                     </div>
+                    <div className="text-center text-paragraph pb-3">
+                        {note}
+                    </div>
                     <Box
                     placeholder={placeholder}
+                    submit={submit}
+                    success={success}
+                    error={error}
+                    alrdone={alrdone}
+                    emailpholder={emailpholder}
                     />
                 </div>
             </div>

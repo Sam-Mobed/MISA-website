@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Gulzar&display=swap');
 
-nav, span, h3, .title, .section-title, .text-paragraph, .index-link, .title-abt, .title-events, .carousel, .text-suggestion, .footer{
+nav, span, h3, .suggestion-btn, .title, .section-title, .text-paragraph, .index-link, .title-abt, .title-events, .carousel, .text-suggestion, .footer{
     font-family: Amiri, Courier, monospace;
 }
 
@@ -17,6 +17,10 @@ h3, .title, .section-title, .index-link, .title-abt, .title-events{
 
 .title-abt, .title-events{
     font-size: 7vmax;
+}
+
+.suggestion-btn{
+    font-size: calc(1.2vmax+10px);
 }
 
 .word{
