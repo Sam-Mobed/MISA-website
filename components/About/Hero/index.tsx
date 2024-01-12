@@ -97,6 +97,7 @@ export default function Hero({title}:Props){
             style={ridersStyle}
             alt="riders"
             className='absolute top-[2vmin] riders'
+            priority={true}
             />
 
             <Image 
@@ -104,6 +105,7 @@ export default function Hero({title}:Props){
             style={WomenStyle}
             alt="woman"
             className='absolute top-[5vmin] woman'
+            priority={true}
             />
             
             <Image 
@@ -111,6 +113,7 @@ export default function Hero({title}:Props){
             style={drumsStyle}
             alt="men-playing-drums"
             className='absolute top-[10vmin] drums'
+            priority={true}
             />
     
             <Image 
@@ -118,6 +121,7 @@ export default function Hero({title}:Props){
             style={menStyle}
             alt="men"
             className='absolute bottom-0 men'
+            priority={true}
             />
 
             <Image 
@@ -125,6 +129,7 @@ export default function Hero({title}:Props){
             style={buildingStyle}
             alt="palace"
             className='absolute left-[18vmin] top-[1vmin] palace'
+            priority={true}
             />
 
             <Image 
@@ -132,6 +137,7 @@ export default function Hero({title}:Props){
             style={buildingStyle}
             alt="tower"
             className='absolute left-[25vmin] top-[6vmin] tower'
+            priority={true}
             />
 
             <Image 
@@ -139,6 +145,7 @@ export default function Hero({title}:Props){
             style={buildingStyle}
             alt="building"
             className='absolute left-[14vmin] top-[9vmin] building'
+            priority={true}
             />
             
             <Image 
@@ -146,6 +153,7 @@ export default function Hero({title}:Props){
             style={angelStyle}
             alt="musician"
             className='absolute bottom-[40vmin] musician'
+            priority={true}
             />
 
             <Image 
@@ -153,6 +161,7 @@ export default function Hero({title}:Props){
             style={giftsStyle}
             alt="men-bringing-gifts"
             className='absolute bottom-[25vmin] gift'
+            priority={true}
             />
 
             <Image 
@@ -160,6 +169,7 @@ export default function Hero({title}:Props){
             style={coupleStyle}
             alt="couple"
             className='absolute bottom-10 right-[20vmax] couple'
+            priority={true}
             />
 
             <Image 
@@ -167,6 +177,7 @@ export default function Hero({title}:Props){
             style={famStyle}
             alt="Family"
             className='absolute bottom-[4vmin] family'
+            priority={true}
             />
                     
                 

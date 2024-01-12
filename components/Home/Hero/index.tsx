@@ -33,6 +33,7 @@ export default function Hero() {
             style={imageStyle}
             alt="hafez-parallax"
             className='absolute top-0'
+            priority={true}
             />
 
             </motion.div>

@@ -57,6 +57,7 @@ export default function Hero({title}:Props){
                 style={deerStyle}
                 alt="deer"
                 className='absolute top-0 deer'
+                priority={true}
                 />
 
                 <Image 
@@ -64,6 +65,7 @@ export default function Hero({title}:Props){
                 style={sndRow}
                 alt="soldiers"
                 className='absolute bottom-[50vmin] soldiers2'
+                priority={true}
                 />
 
                 <Image 
@@ -71,6 +73,7 @@ export default function Hero({title}:Props){
                 style={sndRow}
                 alt="soldiers"
                 className='absolute bottom-[35vmin] right-0 soldiers1'
+                priority={true}
                 />
 
                 <Image 
@@ -78,6 +81,7 @@ export default function Hero({title}:Props){
                 style={treeStyle }
                 alt="tree"
                 className='absolute bottom-[30vmin] tree'
+                priority={true}
                 />
 
                 <Image 
@@ -85,12 +89,14 @@ export default function Hero({title}:Props){
                 style={dragonStyle}
                 alt="dragon"
                 className='absolute bottom-0 dragon'
+                priority={true}
                 />
                 <Image 
                 src={warrior}
                 style={dragonStyle}
                 alt="warrior"
                 className='absolute bottom-0 warrior'
+                priority={true}
                 />
             </div>
         </div>
