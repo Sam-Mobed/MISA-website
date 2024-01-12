@@ -3,14 +3,22 @@ import Members from '@/components/About/Members';
 import Story from '@/components/About/Story';
 import Contact from '@/components/About/Contact';
 import { useTranslations } from 'next-intl';
+import Navbar from '@/components/shared/NavBar';
 
 import Footer from '@/components/shared/Footer';
 
 export default function About(){
     const t = useTranslations('About');
     const t_footer = useTranslations('Footer');
+    const t_nav = useTranslations('Navbar');
     return(
         <div style={{backgroundColor:'bisque'}} className='overflow-hidden'>
+            <Navbar 
+            misa={t_nav('MISA')}
+            home={t_nav('Home')}
+            about={t_nav('About')}
+            events={t_nav('Events')}
+            />
             <Hero title={t('about')} />
             <section id='show-nav'></section>
             <section id='story'></section>
@@ -18,6 +26,7 @@ export default function About(){
             <section id='members'></section>
             {/* @ts-except-error Async Server Component */}
             <Members  title={t('our-members')} text={t('click')} />
+            <section id='contact'></section>
             <Contact contact={t('contact')} contact_text={t('contact-text')}
             ig={t('IG')} fb={t('FB')} tg={t('TG')}
             email={t('email')} newsletter={t('newsletter')} signup={t('signup')} />

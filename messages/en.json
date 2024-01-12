@@ -17,7 +17,7 @@
         "discover-text":"On this site, you will find comprehensive information about MISA. Feel free to explore the various sections by clicking on any of the links below.",
         "abt-us":"About Us",
         "abt-events":"Our Events",
-        "getting-involved":"Getting Involved",
+        "getting-involved":"Gallery",
         "getting-contact":"Getting in Touch"
     },
     "About":{
@@ -32,7 +32,7 @@
         "FB": "Facebook",
         "TG": "Telegram",
         "email": "Our email",
-        "newsletter":"You can also take a look at our newsletter by clicking on the following icon.",
+        "newsletter":"You can also sign up for our monthly newsletter by clicking on the following icon.",
         "signup": "Furthermore, if you would like to get involved as a volunteer, or a member of the club, please sign up by clicking on the following icon."
     },
     "Events":{

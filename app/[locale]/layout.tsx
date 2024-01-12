@@ -30,14 +30,14 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        
+        {/* 
         <Navbar 
           misa={t_nav('MISA')}
           home={t_nav('Home')}
           about={t_nav('About')}
           events={t_nav('Events')}
         />
-
+        */} 
         {children}
         {/*
         <Footer

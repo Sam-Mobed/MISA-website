@@ -87,10 +87,10 @@ export default function Carousel(
                                                 :event.name_fa}
                                             </h2>
                                         </div>
-                                        <div className='pl-1 pr-1'>
+                                        <div className='pl-1 pr-1 text-center'>
                                             {event.datetime}
                                         </div>
-                                        <div className='pl-1 pr-1'>
+                                        <div className='pl-1 pr-1 text-center'>
                                             {checkDate(event.datetime)?
                                                 <div className='text-orange-500 pb-1 text-center'>{event_done}</div>
                                             :
@@ -114,7 +114,7 @@ export default function Carousel(
                                             }
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className='text-center'>
                                         {locale==='en'?
                                         event.content_en
                                         :event.content_fa}

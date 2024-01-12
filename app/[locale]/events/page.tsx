@@ -6,12 +6,20 @@ import Gallery from '@/components/Events/Gallery';
 import Suggest from '@/components/Events/Suggest';
 
 import Footer from '@/components/shared/Footer';
+import Navbar from '@/components/shared/NavBar';
 
 export default function Events(){
     const t = useTranslations('Events');
     const t_footer = useTranslations('Footer');
+    const t_nav = useTranslations('Navbar');
     return (
         <div className='overflow-hidden'>
+            <Navbar 
+            misa={t_nav('MISA')}
+            home={t_nav('Home')}
+            about={t_nav('About')}
+            events={t_nav('Events')}
+            />
             <Hero title={t('events')} />
             <section id='show-nav'></section>
             <section id='upcoming'></section>
@@ -24,6 +32,7 @@ export default function Events(){
             lnks={t('links')} 
             />
             {/* @ts-except-error Async Server Component */}
+            <section id='gallery'></section>
             <Gallery
             title={t('gallery')}
             text={t('gallery-desciption')}

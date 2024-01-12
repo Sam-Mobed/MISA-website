@@ -69,45 +69,40 @@ export default function Footer(
                     <div className="flex flex-row lg:justify-end md:justify-end justify-center">
                         <div>
                             <div className="flex flex-col m-5">
-                                <Link href='/' className="mb-3 subtitle">
+                                <Link href='/' className="mb-3 subtitle flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block subtitle-underline">
                                         {home}
                                     </p>
                                 </Link>
 
-                                <a href='/#goal' className="mb-1">
-                                    <p className="footer_invert inline-block leading-tight">
+                                <a href='/#goal' className="mb-1 flex lg:justify-start md:justify-start justify-center">
+                                    <p className="footer_invert inline-block leading-tight whitespace-nowrap">
                                         {goal}
                                     </p>
                                 </a>
 
-                                <a href='/#values'>
+                                <a href='/#values' className="flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block leading-tight">
                                         {values}
                                     </p>
                                 </a>
                             </div>
                             <div className="flex flex-col m-5">
-                                <Link href='/about' className="mb-3 subtitle">
+                                <Link href='/about' className="mb-3 subtitle flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block subtitle-underline leading-tight">
                                         {about}
                                     </p>
                                 </Link>
 
-                                <a href='/about#story' className="mb-1">
+                                <a href='/about#story' className="mb-1 flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block leading-tight">
                                         {story}
                                     </p>
                                 </a>
 
-                                <a href='/about#members' className="mb-1">
+                                <a href='/about#members' className="mb-1 flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block leading-tight">
                                         {members}
-                                    </p>
-                                </a>
-                                <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer" className="underline">
-                                    <p className="footer_invert inline-block underline">
-                                        {join}
                                     </p>
                                 </a>
                             </div>
@@ -115,19 +110,19 @@ export default function Footer(
 
                         <div>
                             <div className="flex flex-col m-5">
-                                <Link href='/events' className="mb-3 subtitle">
+                                <Link href='/events' className="mb-3 subtitle flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block subtitle-underline">
                                         {events}
                                     </p>
                                 </Link>
 
-                                <a href='/events#upcoming' className="mb-1">
-                                    <p className="footer_invert inline-block leading-tight">
+                                <a href='/events#upcoming' className="mb-1 flex lg:justify-start md:justify-start justify-center">
+                                    <p className="footer_invert inline-block leading-tight whitespace-nowrap">
                                         {upcoming}
                                     </p>
                                 </a>
 
-                                <a href='/events#suggest'>
+                                <a href='/events#gallery' className="flex lg:justify-start md:justify-start justify-center">
                                     <p className="footer_invert inline-block leading-tight">
                                         {suggest}
                                     </p>
@@ -135,7 +130,9 @@ export default function Footer(
                             </div>
                             <div className="flex flex-col m-5">
                                 <div className="mb-3 subtitle flex flex-col leading-tight">
-                                    {socialmedia}
+                                    <p className="lg:text-left md:text-left text-center">
+                                        {socialmedia}
+                                    </p>
                                 </div>
                                 <div className="flex flex-row justify-between mb-2">
                                     <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer">
@@ -150,7 +147,7 @@ export default function Footer(
                                         <FaTelegram className="lg:text-3xl md:text-3xl text-2xl cursor-pointer hover:text-green-600" />
                                     </a>
                                 </div>
-                                <Link href='https://drive.google.com/file/d/1Rwn8vYPAzRDoX7yD4zf-E6G963Uzty09/view?pli=1' target="_blank" rel="noopener noreferrer" className="underline flex justify-center">
+                                <Link href='https://forms.office.com/pages/responsepage.aspx?id=cZYxzedSaEqvqfz4-J8J6lCpuuyIo05AtcqpjuV6Sg1UMzZJWUtFRTYxMUNYTDA4MFVWUlVOQU85OC4u' target="_blank" rel="noopener noreferrer" className="underline flex justify-center">
                                     <p className="footer_invert inline-block leading-tight">
                                         {newsletter}
                                     </p>

@@ -57,45 +57,36 @@ export default function Contact(
                     <div className='flex flex-row justify-center'>
                         <a href='https://t.me/McGillMISA' target="_blank" rel="noopener noreferrer" className='flex flex-col p-5 items-center' >
                             <FaTelegram className="text-4xl cursor-pointer hover:text-green-600" />
-                            {tg}
+                            <p className='cursor-pointer hover:text-green-600'>{tg}</p>
                         </a>
                         <a href='https://www.instagram.com/mcgillmisa/' target="_blank" rel="noopener noreferrer" className='flex flex-col p-5 items-center'>
                             <FaInstagram className="text-4xl cursor-pointer hover:text-purple-600" />
-                            {ig}
+                            <p className='cursor-pointer hover:text-purple-600'>{ig}</p>
                         </a>
                         <a href="https://www.facebook.com/mcgillmisa/" target="_blank" rel="noopener noreferrer" className='flex flex-col p-5 items-center'>
                             <FaFacebook className="text-4xl cursor-pointer hover:text-blue-600" />
-                            {fb}
+                            <p className="cursor-pointer hover:text-blue-600">{fb}</p>
                         </a>
                     </div>
                     <div className='flex flex-col items-center pb-5'>
                         {email}
                         <a className='underline flex flex-col justify-center items-center' href="mailto:misa@ssmu.ca">
                             <MdEmail className="text-4xl cursor-pointer hover:text-red-600" />
-                            <p className='underline hover:cursor-pointer'>misa@ssmu.ca</p>
+                            <p className='underline hover:cursor-pointer hover:text-red-600'>misa@ssmu.ca</p>
                         </a>
                     </div>
                     <div className='flex flex-row mb-10'>
-                        <div className='p-1 flex-1 flex flex-col justify-center items-center text-center border-r-2 border-black'>
+                        <div className='p-1 flex-1 flex flex-col justify-center items-center text-center'>
                             <div className='w-[100%] text-center flex justify-center items-center p-2'>
                                 {newsletter}
                             </div>
                             <div className='flex justify-center items-center p-2'>
                                 <a href='https://drive.google.com/file/d/1Rwn8vYPAzRDoX7yD4zf-E6G963Uzty09/view?pli=1' target="_blank" rel="noopener noreferrer">
-                                    <BsNewspaper className="lg:text-7xl md:text-7xl text-4xl cursor-pointer hover:text-blue-600 border-2 border-black p-2 rounded" />
+                                    <BsNewspaper className="lg:text-7xl md:text-7xl text-5xl cursor-pointer hover:text-blue-600 p-2 rounded" />
                                 </a>
                             </div>
                         </div>
-                        <div className='p-1 flex-1 flex flex-col justify-center items-center text-center'>
-                            <p className='w-[100%] pb-2'>
-                                {signup}
-                            </p>
-                            <div className='flex justiy-center items-center p-2'>
-                                <a href='https://drive.google.com/file/d/1Rwn8vYPAzRDoX7yD4zf-E6G963Uzty09/view?pli=1' target="_blank" rel="noopener noreferrer">
-                                    <FaHandHoldingHeart className="lg:text-7xl md:text-7xl text-4xl cursor-pointer hover:text-red-600 border-2 border-black p-2 rounded" />
-                                </a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

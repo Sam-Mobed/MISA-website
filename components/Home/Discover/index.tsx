@@ -68,11 +68,11 @@ export default function Discover(
                             </p>
                         </Link>
                         
-                        <Link href="/about#contact" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-t-2 border-r-2 border-black transition-transform transform-gpu hover:scale-110'>
+                        <a href="/about#contact" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-t-2 border-r-2 border-black transition-transform transform-gpu hover:scale-110'>
                             <p className='m-3'>
                                 {contact}
                             </p>
-                        </Link>
+                        </a>
                     </div>
 
                     <div className='justify-center center-items flex items-center p-5'>
@@ -89,11 +89,11 @@ export default function Discover(
                                 {events}
                             </p>
                         </Link>
-                        <Link href="/about#apply" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-t-2 border-l-2 border-black transition-transform transform-gpu hover:scale-110'>
+                        <a href="/events#gallery" style={{boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)'}} className='index-link border-t-2 border-l-2 border-black transition-transform transform-gpu hover:scale-110'>
                             <p className='m-3'>
                                 {involve}
                             </p>
-                        </Link>
+                        </a>
                     </div>
                 </div>
 

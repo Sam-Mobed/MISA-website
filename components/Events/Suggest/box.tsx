@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { createClient} from "next-sanity";
 import clientConfig from "@/sanity/config/client-config";
 //import { saveText } from './savetext';
-import './box.css';
+//import './box.css';
 
 type Props = {
   placeholder:string;

@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import './index.css';
 
 import Footer from '@/components/shared/Footer';
+import Navbar from '@/components/shared/NavBar';
 
 export default function Home() {
 
@@ -14,9 +15,16 @@ export default function Home() {
   //this is our index file, so we pass index as argument
   const t = useTranslations('Index');
   const t_footer = useTranslations('Footer');
+  const t_nav = useTranslations('Navbar');
 
   return (
     <div className='main-container overflow-hidden' style={{backgroundColor:'bisque'}}>
+      <Navbar 
+        misa={t_nav('MISA')}
+        home={t_nav('Home')}
+        about={t_nav('About')}
+        events={t_nav('Events')}
+      />
       <Hero />
          
       <Title 
