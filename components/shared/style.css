@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Gulzar&display=swap');
 
-nav, span, h3, .suggestion-btn, .title, .section-title, .text-paragraph, .index-link, .title-abt, .title-events, .carousel, .text-suggestion, .footer{
+nav, span, h3, #emailMessage, .successMSG, .errorMSG, .suggestion-btn, .title, .section-title, .text-paragraph, .index-link, .title-abt, .title-events, .carousel, .text-suggestion, .footer{
     font-family: Amiri, Courier, monospace;
 }
 
