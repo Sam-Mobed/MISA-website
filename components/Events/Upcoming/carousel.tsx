@@ -68,14 +68,17 @@ export default function Carousel(
                     <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[80vmax]" style={{backgroundColor:'white'}} key={event.name_en}>
                         <div className="flex h-[100%] w-[100%] lg:flex-row md:flex-row flex-col">
                             <div className="flex-2 lg:w-[57vw] md:w-[50vw] bg-black flex justify-center items-center">
-                                <Image
-                                src={event.image}
-                                alt='img'
-                                height='100'
-                                width='100'
-                                style={imgStyle}
-                                unoptimized={true}
-                                />
+                                <a href={event.image} target="_blank" rel="noopener noreferrer" className='w-[100%] hover:cursor-pointer flex justify-center'>
+                                    <Image
+                                    src={event.image}
+                                    alt='img'
+                                    height='100'
+                                    width='100'
+                                    style={imgStyle}
+                                    className="hover:scale-110 ease-in duration-200"
+                                    unoptimized={true}
+                                    />
+                                </a>
                             </div>
                             <div className="flex-1">
                                 <div className='flex flex-col p-2 h-[100%] justify-between'>

@@ -43,7 +43,7 @@
         "error": "An unexpected error occurred. Please try again later.",
         "already-suggested": "You have already placed a suggestion in the past 12 hours.",
         "gallery":"Gallery",
-        "gallery-desciption":"Here are some photos from our past events, enjoy them.",
+        "gallery-desciption":"Here are some photos from our past events, enjoy them. You can also click on the images to make them bigger.",
         "event-done": "This event has concluded.",
         "no-waitlist": "All spots have been filled, and we are unable to provide a waitlist at this time.",
         "yes-waitlist": "All spots are filled. Please join the",
