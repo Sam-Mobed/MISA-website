@@ -63,6 +63,7 @@ export default function DynamicElements(){
                     y:left_plant_Y,
                     x:left_plant_X,
                 }}
+                className='transform-gpu'
                 >
                     <Image 
                     src={moving_plants_left}
@@ -81,10 +82,12 @@ export default function DynamicElements(){
                     width: 'calc(20%)',
                     height: 'calc(20%)',
                 }}
+                className='transform-gpu'
                 >   
                     <Image 
                     src={Sun}
                     alt="sun"
+                    className='transform-gpu'
                     />
                 </motion.div>
 
@@ -93,12 +96,13 @@ export default function DynamicElements(){
                     y:right_plant_Y,
                     x:right_plant_X
                 }}
-                
+                className='transform-gpu'
                 >
                     <Image 
                     src={moving_plants_right}
                     style={plantStyle}
                     alt="moving_plants_right"
+                    className='transform-gpu'
                     />
                     
                 </motion.div>
@@ -109,12 +113,13 @@ export default function DynamicElements(){
                         y:simurgh_Y,
                         x:simurgh_X,
                     }}
-                
+                    className='transform-gpu'
                 >
                     <Image 
                     src={Simurgh}
                     style={simurghStyle}
                     alt="simurgh"
+                    className='transform-gpu'
                     />
                 </motion.div>
 
@@ -125,12 +130,13 @@ export default function DynamicElements(){
                         y:beast_Y,
                         x:beast_X,
                     }}
+                    className='transform-gpu'
                 >
                     <Image 
                     src={Beast}
                     style={cornerStyle}
                     alt="Beast"
-                    className='inline-block'
+                    className='inline-block transform-gpu'
                     />
                 </motion.div>
                 
@@ -139,12 +145,13 @@ export default function DynamicElements(){
                         y:hill_Y,
                         x:hill_X,
                     }}
+                    className='transform-gpu'
                 >
                     <Image 
                     src={moving_hill_right}
                     style={cornerHillStyle}
                     alt="moving_hill_right"
-                    className='inline-block'
+                    className='inline-block transform-gpu'
                     />
                 </motion.div>
             </div>

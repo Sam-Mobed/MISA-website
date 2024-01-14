@@ -24,7 +24,7 @@ export default function Hero() {
         <div className='w-full h-screen relative overflow-hidden'>
 
             <motion.div
-            className='mountain-container absolute top-0'
+            className='mountain-container absolute top-0 transform-gpu'
             style={{y:hafez_y}}
             >       
 
@@ -32,7 +32,7 @@ export default function Hero() {
             src={hafez}
             style={imageStyle}
             alt="hafez-parallax"
-            className='absolute top-0'
+            className='absolute top-0 transform-gpu'
             priority={true}
             />
 
@@ -40,7 +40,7 @@ export default function Hero() {
             
 
             <motion.div
-            className='mountain-container absolute bottom-0'
+            className='mountain-container absolute bottom-0 transform-gpu'
             style={{y:mountain_y}}
             >
 
@@ -48,20 +48,20 @@ export default function Hero() {
             src={mountain}
             style={imageStyle}
             alt="mountain-parallax"
-            className='absolute bottom-0'
+            className='absolute bottom-0 transform-gpu'
             />
 
             </motion.div>
 
             <motion.div
-            className='mountain-container absolute bottom-0'
+            className='mountain-container absolute bottom-0 transform-gpu'
             style={{y:hill_y}}
             >
             <Image 
             src={hill}
             style={imageStyle}
             alt="hill-parallax"
-            className='absolute bottom-0'
+            className='absolute bottom-0 transform-gpu'
             /> 
             </motion.div>
             

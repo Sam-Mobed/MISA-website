@@ -96,7 +96,7 @@ export default function Hero({title}:Props){
             src={Riders}
             style={ridersStyle}
             alt="riders"
-            className='absolute top-[2vmin] riders'
+            className='absolute top-[2vmin] riders transform-gpu'
             priority={true}
             />
 
@@ -104,7 +104,7 @@ export default function Hero({title}:Props){
             src={Women}
             style={WomenStyle}
             alt="woman"
-            className='absolute top-[5vmin] woman'
+            className='absolute top-[5vmin] woman transform-gpu'
             priority={true}
             />
             
@@ -112,7 +112,7 @@ export default function Hero({title}:Props){
             src={MenOnDrums}
             style={drumsStyle}
             alt="men-playing-drums"
-            className='absolute top-[10vmin] drums'
+            className='absolute top-[10vmin] drums transform-gpu'
             priority={true}
             />
     
@@ -120,7 +120,7 @@ export default function Hero({title}:Props){
             src={Men}
             style={menStyle}
             alt="men"
-            className='absolute bottom-0 men'
+            className='absolute bottom-0 men transform-gpu'
             priority={true}
             />
 
@@ -128,7 +128,7 @@ export default function Hero({title}:Props){
             src={palace}
             style={buildingStyle}
             alt="palace"
-            className='absolute left-[18vmin] top-[1vmin] palace'
+            className='absolute left-[18vmin] top-[1vmin] palace transform-gpu'
             priority={true}
             />
 
@@ -136,7 +136,7 @@ export default function Hero({title}:Props){
             src={tower}
             style={buildingStyle}
             alt="tower"
-            className='absolute left-[25vmin] top-[6vmin] tower'
+            className='absolute left-[25vmin] top-[6vmin] tower transform-gpu'
             priority={true}
             />
 
@@ -144,7 +144,7 @@ export default function Hero({title}:Props){
             src={whitebuilding}
             style={buildingStyle}
             alt="building"
-            className='absolute left-[14vmin] top-[9vmin] building'
+            className='absolute left-[14vmin] top-[9vmin] building transform-gpu'
             priority={true}
             />
             
@@ -152,7 +152,7 @@ export default function Hero({title}:Props){
             src={Musician}
             style={angelStyle}
             alt="musician"
-            className='absolute bottom-[40vmin] musician'
+            className='absolute bottom-[40vmin] musician transform-gpu'
             priority={true}
             />
 
@@ -160,7 +160,7 @@ export default function Hero({title}:Props){
             src={GiftBringers}
             style={giftsStyle}
             alt="men-bringing-gifts"
-            className='absolute bottom-[25vmin] gift'
+            className='absolute bottom-[25vmin] gift transform-gpu'
             priority={true}
             />
 
@@ -168,7 +168,7 @@ export default function Hero({title}:Props){
             src={couple}
             style={coupleStyle}
             alt="couple"
-            className='absolute bottom-10 right-[20vmax] couple'
+            className='absolute bottom-10 right-[20vmax] couple transform-gpu'
             priority={true}
             />
 
@@ -176,7 +176,7 @@ export default function Hero({title}:Props){
             src={Family}
             style={famStyle}
             alt="Family"
-            className='absolute bottom-[4vmin] family'
+            className='absolute bottom-[4vmin] family transform-gpu'
             priority={true}
             />
                     

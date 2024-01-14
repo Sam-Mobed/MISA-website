@@ -56,7 +56,7 @@ export default function Hero({title}:Props){
                 src={deer}
                 style={deerStyle}
                 alt="deer"
-                className='absolute top-0 deer'
+                className='absolute top-0 deer transform-gpu'
                 priority={true}
                 />
 
@@ -64,7 +64,7 @@ export default function Hero({title}:Props){
                 src={soldiers2}
                 style={sndRow}
                 alt="soldiers"
-                className='absolute bottom-[50vmin] soldiers2'
+                className='absolute bottom-[50vmin] soldiers2 transform-gpu'
                 priority={true}
                 />
 
@@ -72,7 +72,7 @@ export default function Hero({title}:Props){
                 src={soldiers}
                 style={sndRow}
                 alt="soldiers"
-                className='absolute bottom-[35vmin] right-0 soldiers1'
+                className='absolute bottom-[35vmin] right-0 soldiers1 transform-gpu'
                 priority={true}
                 />
 
@@ -80,7 +80,7 @@ export default function Hero({title}:Props){
                 src={tree}
                 style={treeStyle }
                 alt="tree"
-                className='absolute bottom-[30vmin] tree'
+                className='absolute bottom-[30vmin] tree transform-gpu'
                 priority={true}
                 />
 
@@ -88,14 +88,14 @@ export default function Hero({title}:Props){
                 src={dragon}
                 style={dragonStyle}
                 alt="dragon"
-                className='absolute bottom-0 dragon'
+                className='absolute bottom-0 dragon transform-gpu'
                 priority={true}
                 />
                 <Image 
                 src={warrior}
                 style={dragonStyle}
                 alt="warrior"
-                className='absolute bottom-0 warrior'
+                className='absolute bottom-0 warrior transform-gpu'
                 priority={true}
                 />
             </div>
