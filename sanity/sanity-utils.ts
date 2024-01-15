@@ -7,7 +7,7 @@ import clientConfig from "./config/client-config";
 export async function getEvents(): Promise<Event[]>{
 
     return createClient(clientConfig).fetch(
-        groq`*[_type == "event"]{
+        groq`*[_type == "event"] | order(_createdAt desc){
             _id,
             _createdAt,
             name_en,
@@ -30,7 +30,7 @@ export async function getEvents(): Promise<Event[]>{
 export async function getPhotos(): Promise<Photo[]>{
 
     return createClient(clientConfig).fetch(
-        groq`*[_type == "photo"]{
+        groq`*[_type == "photo"] | order(_createdAt asc){
             _id,
             _createdAt,
             name_en,
