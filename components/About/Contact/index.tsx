@@ -81,7 +81,7 @@ export default function Contact(
                                 {newsletter}
                             </div>
                             <div className='flex justify-center items-center p-2'>
-                                <a href='https://drive.google.com/file/d/1Rwn8vYPAzRDoX7yD4zf-E6G963Uzty09/view?pli=1' target="_blank" rel="noopener noreferrer">
+                                <a href='https://forms.office.com/pages/responsepage.aspx?id=cZYxzedSaEqvqfz4-J8J6lCpuuyIo05AtcqpjuV6Sg1UMzZJWUtFRTYxMUNYTDA4MFVWUlVOQU85OC4u' target="_blank" rel="noopener noreferrer">
                                     <BsNewspaper className="lg:text-7xl md:text-7xl text-5xl cursor-pointer hover:text-blue-600 p-2 rounded" />
                                 </a>
                             </div>
