@@ -34,7 +34,7 @@ type Props = {
 
 const imgStyle = {
     height:'auto',
-    width:'80%'
+    width:'70%'
 }
 
 export default function Carousel(
@@ -65,7 +65,7 @@ export default function Carousel(
         <div className="overflow-hidden carousel lg:text-[1.3vmax] md:text-[1.5vmax] pb-5">
             <div className="flex pb-5 transition-transform ease-out duration-1000" style={{transform: `translateX(-${currSlide*100}%)`}}>
                 {events.map((event)=>(
-                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[80vmax]" style={{backgroundColor:'white'}} key={event.name_en}>
+                    <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[100vmax]" style={{backgroundColor:'white'}} key={event.name_en}>
                         <div className="flex h-[100%] w-[100%] lg:flex-row md:flex-row flex-col">
                             <div className="flex-2 lg:w-[57vw] md:w-[50vw] bg-black flex justify-center items-center">
                                 <a href={event.image} target="_blank" rel="noopener noreferrer" className='w-[100%] hover:cursor-pointer flex justify-center'>
@@ -75,7 +75,6 @@ export default function Carousel(
                                     height='100'
                                     width='100'
                                     style={imgStyle}
-                                    className="hover:scale-110 ease-in duration-200"
                                     unoptimized={true}
                                     />
                                 </a>
@@ -124,7 +123,7 @@ export default function Carousel(
                                     </div>
                                     <div>
                                         {event.links.length!==0?
-                                            <div>
+                                            <ul className='list-none'>
                                                 <p className='font-bold'>{links}</p>
                                                 {event.links.map((l,i)=>(
                                                     <li key={l}>
@@ -133,7 +132,7 @@ export default function Carousel(
                                                         </a>
                                                     </li>
                                                 ))}
-                                            </div>
+                                            </ul>
                                         :
                                         <></>
                                         }

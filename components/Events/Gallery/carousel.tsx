@@ -27,7 +27,7 @@ type Props = {
 
 const imgStyle = {
     height:'auto',
-    width:'65%'
+    width:'50rem'
 }
 
 export default function Carousel(
@@ -51,7 +51,7 @@ export default function Carousel(
                 {photos.map((photo)=>(
                     <div className="flex-shrink-0 w-[80vw] lg:h-[45vmax] md:h-[45vmax] h-[80vmax]" style={{backgroundColor:'white'}} key={photo.name_en}>
                         <div className="flex h-[100%] w-[100%] flex-col">
-                            <div className="flex-2 h-[90%] bg-black flex justify-center items-center">
+                            <div className="flex-2 h-[90%] bg-black flex justify-center items-center overflow-hidden">
                                 <a href={photo.image} target="_blank" rel="noopener noreferrer" className='w-[100%] hover:cursor-pointer flex justify-center'>
                                     <Image
                                     src={photo.image}
@@ -59,7 +59,6 @@ export default function Carousel(
                                     height='100'
                                     width='100'
                                     style={imgStyle}
-                                    className="hover:scale-110 ease-in duration-200"
                                     unoptimized={true}
                                     />
                                 </a>
